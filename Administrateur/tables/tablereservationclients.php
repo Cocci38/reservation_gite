@@ -1,5 +1,5 @@
 <?php
-require 'initialisation .php';
+require 'Administrateur\initialisation.php';
 
 try {
 $sql = "CREATE TABLE Reservation_clients (
