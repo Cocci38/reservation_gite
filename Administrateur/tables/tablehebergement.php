@@ -2,16 +2,17 @@
 require 'initialisation .php';
 
 try {
-$sql = "CREATE TABLE Gites (
+$sql = "CREATE TABLE Hebergements(
     Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    Id_categorie INT (10),
     Intitule VARCHAR(30) NOT NULL,
     Decription TEXT NOT NULL,
     Photo VARCHAR(255) NOT NULL,
-    Nombre de couchages VARCHAR(30) NOT NULL,
-    Nombre de salles de bain VARCHAR(30) NOT NULL,
-    Emplacement geographique VARCHAR(30) NOT NULL,
+    Nombre_de_couchages INT UNSIGNED NOT NULL,
+    Nombre_de_salles_de_bain INT UNSIGNED NOT NULL,
+    Emplacement_geographique VARCHAR(30) NOT NULL,
     Prix INT UNSIGNED NOT NULL,
-    Disponibilite VARCHAR(30) NOT NULL";
+    Disponibilite VARCHAR(30) NOT NULL)";
 
 $conn->exec($sql);
 echo 'Table bien créée !';
