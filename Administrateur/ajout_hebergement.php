@@ -9,7 +9,7 @@
 <body>
 <?php
 
-include 'Administrateur\initialisation .php';
+require substr(__FILE__, 0, -strlen($_SERVER['SCRIPT_NAME'])).'/Administrateur/initialisation.php';
 include 'Administrateur\tables\tablehebergement.php';
 include 'Administrateur\tables\tablecategorie.php';
 
@@ -31,6 +31,7 @@ $sth = $conn->prepare("
     $sth->bindParam(':Description',$description);
     $sth->bindParam(':Photo',$photo);
     $sth->bindParam(':Nombre_de_couchages',$couchage);
+    $sth->bindParam(':Nombre_de_salle',$bain);
     $sth->bindParam(':Emplacement_geographique',$lieux);
     $sth->bindParam(':Prix',$prix);
     $sth->execute();

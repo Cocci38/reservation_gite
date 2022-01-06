@@ -1,5 +1,5 @@
 <?php
-require 'Administrateur\initialisation.php';
+require substr(__FILE__, 0, -strlen($_SERVER['SCRIPT_NAME'])).'/Administrateur/initialisation.php';
 
 try {
 $sql = "CREATE TABLE Administrateur (

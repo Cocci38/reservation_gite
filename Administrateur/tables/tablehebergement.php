@@ -1,10 +1,29 @@
 <?php
-require 'Administrateur\initialisation.php';
+try {
+    // Overture session :
+    
+    session_start();
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "reservation";
+    
+    
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    
+    catch (PDOException $e) {
+        echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+    }
 
 try {
 $sql = "CREATE TABLE Hebergements(
     Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     Id_categorie INT (10),
+    Id_hebergement INT (10),
+    Categorie VARCHAR(30) NOT NULL,
     Intitule VARCHAR(30) NOT NULL,
     Decription TEXT NOT NULL,
     Photo VARCHAR(255) NOT NULL,
