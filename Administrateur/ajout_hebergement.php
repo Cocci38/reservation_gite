@@ -8,8 +8,8 @@
 </head>
 <body>
 
-
-    <form action="Administrateur\ajout.php" method="post">
+<?php var_dump($_SERVER['SCRIPT_NAME'])?>
+    <form action="<?php echo $_SERVER["DOCUMENT_ROOT"].'/administrateur\ajout.php'; ?>" method="post">
 
         <label for="Intitule">Nom de l'hébergement</label>
         <input type="text" name="Nom" id="Intitule" required>
