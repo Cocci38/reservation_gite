@@ -1,6 +1,6 @@
 <?php
 
-require substr(__FILE__, 0, -strlen($_SERVER['SCRIPT_NAME'])).'/Administrateur/initialisation.php';
+require 'initialisation.php';
 
 $intitule =$_POST["Intitule"];
 $categorie =$_POST["Categorie"];
