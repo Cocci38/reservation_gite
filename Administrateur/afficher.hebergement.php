@@ -56,21 +56,21 @@ try {
                     }*/
 
                     
-                    $sth = $conn->prepare("SELECT * From hebergements where Id= " . $_GET['id']);
+                    $sth = $conn->prepare("SELECT * From hebergements where Id= " . $_GET['id'] );
                     $sth->execute();
                     $result = $sth->fetch();
-                    echo  $result['Id'] .'"><img src="images-memory\modifier.png"alt="modifier hébergement"></a>';
+                    echo  $result['Id'];
 
 
                     if (isset($result)) {
-                        echo "Prénom : " .$result ['Intitule'] ;
-                        echo " Nom : " . $result ['Categorie'] ;
-                        echo " Nom : " . $result ['Description'] ;
-                        echo " Nom : " . $result ['Photo'];
-                        echo " Nom : " . $result ['Nombre_de_couchages'] ;
-                        echo " Nom : " . $result ['Nombre_de_salles_de_bain'] ;
-                        echo " Nom : " . $result ['Emplacement_geographique'] ;
-                        echo " Nom : " . $result ['Prix'] ;
+                        echo "Intitulé : " .$result ['Intitule'] ;
+                        echo " Categorie : " . $result ['Categorie'] ;
+                        echo " Description : " . $result ['Description'] ;
+                        echo " Photo : " . $result ['Photo'];
+                        echo " Nbr de couchages : " . $result ['Nombre_de_couchages'] ;
+                        echo " Nbr de salles de bains : " . $result ['Nombre_de_salles_de_bain'] ;
+                        echo " Emplacement : " . $result ['Emplacement_geographique'] ;
+                        echo " Prix : " . $result ['Prix'] ;
 
 
                     }
