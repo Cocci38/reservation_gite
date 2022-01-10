@@ -12,10 +12,10 @@
     <form action= 'ajout.php' method="post">
 
         <label for="Intitule">Nom de l'hébergement</label>
-        <input type="text" name="Nom" id="Intitule" required>
+        <input type="text" name="Intitule" id="Intitule" required>
 
         <label for="Categorie">Type d'hébergement</label>
-        <select name="Type d'hébergement" id="Categorie" required>
+        <select name="Categorie" id="Categorie" required>
             <option value="chambre">Chambre</option>
             <option value="appartement">Appartement</option>
             <option value="mobil_home">Mobil Home</option>
@@ -30,7 +30,7 @@
         <input type="file" name="Photo" id="Photo" required>
 
         <label for="Nombre_de_couchages">Nombres de lits</label>
-        <select name="Nombre de lits" id="Nombre_de_couchages" required>
+        <select name="Nombre_de_couchages" id="Nombre_de_couchages" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -44,13 +44,13 @@
         </select>
 
         <label for="Nombre_de_salles_de_bain">Salle(s) de bain</label>
-        <select name="Salle de bain" id="Nombre_de_salles_de_bain" required>
+        <select name="Nombre_de_salles_de_bain" id="Nombre_de_salles_de_bain" required>
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
 
         <label for="Emplacement_geographique">Lieux</label>
-        <input type="text" name="Lieux" id="Emplacement_geographique" required>
+        <input type="text" name="Emplacement_geographique" id="Emplacement_geographique" required>
 
         <label for="Prix">Prix</label>
         <input type="number" name="Prix" id="Prix" required>
