@@ -56,10 +56,11 @@ try {
                     }*/
 
                     
-                    $sth = $conn->prepare("SELECT * From hebergements where Id= " . $_GET['id'] );
+                    $sth = $conn->prepare("SELECT * From hebergements where Id= :id"  );
+                    $sth -> bindValue (":id" , $_GET['id'] );
                     $sth->execute();
                     $result = $sth->fetch();
-                    echo  $result['Id'];
+                    echo  $result['Id'] ;
 
 
                     if (isset($result)) {
