@@ -17,9 +17,8 @@ $phone = $_POST["telephone"];
 $mail = $_POST["mail"];
 
 try{
-$sth = $conn->prepare("
-    INSERT INTO hebergements(arrivee, depart, adulte, enfant, titre, nom, prenom, adresse, code_postal, ville, pays, telephone, mail)
-    VALUES(:arrivee, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
+$sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, depart, adulte, enfant, titre, nom, prenom, adresse, code_postal, ville, pays, telephone, mail)
+                    VALUES(:arrivee, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
 
     $sth->bindParam(':arrivee',$arrivee);
     $sth->bindParam(':depart',$depart);
