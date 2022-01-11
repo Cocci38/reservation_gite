@@ -7,15 +7,9 @@
     <title>Recherche de gites</title>
 </head>
 <body>
-    <header>
-        <div>
-            logo easy trip
-        </div>
-        <div>
-            Avec nous voyager facile !
-        </div>
-    </header>
+
     <?php
+    require 'navbar.php';
     require 'recherche.class.php';
     ?>
     <form action= '' method="post">
@@ -45,7 +39,7 @@
 
     </form>
 
-    <h2>Des idées pour s'évader ?</h2>
+    <h3>Des idées pour s'évader ?</h3>
     <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
     <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
     <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
