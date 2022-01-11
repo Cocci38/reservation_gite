@@ -60,7 +60,7 @@ try {
                     $sth -> bindValue (":id" , $_GET['id'] );
                     $sth->execute();
                     $result = $sth->fetch();
-                    echo  $result['Id'] ;
+                    echo   '<a href="modifier.hebergement.php?id="><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>';
 
 
                     if (isset($result)) {
