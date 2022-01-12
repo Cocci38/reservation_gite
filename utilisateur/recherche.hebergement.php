@@ -12,7 +12,7 @@
     require 'navbar.php';
     require 'recherche.class.php';
     ?>
-    <form action= '' method="post">
+    <form action= "" method="post">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
         <input type="text" name="lieux" id="lieux" required>
@@ -36,6 +36,10 @@
             <option value="9">9 Voyageurs</option>
             <option value="10">10 et plus</option>
         </select>
+
+        <div class="button">
+                    <button type="submit" value="search" >Rechercher</button>
+                </div>
 
     </form>
 

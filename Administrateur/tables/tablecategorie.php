@@ -21,7 +21,6 @@ try {
 try {
 $sql = "CREATE TABLE Categories (
     Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    Id_categorie INT (10),
     Nom VARCHAR(30) NOT NULL)";
 
 $conn->exec($sql);

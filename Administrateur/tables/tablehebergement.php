@@ -22,7 +22,6 @@ try {
 $sql = "CREATE TABLE Hebergements(
     Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     Id_categorie INT (10),
-    Id_hebergement INT (10),
     Categorie VARCHAR(30) NOT NULL,
     Intitule VARCHAR(30) NOT NULL,
     Decription TEXT NOT NULL,
