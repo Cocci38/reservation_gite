@@ -10,6 +10,8 @@
 
 <button><a href="deconnexion.php">Deconnexion</a></button> 
 
+<button><a href="ajout_hebergement.php">Ajouter un hébergement</a></button> 
+
 <?php
 
 

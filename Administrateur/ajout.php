@@ -14,6 +14,7 @@ $couchage = $_POST["Nombre_de_couchages"];
 $bain = $_POST["Nombre_de_salles_de_bain"];
 $lieux = $_POST["Emplacement_geographique"];
 $prix = $_POST["Prix"];
+}
 
 try{
 $sth = $conn->prepare("
