@@ -10,21 +10,20 @@
 
     <?php
     require 'navbar.php';
-    require 'recherche.class.php';
     ?>
-    <form action= "" method="post">
+    <form action= "recherche.php" method="post">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
-        <input type="text" name="lieux" id="lieux" required>
+        <input type="text" name="Emplacement_geographique" id="lieux" required>
 
-        <label for="arrive">Arrivée</label>
-        <input type="date" name="arrive" id="arrive" required>
+        <label for="arrivee">Arrivée</label>
+        <input type="date" name="arrivee" id="arrivee" required>
 
         <label for="depart">Départ</label>
         <input type="date" name="depart" id="depart" required>
 
         <label for="voyageur">Voyageur(s)</label>
-        <select name="voyageur" id="voyageur" required>
+        <select name="Nombre_de_couchages" id="voyageur" required>
             <option value="1">1 Voyageur</option>
             <option value="2">2 Voyageurs</option>
             <option value="3">3 Voyageurs</option>
@@ -38,6 +37,7 @@
         </select>
 
         <div class="button">
+                    <input type="text" name="recherche">
                     <button type="submit" value="search" >Rechercher</button>
                 </div>
 
