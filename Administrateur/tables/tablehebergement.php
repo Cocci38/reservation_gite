@@ -24,7 +24,7 @@ $sql = "CREATE TABLE Hebergements(
     Id_categorie INT (10),
     Categorie VARCHAR(30) NOT NULL,
     Intitule VARCHAR(30) NOT NULL,
-    Decription TEXT NOT NULL,
+    Description TEXT NOT NULL,
     Photo VARCHAR(255) NOT NULL,
     Nombre_de_couchages INT UNSIGNED NOT NULL,
     Nombre_de_salles_de_bain INT UNSIGNED NOT NULL,
