@@ -1,24 +1,9 @@
 <?php 
 
-//require substr(__FILE__, 0, -strlen($_SERVER['SCRIPT_NAME'])).'/Administrateur/initialisation.php';
-try {
-    // Overture session :
-    
-    session_start();
-    
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "reservation";
-    
-    
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    
-    catch (PDOException $e) {
-        echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-    }
+require 'initialisation.php' ;
+
+
+
 try {
 
 $admin = $_POST["Nom_admin"];
@@ -30,22 +15,25 @@ $sth = $conn->prepare($util);
 $sth->execute();
 $result = $sth->fetch();
 $_SESSION['result']=$result;
+
 if (empty($_SESSION['result']) )
     {
-/*header("location: ../administrateur\connexion.php");*/
+
 echo "Identifiant ou mot de passe incorrect";
+
+header("location:connexion.php");
+echo "Identifiant ou mot de passe incorrect";
+
 
 
 }
 
 else {
-    // header("location: authentification.php");
+   
+echo 'connexion réussie '; 
 
-    header("location: ../utilisateur\index.php");
+    header("location:indexheb.php");
 }
-
-
-
 
 }
 

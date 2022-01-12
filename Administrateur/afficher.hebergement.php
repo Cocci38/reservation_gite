@@ -23,45 +23,26 @@
 
                 <?php
 
-try {
-    // Overture session :
-    
-    session_start();
-    
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "reservation";
-    
-    
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    
-    catch (PDOException $e) {
-        echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-    }
-    
-    
+
     
 
-                // Afficher la fiche contact
+                // Afficher la fiche hébergement
 
                 try {
 
-                    /*require 'initialisation.php';
+                require 'initialisation.php';
                     if (empty($_SESSION['result'])) {
-                        header("location: administrateur\connexion.php");
+                        header("location:connexion.php");
                         // echo "Identifiant ou mot de passe incorrect";
-                    }*/
+                    }
 
                     
                     $sth = $conn->prepare("SELECT * From hebergements where Id= :id"  );
                     $sth -> bindValue (":id" , $_GET['id'] );
                     $sth->execute();
                     $result = $sth->fetch();
-                    echo   '<a href="modifier.hebergement.php?id="><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>';
-
+                    echo   '<a href="modifier.hebergement.php?id='.$_GET['id'].'"><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>';
+                    echo '<a href="supprimer.php?id='. $result['Id'] .'"><img class="suppimg" src="images-memory\corbeille.png" alt="supprimer contact"></a></div>';
 
                     if (isset($result)) {
                         echo "Intitulé : " .$result ['Intitule'] ;
@@ -78,9 +59,11 @@ try {
                 } catch (PDOException $e) {
                     echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
                 }
-
+ 
 
                 ?>
+            
+    
 
             </div>
         </div>

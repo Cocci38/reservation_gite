@@ -2,6 +2,10 @@
 
 require 'initialisation.php';
 
+if (empty($_SESSION['result'])) {
+    header("location:connexion.php");
+
+
 $intitule = $_POST["Intitule"];
 $categorie = $_POST["Categorie"];
 $description = $_POST["Description"];

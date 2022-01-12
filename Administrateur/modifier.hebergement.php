@@ -13,12 +13,28 @@
 
 require 'initialisation.php';
 
+if (empty($_SESSION['result'])) {
+    header("location:connexion.php");
+ 
+}
+
 try  {
-    $sth = $conn->prepare("SELECT * From hebergements where Id= :id"  );
+
+if (! empty ( $_GET['id']) && isset ($_GET['id'])) {
+
+    $sth = $conn->prepare("SELECT * From hebergements where Id= :id");
     $sth -> bindValue (":id" , $_GET['id'] );
     $sth->execute();
     $result = $sth->fetch();
 
+
+    
+}
+
+else {
+
+    header ('location: indexheb.php');
+}
 
 }
 

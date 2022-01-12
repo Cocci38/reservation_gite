@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<form action="../administrateur\verifconnexion.php" method="post" >
+<form action="verifconnexion.php" method="post" >
             
 
               <label for="identifiant" >Identifiant</label>
@@ -22,7 +22,7 @@
 
           </form>
 
-
+          
 
 </body>
 </html>
