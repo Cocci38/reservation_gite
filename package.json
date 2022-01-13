@@ -1,0 +1,19 @@
+{
+  "name": "reservations_gites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cocci38/reservations_gites.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cocci38/reservations_gites/issues"
+  },
+  "homepage": "https://github.com/Cocci38/reservations_gites#readme"
+}
