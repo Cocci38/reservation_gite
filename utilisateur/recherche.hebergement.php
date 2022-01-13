@@ -16,7 +16,7 @@
     <?php
     require 'navbar.php';
     ?>
-    <form action= "recherche.php" method="post">
+    <form action= "testrecherche.php" method="post">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
         <input type="text" name="Emplacement_geographique" id="lieux" required>

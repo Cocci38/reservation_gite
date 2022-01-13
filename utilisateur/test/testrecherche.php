@@ -1,6 +1,20 @@
 <?php
 require '../Administrateur\initialisation.php';
+require 'localisation.class.php';
+require 'voyageur.class.php';
+require 'dispo.class.php';
 
+$lieux = 'Emplacement_geographique';
+$nombre = 'Nombre_de_couchages';
+$dispo = 'Disponibilite';
+
+$isere = new Localisation('Isère');
+$savoie = new Localisation('Savoie');
+$nombre1 = new Voyageur(1);
+$nombre2 = new Voyageur(2);
+$nombre3 = new Voyageur(3);
+$nombre4 = new Voyageur(4);
+$nombre5 = new Voyageur(5);
 
 $recherche = isset($_POST['recherche']) ? $_POST['recherche'] : '';
 
@@ -18,5 +32,7 @@ echo '</pre>';
 catch (PDOException $e) {
     echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
 }
-
+if ($isere = true) {
+    print_r($resultat);
+}
 ?>
