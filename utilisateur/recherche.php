@@ -5,8 +5,8 @@ $recherche = isset($_POST['recherche']) ? $_POST['recherche'] : '';
 
 try{
 $sth = $conn->prepare(
-    "SELECT Emplacement_geographique, Nombre_de_couchages, arrivee, depart FROM Hebergements
-    INNER JOIN Reservation_clients on Hebergements.id = Reservation_clients.Id_hebergement");
+    "SELECT Emplacement_geographique, Nombre_de_couchages, Disponibilite FROM Hebergements
+    WHERE Emplacement_geographique = 'Isère' OR Nombre_de_couchages = 'x' OR Disponibilite = 1");
 
 $sth-> execute();
 $resultat = $sth->fetchAll(PDO::FETCH_ASSOC);

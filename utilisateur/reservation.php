@@ -35,7 +35,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, depart, adulte, 
     $sth->bindParam(':mail',$mail);
     $sth->execute();
 
-    //header();
+    header('Location: msg.mail.php');
     
 }
 catch (PDOException $e) {

@@ -43,7 +43,7 @@
 
         <div class="button">
                     <input type="text" name="recherche">
-                    <button type="submit" value="search" >Rechercher</button>
+                    <a href = 'listegite.php'><button type="submit" value="SEARCH" >Rechercher</button></a>
                 </div>
 
     </form>
