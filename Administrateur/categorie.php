@@ -30,14 +30,20 @@ if (empty($_SESSION['result'])) {
 
         try 
         {
-            $nom = $_POST["Nom"];
+            if (!empty ($_POST["Nom"])) {
 
-            $sth = $conn->prepare("
-            INSERT INTO categories (Nom)
-            VALUES (:Nom)");
+                $nom = $_POST["Nom"];
 
-            $sth->bindParam(':Nom',$nom);
-            $sth->execute();
+                $sth = $conn->prepare("
+                INSERT INTO categories (Nom)
+                VALUES (:Nom)");
+    
+                $sth->bindParam(':Nom',$nom);
+                $sth->execute();
+
+            }
+
+        
 
         }
 

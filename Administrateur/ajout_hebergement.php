@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<?php require 'initialisation.php'; ?>
 
     <form action= 'ajout.php' method="post">
 
@@ -16,11 +17,13 @@
 
         <label for="Categorie">Type d'hébergement</label>
         <select name="Categorie" id="Categorie" required>
-            <option value="chambre">Chambre</option>
-            <option value="appartement">Appartement</option>
-            <option value="mobil_home">Mobil Home</option>
-            <option value="maison">Maison</option>
-            <option value="villa">Villa</option>
+        <?php $sth = $conn->prepare("SELECT * From categories" );
+                    $sth->execute();
+                    $result = $sth->fetchall(); 
+                 for ($i= 0; $i<count($result); $i++) {
+                echo '<option value='.$result[$i]['Id'].'>'.$result[$i]['Nom'].'</option>';
+                 }
+                    ?>
         </select>
 
         <label for="Description">Description</label>

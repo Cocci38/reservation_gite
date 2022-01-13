@@ -1,0 +1,29 @@
+:root{
+    --light-blue:#6968e5;
+    --light-gray:#f5f5f5;
+    --dark-blue:#28284b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*nav{
+    background-color: var(--dark-blue);
+}*/
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    ". . .";
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.logo{ 
+    height: 200px;
+    width: 200px;
+}
