@@ -1,11 +1,1 @@
-:root {
-  --light-blue:#6968e5;
-  --light-gray:#f5f5f5;
-  --dark-blue:#28284b;
-  font-family: "Montserrat", sans-serif;
-}
 
-form {
-  font-family: "Montserrat";
-  font-style: var(--dark-blue);
-}

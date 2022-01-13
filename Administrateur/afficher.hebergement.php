@@ -16,9 +16,9 @@
 <body>
 
 <button><a href="deconnexion.php">Deconnexion</a></button> 
-    
+<button><a href="indexheb.php">Accueil</a></button> 
             
-                <a href="indexheb.php"><img class="logo" src="images\boy-1597957_1280.png" alt=""></a>
+               
 
 
                 <?php
@@ -38,6 +38,11 @@
 
                     
                     $sth = $conn->prepare("SELECT * From hebergements where Id= :id"  );
+                    $sth = $conn->prepare("SELECT users.prenom, comments.contenu
+                    FROM users
+                    INNER JOIN comments ON users.id = comments.userId
+                  ");
+
                     $sth -> bindValue (":id" , $_GET['id'] );
                     $sth->execute();
                     $result = $sth->fetch();
