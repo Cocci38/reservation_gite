@@ -6,50 +6,49 @@ if (empty($_SESSION['result'])) {
     header("location:connexion.php");}
 
 
-$intitule = $_POST["Intitule"];
-$description = $_POST["Description"];
 
 /* Upload de l'image */
 
-$photo = $_POST["Photo"];
 
-/*$maxSize=50000;
-$validExt= array ('.jpg', '.jpeg', '.gif', '.png'); 
 
-    if ($_FILES ['Photo']['error'] ){   
+if (isset ($_POST['envoyer'])){
 
-    echo 'Une erreur est survenue lors du transfert ';
-    die;}
+echo 'ok';
 
-    $fileSize = $_FILES ['Photo']['size'];
-        if ($fileSize > $maxSize) {
 
-            echo 'Le fichier est trop gros';
-            die;
-        }
-    $fileName = $_FILES ['Photo']['name'];
+if (isset ($_FILES['Photo'])) {
+    var_dump($_FILES);
 
-    $fileExt='.'. strtolower(substr(strrchr($fileName, '.'), 1));
-    if (in_array($fileExt, $validExt)){
-
-        echo "Le fichier n'est pas une image !";
-        die; 
-    }
     $tmpName = $FILES['Photo']['tmp_name'];
-    $uniqueName = md5(uniqid(rand(),true));
-    $fileName = 'images/'. $uniqueName . $fileExt;
-    $resultat = move_uploaded_file($tmpName, $fileName);
+    $fileName = $_FILES['Photo']['name'];
+    $size=$_FILES['Photo']['size'];
+    $error=$_FILES['Photo']['error'];
+    $type = $_FILES['Photo']['type'];
 
-    if ($resultat) {
-        echo 'transfert terminé';
-    }*/
+    $tabeExtention = explode('.',$fileName);
+    $extension= strtolower(end($tabeExtention));
 
+    $extensionsAutorisees=['jpg', 'jpeg', 'gif', 'png'];
+    $maxSize=50000;
 
+if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error == 0 ) {
 
+    move_uploaded_file($tmpName, '../images/'. $fileName); }
+    else {
+        echo 'Mauvaise extension ou taille trop importante ou erreur';
+    }
+
+}
+
+}
+
+$intitule = $_POST["Intitule"];
+$description = $_POST["Description"];
 $couchage = $_POST["Nombre_de_couchages"];
 $bain = $_POST["Nombre_de_salles_de_bain"];
 $lieux = $_POST["Emplacement_geographique"];
 $prix = $_POST["Prix"];
+
 
 
 try{
@@ -59,7 +58,7 @@ $sth = $conn->prepare("
 
     $sth->bindParam(':Intitule',$intitule);
     $sth->bindParam(':Description',$description);
-    $sth->bindParam(':Photo',$photo);
+    $sth->bindParam(':Photo', $fileName);
     $sth->bindParam(':Nombre_de_couchages',$couchage);
     $sth->bindParam(':Nombre_de_salles_de_bain',$bain);
     $sth->bindParam(':Emplacement_geographique',$lieux);

@@ -59,7 +59,7 @@
         <input type="number" name="Prix" id="Prix" required>
 
         <div id="submit">
-            <input type="submit" value="Envoyer">
+            <input type="submit" name= "envoyer" value="Envoyer">
         </div>
     </form>
 </body>
