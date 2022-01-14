@@ -27,12 +27,11 @@ $radius-btn : 5px;
 //pour le grid
 .container--fluid{
     display: grid; 
-    grid-template-columns: 0.6fr 1.4fr; 
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
     ". . ."; 
-    justify-content: stretch; 
+    justify-content: left; 
     align-content: stretch; 
     justify-items: stretch; 
     align-items: stretch; 
@@ -47,8 +46,8 @@ $radius-btn : 5px;
 
 body {
     background-color: $color-light;
-    margin: 10;
-    padding: 10;
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat';
 }
 
@@ -59,14 +58,16 @@ nav{
 h1{
     text-align: center;
     font-family: 'Montserrat';
-    font-size: 60px;
+    font-size: 50px;
     color: $color-light;
-    text-shadow: 3px 3px 0px $color-middle;
+    text-shadow: 1px 1px 0px $color-middle;
+    max-width: 100%;
+    height: auto;
 }
 
 img{
-    width: 400px;
-    height: 400px;
+    max-width: 100%;
+    height: auto;
 }
 
 

@@ -12,10 +12,12 @@
     <title>Recherche de gites</title>
 </head>
 <body>
-
+<header>
     <?php
     require 'navbar.php';
     ?>
+</header>
+<main>
     <form action= "test.php" method="post">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
@@ -48,8 +50,32 @@
     </form>
 
     <h2>Des idées pour s'évader ?</h2>
-    <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
-    <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
-    <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
+    <div class="container">
+    <div class="row1">
+        <div class="item">
+            <img src="" alt="" srcset=""> 
+            <p>Nom et lieux</p> 
+            <p>Nombre de Chambre + personne</p>
+            <p>Tarif</p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="item">
+            <img src="" alt="" srcset="">
+            <p>Nom et lieux</p> 
+            <p>Nombre de Chambre + personne</p>
+            <p>Tarif</p>
+        </div>
+    </div>
+    <div class="row3">
+        <div class="item">
+            <img src="" alt="" srcset="">
+            <p>Nom et lieux</p> 
+            <p>Nombre de Chambre + personne</p>
+            <p>Tarif</p>
+        </div>
+</div>
+    </div>
+    </main>
 </body>
 </html>
