@@ -8,7 +8,44 @@ if (empty($_SESSION['result'])) {
 
 $intitule = $_POST["Intitule"];
 $description = $_POST["Description"];
+
+/* Upload de l'image */
+
 $photo = $_POST["Photo"];
+
+/*$maxSize=50000;
+$validExt= array ('.jpg', '.jpeg', '.gif', '.png'); 
+
+    if ($_FILES ['Photo']['error'] ){   
+
+    echo 'Une erreur est survenue lors du transfert ';
+    die;}
+
+    $fileSize = $_FILES ['Photo']['size'];
+        if ($fileSize > $maxSize) {
+
+            echo 'Le fichier est trop gros';
+            die;
+        }
+    $fileName = $_FILES ['Photo']['name'];
+
+    $fileExt='.'. strtolower(substr(strrchr($fileName, '.'), 1));
+    if (in_array($fileExt, $validExt)){
+
+        echo "Le fichier n'est pas une image !";
+        die; 
+    }
+    $tmpName = $FILES['Photo']['tmp_name'];
+    $uniqueName = md5(uniqid(rand(),true));
+    $fileName = 'images/'. $uniqueName . $fileExt;
+    $resultat = move_uploaded_file($tmpName, $fileName);
+
+    if ($resultat) {
+        echo 'transfert terminé';
+    }*/
+
+
+
 $couchage = $_POST["Nombre_de_couchages"];
 $bain = $_POST["Nombre_de_salles_de_bain"];
 $lieux = $_POST["Emplacement_geographique"];

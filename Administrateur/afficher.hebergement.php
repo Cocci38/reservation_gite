@@ -39,6 +39,8 @@
                     
                     /*$sth = $conn->prepare("SELECT * From hebergements where Id= :id"  );*/
 
+                    /* Jointure*/
+
                     $sth = $conn->prepare("SELECT * FROM hebergements
                     LEFT JOIN categories ON hebergements.Id_categorie = categories.Id where hebergements.Id= :id");
 
@@ -48,6 +50,7 @@
 
 
                     echo   '<a href="modifier.hebergement.php?id='.$_GET['id'].'"><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>';
+                    
                     echo '<a href="supprimer.php?id='. $result['Id'] .'"><img class="suppimg" src="images-memory\corbeille.png" alt="supprimer contact"></a></div>';
 
                     if (isset($result)) {
