@@ -16,7 +16,7 @@
     <?php
     require 'navbar.php';
     ?>
-    <form action= "testrecherche.php" method="post">
+    <form action= "test.php" method="post">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
         <input type="text" name="Emplacement_geographique" id="lieux" required>
@@ -41,14 +41,13 @@
             <option value="10">10 et plus</option>
         </select>
 
-        <div class="button">
-                    <input type="text" name="recherche">
-                    <a href = 'listegite.php'><button type="submit" value="SEARCH" >Rechercher</button></a>
-                </div>
+        <div>
+            <a href = 'listegite.php'><button type="submit" name="recherche" value="Search" >Rechercher</button></a>
+        </div>
 
     </form>
 
-    <h3>Des idées pour s'évader ?</h3>
+    <h2>Des idées pour s'évader ?</h2>
     <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
     <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>
     <div>mettre un hébergement comme idée et rajouter un lien vers sa fiche</div>

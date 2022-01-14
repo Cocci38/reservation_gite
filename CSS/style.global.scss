@@ -1,27 +1,75 @@
+//couleur
 $color-middle : #6968e5;
 $color-light :#f5f5f5;
 $color-dark : #28284b;
-$font : Montserrat, sans-serif;
 
-/*nav{
-    background-color: var(--dark-blue);
-}*/
-.container {
+//écriture
+$font : 'Montserrat', 'sans-serif';
+
+//Utilitaire
+
+$radius-btn : 5px;
+
+@mixin absolute ($top, $right, $bottom, $left, $x, $y){
+    position: absolute;
+    top:$top;
+    right:$right;
+    bottom: $bottom;
+    left:$left;
+    transform: translate($x,$y);
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//pour le grid
+.container--fluid{
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 0.6fr 1.4fr; 
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-    ". . .";
+    ". . ."; 
+    justify-content: stretch; 
+    align-content: stretch; 
+    justify-items: stretch; 
+    align-items: stretch; 
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
-    
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo{ 
-    height: 200px;
-    width: 200px;
+
+body {
+    background-color: $color-light;
+    margin: 10;
+    padding: 10;
+    font-family: 'Montserrat';
 }
+
+nav{
+    background-color: $color-dark;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 60px;
+    color: $color-light;
+    text-shadow: 3px 3px 0px $color-middle;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+
