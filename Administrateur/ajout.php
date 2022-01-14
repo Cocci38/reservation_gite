@@ -19,7 +19,7 @@ echo 'ok';
 if (isset ($_FILES['Photo'])) {
     var_dump($_FILES);
 
-    $tmpName = $FILES['Photo']['tmp_name'];
+    $tmpName = $_FILES['Photo']['tmp_name'];
     $fileName = $_FILES['Photo']['name'];
     $size=$_FILES['Photo']['size'];
     $error=$_FILES['Photo']['error'];
@@ -28,7 +28,7 @@ if (isset ($_FILES['Photo'])) {
     $tabeExtention = explode('.',$fileName);
     $extension= strtolower(end($tabeExtention));
 
-    $extensionsAutorisees=['jpg', 'jpeg', 'gif', 'png'];
+    $extensionsAutorisees=['jpg', 'jpeg', 'gif', 'png', 'webp'];
     $maxSize=50000;
 
 if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error == 0 ) {

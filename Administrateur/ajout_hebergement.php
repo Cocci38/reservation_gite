@@ -10,7 +10,7 @@
 
 <?php require 'initialisation.php'; ?>
 
-    <form action= 'ajout.php' method="post">
+    <form action= 'ajout.php' method="post" enctype="multipart/form-data">
 
         <label for="Intitule">Nom de l'hébergement</label>
         <input type="text" name="Intitule" id="Intitule" required>

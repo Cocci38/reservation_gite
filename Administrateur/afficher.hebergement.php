@@ -57,7 +57,7 @@
                         echo "Intitulé : " .$result ['Intitule'] ;
                         echo " Catégorie : " . $result ['Id_categorie'] ;
                         echo " Description : " . $result ['Description'] ;
-                        echo " Photo : "  . '<img src= "../images "'. $result ['Photo']. 'alt="photo hébergement">';
+                        echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">';
                         echo " Nbr de couchages : " . $result ['Nombre_de_couchages'] ;
                         echo " Nbr de salles de bains : " . $result ['Nombre_de_salles_de_bain'] ;
                         echo " Emplacement : " . $result ['Emplacement_geographique'] ;
