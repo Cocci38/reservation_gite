@@ -18,7 +18,7 @@
     ?>
 </header>
 <main>
-    <form action= "test.php" method="post">
+    <form action= "test4.php" method="GET">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
         <input type="text" name="Emplacement_geographique" id="lieux" required>

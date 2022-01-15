@@ -24,7 +24,7 @@
 
 try {
 
-require 'initialisation.php';
+    require '../Administrateur\initialisation.php';
 
     /* Jointure*/
 
