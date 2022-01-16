@@ -44,7 +44,7 @@
         </select>
 
         <div>
-            <a href = 'listegite.php'><button type="submit" name="recherche" value="Search" >Rechercher</button></a>
+            <a href = ''><button type="submit" name="recherche" value="Search" >Rechercher</button></a>
         </div>
 
     </form>

@@ -15,6 +15,7 @@
 <header>
     <?php
     require 'navbar.php';
+    require 'test4.php'
     ?>
 </header>
 <main>
@@ -39,7 +40,7 @@
     <div class="row3">
         <div class="item">
             <img src="" alt="" srcset="">
-            <p>Nom et lieux</p> 
+            <p><?= $result['Emplacement_geographique']; ?></p>
             <p>Nombre de Chambre + personne</p>
             <p>Tarif</p>
         </div>

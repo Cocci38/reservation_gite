@@ -1,6 +1,7 @@
 <?php
 require '../Administrateur\initialisation.php';
 
+
 $hebergement = $conn->query("SELECT * FROM Hebergements");
 if(isset($_GET['recherche']) && !empty($_GET['recherche'])){
     $recherche = htmlspecialchars($_GET['recherche']);
@@ -9,9 +10,8 @@ if(isset($_GET['recherche']) && !empty($_GET['recherche'])){
 }
 if($hebergement->rowCount()>0){
     while($result = $hebergement->fetch()){
-        echo $result['Emplacement_geographique'];
+        $result['Emplacement_geographique'];
 }
-}else
-echo "Il n'y a rien";
+}
 
 ?>
