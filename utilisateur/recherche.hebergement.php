@@ -52,15 +52,18 @@
     <h2>Des idées pour s'évader ?</h2>
     <div class="container">
     <div class="row1">
-        <div class="item">
-            <img src="" alt="" srcset=""> 
-            <p>Nom et lieux</p> 
-            <p>Nombre de Chambre + personne</p>
-            <p>Tarif</p>
+        <div class="container_fluid">
+            <div class="maison">
+            <img src="../images\Maison\Lesterel.jpg" alt="maison l'esterel" srcset="">
+            </div>
+            <p>L'esterel</p> 
+            <p>3 chambres pour 6 personnes</p>
+            <p>100€ par nuit</p>
+            <a href="istegite.php"><button type='submit'></button></a>
         </div>
     </div>
     <div class="row2">
-        <div class="item">
+        <div class=".container_fluid">
             <img src="" alt="" srcset="">
             <p>Nom et lieux</p> 
             <p>Nombre de Chambre + personne</p>
@@ -68,7 +71,7 @@
         </div>
     </div>
     <div class="row3">
-        <div class="item">
+        <div class=".container_fluid">
             <img src="" alt="" srcset="">
             <p>Nom et lieux</p> 
             <p>Nombre de Chambre + personne</p>

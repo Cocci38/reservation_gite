@@ -19,7 +19,7 @@ if(isset($_GET['recherche']) && !empty($_GET['recherche'])){
 ?>
 
     <form method="GET">
-        <input type="search" name="recherche" placeholder="recherche un hébergement"autocomplete="off">
+        <input type="search" name="recherche" placeholder="recherche un hébergement">
         <input type="submit" name="envoyer">
         </form>
 

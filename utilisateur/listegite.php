@@ -40,7 +40,7 @@
     <div class="row3">
         <div class="item">
             <img src="" alt="" srcset="">
-            <p><?= $result['Emplacement_geographique']; ?></p>
+            <p>Intitulé</p>
             <p>Nombre de Chambre + personne</p>
             <p>Tarif</p>
         </div>
