@@ -36,8 +36,8 @@
 ?>
     <form method="GET">
         <label for="lieux">Où souhaitez-vous aller?</label>
-        <input type="search" name="recherche" placeholder="recherche un hébergement">
-        <input type="submit" name="envoyer" value="Rechercher">
+        <input type="search" name="recherche" placeholder="Destination">
+        <button><input type="submit" name="envoyer" value="Rechercher"></button>
         </form>
 
     <?php if (@$afficher=='oui'){?>
@@ -51,13 +51,11 @@
 <div class="container">
 <?php for($i=0;$i<count($tab);$i++){ ?>
     <div class="row1">
-        <div class="item">
-            <img src="" alt="" srcset="">
-            <p><?php echo $tab[$i]["Id_Categorie"] ?></p>
-            <p><?php echo $tab[$i]["Emplacement_geographique"] ?></p>
-            <p><?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
-            <p><?php echo $tab[$i]["Prix"] ?></p>
-        </div>
+            <img src="" alt="" srcset=""><?php echo $tab[$i]["Photo"] ?>
+            <p><?php echo $tab[$i]["Categorie"] ?></p>
+            <p>Lieux : <?php echo $tab[$i]["Emplacement_geographique"] ?></p>
+            <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
+            <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
     </div>
 
 <?php } ?>

@@ -31,7 +31,7 @@ form{
 
 .label{
     color: $color-dark;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 a{
@@ -80,8 +80,8 @@ button,
     }
 
 .container {  display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
     gap: 22px 22px;
     grid-auto-flow: row;
     align-content: center;
@@ -93,41 +93,12 @@ button,
     grid-column-start: 1;
     grid-column-end: 2;
     border: $color-dark solid 1px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
-.row2{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    border: $color-dark solid 1px;
-    border-radius: 10px;
-}
-.row3{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    border: $color-dark solid 1px;
-    border-radius: 10px;
-}
-.row4{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border: $color-dark solid 1px;
-    border-radius: 10px;
-}
-.row5{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    border: $color-dark solid 1px;
-    border-radius: 10px;
-}
-.row6{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    border: $color-dark solid 1px;
-    border-radius: 10px;
-}
+
 .container_fluid {  display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     align-content: stretch;
