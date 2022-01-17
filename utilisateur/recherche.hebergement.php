@@ -18,7 +18,23 @@
     ?>
 </header>
 <main>
-    <form action= "test4.php" method="GET">
+<?php
+    require '../Administrateur\initialisation.php';
+
+    @$recherche=$_GET["recherche"];
+    @$envoyer=$_GET["envoyer"];
+
+    if(isset($envoyer)&& !empty(trim($recherche))){
+        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
+        $sth->setFetchMode(PDO::FETCH_ASSOC);
+        $sth->execute();
+        $tab=$sth->fetchAll();
+
+        $afficher='oui';
+    }
+
+?>
+    <form method="GET">
 
         <label for="lieux">Où souhaitez-vous aller?</label>
         <input type="text" name="Emplacement_geographique" id="lieux" required>
@@ -44,10 +60,21 @@
         </select>
 
         <div>
-            <a href = ''><button type="submit" name="recherche" value="Search" >Rechercher</button></a>
+            <button type="submit" name="recherche" name="valider" value="Search" >Rechercher</button>
         </div>
 
     </form>
+
+    <?php if (@$afficher=='oui'){?>
+        <div id="resultat"></div>
+        <div id="nbr"><?=count($tab)."".(count($tab)>1?" résultats trouvés":" résultat trouvé") ?></div>
+        <ol>
+            <?php for($i=0;$i<count($tab);$i++){ ?>
+            <li><?php echo $tab[$i]["Emplacement_geographique"] ?></li>
+            <li><?php echo $tab[$i]["Nombre_de_couchages"] ?></li>
+            <?php } ?>
+        </ol>
+        <?php } ?>
 
     <h2>Des idées pour s'évader ?</h2>
     <div class="container">
