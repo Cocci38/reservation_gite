@@ -29,7 +29,9 @@
 
      // affichage du résultat
     while($hebergement = $resultat->fetch(PDO::FETCH_OBJ)){
-    echo 'Résultat de la recherche: '.$resultat['Emplacement_geographique'].', '.$resultat['Nombre_de_couchages'];
+        ?><p><?= $result['Emplacement_geographique']; ?></p>
+        <?php
+        
     }
 ?>
 </body>
