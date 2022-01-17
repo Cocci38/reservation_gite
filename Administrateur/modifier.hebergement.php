@@ -27,7 +27,6 @@ if (! empty ( $_GET['id']) && isset ($_GET['id'])) {
     $sth->execute();
     $result = $sth->fetch();
 
-
     
 }
 
@@ -46,7 +45,7 @@ else {
 
 ?>
 
-    <form action= 'modifier.php?id= <?php echo $result['Id']; ?>' method="post">
+    <form action= 'modifier.php?id= <?php echo $result['id']; ?>' method="post" enctype="multipart/form-data">
 
         <label for="Intitule">Nom de l'hébergement</label>
         <input type="text" name="Intitule" value=" <?php echo $result['Intitule'];  ?>" id="Intitule" required>
@@ -55,21 +54,21 @@ else {
         <select name="Categorie" value=" <?php echo $result['Categorie'];  ?>" id="Categorie" required>
         <?php $sth = $conn->prepare("SELECT * From categories" );
                     $sth->execute();
-                    $result = $sth->fetchall(); 
-                 for ($i= 0; $i<count($result); $i++) {
-                echo '<option value='.$result[$i]['Id'].'>'.$result[$i]['Nom'].'</option>';
+                    $resultC = $sth->fetchall(); 
+                 for ($i= 0; $i<count($resultC); $i++) {
+                echo '<option value='.$resultC[$i]['Id'].'>'.$resultC[$i]['Nom'].'</option>';
                  }
                     ?>
         </select>
 
         <label for="Description">Description</label>
-        <textarea name="Description" value="<?php echo $result['Description'];  ?>" id="Description" cols="30" rows="10" required></textarea>
+        <textarea name="Description"   id="Description" cols="30" rows="10" required><?php echo $result['Description'];?></textarea>
 
         <label for="Photo">Photos</label>
-        <input type="file" name="Photo" id="Photo" required>
+        <input type="file" name="Photo" value=" <?php  echo $result ['Photo'] ?>" id="Photo" required>
 
         <label for="Nombre_de_couchages">Nombres de lits</label>
-        <select name="Nombre_de_couchages" id="Nombre_de_couchages" required>
+        <select name="Nombre_de_couchages" value=" <?php echo $result["Nombre_de_couchages"];  ?>"id="Nombre_de_couchages" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -83,16 +82,16 @@ else {
         </select>
 
         <label for="Nombre_de_salles_de_bain">Salle(s) de bain</label>
-        <select name="Nombre_de_salles_de_bain" id="Nombre_de_salles_de_bain" required>
+        <select name="Nombre_de_salles_de_bain" value=" <?php echo $result["Nombre_de_salles_de_bain"];  ?>"id="Nombre_de_salles_de_bain" required>
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
 
         <label for="Emplacement_geographique">Lieux</label>
-        <input type="text" name="Emplacement_geographique" id="Emplacement_geographique" required>
+        <input type="text" name="Emplacement_geographique" value=" <?php echo $result["Emplacement_geographique"];?>" id="Emplacement_geographique" required>
 
         <label for="Prix">Prix</label>
-        <input type="number" name="Prix" id="Prix" required>
+        <input type="number" name="Prix" value=" <?php echo $result["Prix"];  ?>" id="Prix" required>
 
         <div id="submit">
             <input type="submit" value="Envoyer">

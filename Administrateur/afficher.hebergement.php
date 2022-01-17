@@ -51,7 +51,7 @@
 
                     echo   '<a href="modifier.hebergement.php?id='.$_GET['id'].'"><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>';
                     
-                    echo '<a href="supprimer.php?id='. $result['Id'] .'"><img class="suppimg" src="images-memory\corbeille.png" alt="supprimer contact"></a></div>';
+                    echo '<a href="supprimer.php?id='. $_GET['id'] .'"><img class="suppimg" src="" alt="supprimer contact"></a></div>';
 
                     if (isset($result)) {
                         echo "Intitulé : " .$result ['Intitule'] ;
