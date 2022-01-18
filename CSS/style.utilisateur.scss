@@ -112,6 +112,30 @@ button,
     ".";
 }
 
+.ellipsis-container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 4px 0px;
+    grid-auto-flow: row;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+    "."
+    "."
+    "."
+    ".";
+    margin: 300px;
+}
+
+.row2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+}
+
+
 img{
     max-width: 100%;
     max-height: 100%;

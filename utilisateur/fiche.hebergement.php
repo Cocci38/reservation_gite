@@ -28,24 +28,24 @@ try {
 
     /* Jointure*/
 
-    $sth = $conn->prepare("SELECT * FROM hebergements
-    LEFT JOIN categories ON hebergements.Id_categorie = categories.Id where hebergements.Id= :id");
+    $sth = $conn->prepare("SELECT * FROM hebergements");
+        $sth->execute();
+        $result = $sth->fetch();
 
-    $sth -> bindValue (":id" , $_GET['id'] );
-    $sth->execute();
-    $result = $sth->fetch();
-
-    if (isset($result)) {
-        echo "Intitulé : " .$result ['Intitule'] ;
-        echo " Catégorie : " . $result ['Id_categorie'] ;
-        echo " Description : " . $result ['Description'] ;
-        echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">';
-        echo " Nbr de couchages : " . $result ['Nombre_de_couchages'] ;
-        echo " Nbr de salles de bains : " . $result ['Nombre_de_salles_de_bain'] ;
-        echo " Emplacement : " . $result ['Emplacement_geographique'] ;
-        echo " Prix : " . $result ['Prix'] ;
-
-
+        if (isset($result)) { ?>
+            <div class="ellipsis-container">
+                <div class="row2">
+                    <h2><?php echo $result ['Intitule'] ; ?></h2>
+                    <p>à <?php echo $result ['Emplacement_geographique'] ; ?></p>
+                    <span><?php echo " Catégorie : " . $result ['Id_categorie'] ;?></span>
+                    <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
+                    <span>Capacité : <?php echo $result ['Nombre_de_couchages'] ; ?> personne(s)</span>
+                    <span>Capacité : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?> salle de bain</span>
+                    <span>Description : <?php echo $result ['Description'] ; ?></span>
+                    <span>Tarif : <?php echo $result ['Prix'] ; ?>€</span>
+                    <a href="reservation.utili.php"><button type="submit">Réservation</button></a>
+                    
+                    <?php
     }
 } catch (PDOException $e) {
     echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();

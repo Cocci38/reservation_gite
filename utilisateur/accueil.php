@@ -51,11 +51,12 @@
 <div class="container">
 <?php for($i=0;$i<count($tab);$i++){ ?>
     <div class="row1">
-            <img src="" alt="" srcset=""><?php echo $tab[$i]["Photo"] ?>
+    <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement"></a>'; ?>
             <p><?php echo $tab[$i]["Categorie"] ?></p>
-            <p>Lieux : <?php echo $tab[$i]["Emplacement_geographique"] ?></p>
+            <p>Lieux : <?php echo '<a href="fiche.hebergement.php"'.$tab[$i]["Emplacement_geographique"].'</a>' ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
+            <a href="fiche.hebergement.php"><button type="submit"></button></a>
     </div>
 
 <?php } ?>
