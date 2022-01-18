@@ -3,3 +3,49 @@ $color-light :#f5f5f5;
 $color-dark : #28284b;
 $font : Montserrat, sans-serif;
 
+
+
+header {
+background: $color-dark;
+display: flex
+
+}
+
+h1{
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 50px;
+  color: $color-light;
+  text-shadow: 1px 1px 0px $color-middle;
+  max-width: 100%;
+  height: auto;
+}
+
+//pour le grid
+.container--fluid{
+  display: grid; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+  ". . ."; 
+  justify-content: left; 
+  align-content: stretch; 
+  justify-items: stretch; 
+  align-items: stretch; 
+
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block::after {
+
+  content :"";
+  border-left: 2px $color-middle solid;
+ 
+
+
+}

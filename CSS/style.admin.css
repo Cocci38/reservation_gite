@@ -1,1 +1,36 @@
+header {
+  background: #28284b;
+  display: flex;
+}
 
+h1 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 50px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 0px #6968e5;
+  max-width: 100%;
+  height: auto;
+}
+
+.container--fluid {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+  justify-content: left;
+  align-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block::after {
+  content: "";
+  border-left: 2px #6968e5 solid;
+}
