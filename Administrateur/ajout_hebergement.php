@@ -4,14 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS\style.admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+
     <title>Ajouter hébergement</title>
 </head>
 <body>
+<button><a href="deconnexion.php">Deconnexion</a></button> 
+<button><a href="indexheb.php">Accueil</a></button> 
+
+<header>
+
+
+
+<nav class="container--fluid">
+<div class="item">
+    <a href="indexheb.php"><img class = "logo" src="../imageeasytrip\Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
+</div>
+<div class="item">
+    <h1>Avec nous voyager facile !</h1>
+</div>
+</nav>
+</header>
+
+
+<main>
 
 <?php require 'initialisation.php'; ?>
 
-    <form action= 'ajout.php' method="post" enctype="multipart/form-data">
+<a href="categorie.php">Ajouter catégorie </a>
 
+    <form action= 'ajout.php' method="post" enctype="multipart/form-data">
+<div class="col1">
         <label for="Intitule">Nom de l'hébergement</label>
         <input type="text" name="Intitule" id="Intitule" required>
 
@@ -28,7 +54,9 @@
 
         <label for="Description">Description</label>
         <textarea name="Description" id="Description" cols="30" rows="10" required></textarea>
+        </div>
 
+        <div class="col2">
         <label for="Photo">Photos</label>
         <input type="file" name="Photo" id="Photo" required>
 
@@ -51,6 +79,7 @@
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
+      
 
         <label for="Emplacement_geographique">Lieux</label>
         <input type="text" name="Emplacement_geographique" id="Emplacement_geographique" required>
@@ -61,6 +90,8 @@
         <div id="submit">
             <input type="submit" name= "envoyer" value="Envoyer">
         </div>
+        </div>
     </form>
+    </main>
 </body>
 </html>

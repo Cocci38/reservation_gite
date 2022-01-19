@@ -1,7 +1,8 @@
 $color-middle : #6968e5;
 $color-light :#f5f5f5;
 $color-dark : #28284b;
-$font : Montserrat, sans-serif;
+//écriture
+$font : 'Montserrat', 'sans-serif';
 
 
 
@@ -11,9 +12,21 @@ display: flex
 
 }
 
+body{
+  font-style: $color-dark solid;
+  background-color: $color-light;
+  font-family: $font;
+  }
+
+main {
+  margin:50px 150px ;
+padding: 2px 10px 2px 10px;
+background-color: $color-middle;
+}
+
 h1{
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: $font;
   font-size: 50px;
   color: $color-light;
   text-shadow: 1px 1px 0px $color-middle;
@@ -41,11 +54,71 @@ h1{
   justify-content: center;
 }
 
-.block::after {
 
-  content :"";
-  border-left: 2px $color-middle solid;
+.block {
+   
+    outline: solid $color-dark 2px;
+    background-color: $color-light;
+    margin: 20px;
+    padding: 1px 3px 2px 3px;
+    height: 80px;
+
+  
+
+}
+
+.liste {
+
+  display: grid;
+  grid-template-columns: 7fr 7fr 7fr;
+  grid-template-rows: repeat (100px) ;
+  height: 300px;
+
+}
+
+img {
+
+  width: 300px;
+}
+
+// formulaires 
+
+
+form {
+  width  : 80%;
+  margin : 50px; 
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  padding: 10px;
+  background-color: $color-light;
+  
+
+}
+
+label {
+  margin-top:10px;
+  display:block;
+  }
+
+  input, textarea, select {
+    padding:3px;
+    border:1px solid $color-dark;
+    border-radius:5px;
+    width:300px;
+    box-shadow:1px 1px 2px $color-middle;
+    }
  
 
+    select {
+      margin-top:10px;
+      }
 
+ input {
+   margin-top: 10px;
+ }   
+
+.col1, .col2  {
+  margin : 10px;
+  padding: 10px ;
 }

@@ -40,8 +40,8 @@ if (isset ($_POST['envoyer'])){
     }
 
 $intitule = $_POST["Intitule"];
+$id_categorie= $_POST["Id_categorie"];
 $description = $_POST["Description"];
-$photo = $_POST["Photo"];
 $couchage = $_POST["Nombre_de_couchages"];
 $bain = $_POST["Nombre_de_salles_de_bain"];
 $lieux = $_POST["Emplacement_geographique"];
@@ -49,10 +49,11 @@ $prix = $_POST["Prix"];
 
 
 try{
-    $sth = $conn->prepare(" UPDATE hebergements SET Intitule= :Intitule, Description= :Description, Photo= :Photo, Nombre_de_couchages= :Nombre_de_couchages, Nombre_de_salles_de_bain= :Nombre_de_salles_de_bain, Emplacement_geographique= :Emplacement_geographique, Prix= :Prix where Id= :id"); 
+    $sth = $conn->prepare(" UPDATE hebergements SET Intitule= :Intitule, Id_categorie= :Id_categorie, Description= :Description, Photo= :Photo, Nombre_de_couchages= :Nombre_de_couchages, Nombre_de_salles_de_bain= :Nombre_de_salles_de_bain, Emplacement_geographique= :Emplacement_geographique, Prix= :Prix where Id= :id"); 
  
     
         $sth->bindParam(':Intitule',$intitule);
+        $sth->bindParam(':Id_categorie',$id_categorie);
         $sth->bindParam(':Description',$description);
         $sth->bindParam(':Photo',$fileName);
         $sth->bindParam(':Nombre_de_couchages',$couchage);
@@ -63,7 +64,8 @@ try{
 
         $sth->execute();
     
-        //header();
+        header('indexheb.php');
+
         
     }
     catch (PDOException $e) {
