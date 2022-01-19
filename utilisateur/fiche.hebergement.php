@@ -28,7 +28,7 @@ try {
 
     /* Jointure*/
 
-    $lien = $conn->prepare('SELECT * FROM Hebergements, Categories');
+    $lien = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id');
 
         $lien->execute();
         $result = $lien->fetch();
