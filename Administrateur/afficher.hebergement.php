@@ -35,7 +35,9 @@
 </div>
 </nav>
 </header>      
-               
+    
+
+<main>
 
 
                 <?php
@@ -66,19 +68,35 @@
                     $result = $sth->fetch();
 
 
-                    echo   '<a href="modifier.hebergement.php?id='.$_GET['id'].'"><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>';
-                    
-                    echo '<a href="supprimer.php?id='. $_GET['id'] .'"><img class="suppimg" src="" alt="supprimer hébergement"></a></div>';
-
+                   
                     if (isset($result)) {
-                        echo "Intitulé : " .$result ['Intitule'] ;
-                        echo " Catégorie : " . $result ['Nom'] ;
-                        echo " Description : " . $result ['Description'] ;
-                        echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">';
-                        echo " Nbr de couchages : " . $result ['Nombre_de_couchages'] ;
-                        echo " Nbr de salles de bains : " . $result ['Nombre_de_salles_de_bain'] ;
-                        echo " Emplacement : " . $result ['Emplacement_geographique'] ;
-                        echo " Prix : " . $result ['Prix'] ;
+                        ?>
+                        <div class="fiche_hebergement">
+
+                       
+                        <span> <?php  echo $result ['Intitule'] ;?></span>
+                        <span> <?php  echo " Catégorie : " . $result ['Nom'] ;?></span>
+                        <span> <?php echo " Description : " . $result ['Description'] ;?></span>
+                        <span> <?php echo " Nbr de couchages : " . $result ['Nombre_de_couchages'] ;?></span>
+                        <span><?php echo " Nbr de salles de bains : " . $result ['Nombre_de_salles_de_bain'] ;?></span>
+                        <span> <?php echo " Emplacement : " . $result ['Emplacement_geographique'] ;?></span>
+                        <span> <?php echo " Prix : " . $result ['Prix'] ;?></span>
+                        <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">';?></span>
+                     
+
+                      
+                    
+                   
+                      <div class="btn-crud">
+                        <button> <?php echo   '<a href="modifier.hebergement.php?id='.$_GET['id'].'"><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>'; ?></button>
+
+        <button><?php echo '<a href="supprimer.php?id='. $_GET['id'] .'"><img class="suppimg" src="" alt="supprimer hébergement"></a></div>';
+
+?></button>
+          </div>             
+                       </div>    
+                       
+                       <?php
 
 
                     }
@@ -94,12 +112,7 @@
             </div>
         </div>
     </div>
-   
-   
-        
-    
-
-    ?>
+    </main>
 
 
 </body></html>

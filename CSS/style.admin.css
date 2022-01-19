@@ -96,3 +96,56 @@ input {
   margin: 10px;
   padding: 10px;
 }
+
+.fiche_hebergement {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas: "a a" "b c" "d e" "f f" "g g" "h h" "h h" "i i";
+  height: auto;
+}
+.fiche_hebergement span {
+  outline: solid #6968e5 2px;
+  background-color: #f5f5f5;
+  margin: 4px;
+  padding: 4px;
+}
+.fiche_hebergement span:nth-child(1) {
+  background-color: red;
+  grid-area: a;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 15px;
+}
+.fiche_hebergement span:nth-child(2) {
+  grid-area: b;
+  background-color: green;
+}
+.fiche_hebergement span:nth-child(3) {
+  grid-area: c;
+  background-color: yellow;
+}
+.fiche_hebergement span:nth-child(4) {
+  grid-area: d;
+  background-color: blue;
+}
+.fiche_hebergement span:nth-child(5) {
+  grid-area: e;
+  background-color: purple;
+}
+.fiche_hebergement span:nth-child(6) {
+  grid-area: f;
+  background-color: orange;
+}
+.fiche_hebergement span:nth-child(7) {
+  grid-area: g;
+  background-color: grey;
+}
+.fiche_hebergement span:nth-child(8) {
+  grid-area: h;
+  background-color: pink;
+}
+.fiche_hebergement .btn-crud {
+  grid-area: i;
+  background-color: black;
+}
