@@ -122,3 +122,73 @@ label {
   margin : 10px;
   padding: 10px ;
 }
+
+
+.fiche_hebergement {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  grid-template-rows: repeat(8, 1fr) ;
+  grid-template-areas: "a a"
+                       "b c"
+                       "d e"
+                       "f f"
+                       "g g"
+                       "h h"
+                       "h h"
+                       "i i";
+  height: auto;
+
+ 
+  span{
+    outline: solid $color-middle 2px;
+    background-color: $color-light;
+    margin: 4px;
+    padding: 4px;
+
+    &:nth-child(1) {
+background-color: red;
+grid-area: a;
+text-align: center;
+font-size: 25px;
+margin-top: 15px;
+    } 
+    &:nth-child(2){
+      grid-area:b;
+      background-color: green;
+    }
+
+    &:nth-child(3){
+      grid-area: c;
+      background-color: yellow;
+    }
+    &:nth-child(4){
+      grid-area:d;
+      background-color: blue;
+    }
+    &:nth-child(5){
+      grid-area:e;
+      background-color: purple;
+    }
+    &:nth-child(6){
+      grid-area:f;
+      background-color: orange;
+    }
+    &:nth-child(7){
+      grid-area: g;
+      background-color: grey;
+    }
+    &:nth-child(8){
+      grid-area: h;
+      background-color: pink;
+    }
+  }
+
+
+  .btn-crud {
+grid-area: i ;
+background-color: black;
+
+  }
+}
+
