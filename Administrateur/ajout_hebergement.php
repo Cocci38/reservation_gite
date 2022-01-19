@@ -16,7 +16,7 @@
         <input type="text" name="Intitule" id="Intitule" required>
 
         <label for="Categorie">Type d'hébergement</label>
-        <select name="Categorie" id="Categorie" required>
+        <select name="Id_categorie" id="Id_categorie" required>
         <?php $sth = $conn->prepare("SELECT * From categories" );
                     $sth->execute();
                     $result = $sth->fetchall(); 

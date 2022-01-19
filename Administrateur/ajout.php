@@ -46,6 +46,7 @@ if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error 
 }
 
 $intitule = $_POST["Intitule"];
+$id_categorie= $_POST["Id_categorie"];
 $description = $_POST["Description"];
 $couchage = $_POST["Nombre_de_couchages"];
 $bain = $_POST["Nombre_de_salles_de_bain"];
@@ -54,24 +55,28 @@ $prix = $_POST["Prix"];
 
 
 
+
 try{
-$sth = $conn->prepare("
-    INSERT INTO hebergements(Intitule, Description, Photo, Nombre_de_couchages, Nombre_de_salles_de_bain, Emplacement_geographique, Prix)
-    VALUES(:Intitule, :Description, :Photo, :Nombre_de_couchages, :Nombre_de_salles_de_bain, :Emplacement_geographique, :Prix)");
+$sth = $conn->prepare ("INSERT INTO hebergements (Intitule, Id_categorie, Description, Photo, Nombre_de_couchages, Nombre_de_salles_de_bain, Emplacement_geographique, Prix)
+    VALUES(:Intitule, :Id_categorie, :Description, :Photo, :Nombre_de_couchages, :Nombre_de_salles_de_bain, :Emplacement_geographique, :Prix)");
+
+/*$sth = $conn->prepare("INSERT INTO hebergements (Id_categorie) SELECT Nom FROM categories VALUES(:Id_categorie)");*/
 
     $sth->bindParam(':Intitule',$intitule);
+    $sth->bindParam(':Id_categorie',$id_categorie);
     $sth->bindParam(':Description',$description);
     $sth->bindParam(':Photo', $fileName);
     $sth->bindParam(':Nombre_de_couchages',$couchage);
     $sth->bindParam(':Nombre_de_salles_de_bain',$bain);
     $sth->bindParam(':Emplacement_geographique',$lieux);
     $sth->bindParam(':Prix',$prix);
+   
     $sth->execute();
 
 
 
-
     //header();
+
     
 }
 catch (PDOException $e) {
