@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS\style.admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+
     <title>Modifier hébergement</title>
 </head>
 <body>
 <button><a href="indexheb.php">Accueil</a></button> 
+
+<button><a href="deconnexion.php">Deconnexion</a></button> 
+
+
+<button><a href="../utilisateur\listegite.php">Utilisateur</a></button> 
+<header>
+
+
+
+<nav class="container--fluid">
+<div class="item">
+    <a href="indexheb.php"><img class = "logo" src="../imageeasytrip\Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
+</div>
+<div class="item">
+    <h1>Avec nous voyager facile !</h1>
+</div>
+</nav>
+</header>
+
+
 <?php
 
 
@@ -44,14 +69,14 @@ else {
     
 
 ?>
-
+<main>
     <form action= 'modifier.php?id= <?php echo $result['id']; ?>' method="post" enctype="multipart/form-data">
-
+    <div class="col1">
         <label for="Intitule">Nom de l'hébergement</label>
         <input type="text" name="Intitule" value=" <?php echo $result['Intitule'];  ?>" id="Intitule" required>
 
         <label for="Categorie">Type d'hébergement</label>
-        <select name="Categorie" value=" <?php echo $result['Categorie'];  ?>" id="Categorie" required>
+        <select name="Id_categorie" value=" <?php echo $result['Categorie'];  ?>" id="Id_categorie" required>
         <?php $sth = $conn->prepare("SELECT * From categories" );
                     $sth->execute();
                     $resultC = $sth->fetchall(); 
@@ -63,9 +88,11 @@ else {
 
         <label for="Description">Description</label>
         <textarea name="Description"   id="Description" cols="30" rows="10" required><?php echo $result['Description'];?></textarea>
+        </div>
 
+        <div class="col2">
         <label for="Photo">Photos</label>
-        <input type="file" name="Photo" value=" <?php  echo $result ['Photo'] ?>" id="Photo" required>
+        <input type="file" name="Photo" value=" <?php   echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>" id="Photo" required>
 
         <label for="Nombre_de_couchages">Nombres de lits</label>
         <select name="Nombre_de_couchages" value=" <?php echo $result["Nombre_de_couchages"];  ?>"id="Nombre_de_couchages" required>
@@ -96,6 +123,9 @@ else {
         <div id="submit">
             <input type="submit" value="Envoyer">
         </div>
+        </div>
     </form>
+
+    <main>
 </body>
 </html>
