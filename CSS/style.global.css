@@ -24,7 +24,12 @@ body {
   background-color: #f5f5f5;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family: "Montserrat", "sans-serif";
+}
+
+main {
+  margin: 50px 150px 50px 150px;
+  padding: 10px;
 }
 
 nav {
@@ -33,7 +38,7 @@ nav {
 
 h1 {
   text-align: center;
-  font-family: "Montserrat";
+  font-family: #28284b;
   font-size: 50px;
   color: #f5f5f5;
   text-shadow: 1px 1px 0px #6968e5;

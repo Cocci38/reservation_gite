@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../CSS\style.utilisateur.css">
 <link rel="stylesheet" href="../CSS\style.global.css">
     <title>Réservation</title>
 </head>
 <body>
+    <header>
     <?php
     require 'navbar.php';
     ?>
-<section>
-            <h2>Réservation</h2>
-            <form action="reservation.php" method="post">
+    </header>
+    <main>
+
+    <h2>Réservation</h2>
+            <form class="reservation" action="reservation.php" method="post">
             <div class = "date">
-                    <h4>Vos dates de séjour</h4>
+                    <h3>Vos dates de séjour</h3>
                 <div>
                     <label for="arrivee">Du</label>
                     <input type="date" id="arrivee" name="arrivee" required>
@@ -30,7 +33,7 @@
                 </div>
                 </div>
                 <div class = "personne">
-                    <h4>Nombres de personnes</h4>
+                    <h3>Nombres de personnes</h3>
                 <div>
                     <label for="adulte">Adulte</label>
                     <input type="text" id="adulte" name="adulte" required>
@@ -78,13 +81,16 @@
                     <input type="email" id="mail" name="mail" required>
                 </div>
                 </div>
-                <div class="button">
+                <div class="btn">
+                <div>
                     <button type="submit">Valider</button>
                 </div>
-                <div class="button">
+                <div>
                     <a href=fiche.hebergement.php></a><button type = "button" value = "Retour"  onclick = "history.go(-1)">Annuler</button>
                 </div>
+                </div>
             </form>
-        </section>
+
+        </main>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../CSS\style.utilisateur.css">
 <link rel="stylesheet" href="../CSS\style.global.css">
     <title>Recherche de gites</title>
@@ -35,30 +35,29 @@
 
 ?>
     <form method="GET">
-        <label for="lieux">Où souhaitez-vous aller?</label>
-        <input type="search" name="recherche" placeholder="Destination">
-        <button><input type="submit" name="envoyer" value="Rechercher"></button>
-        </form>
+        <div class="recherche-container">
+            <label for="lieux">Où souhaitez-vous aller?</label>
+            <input type="search" name="recherche" placeholder="Destination">
+            <input type="submit" name="envoyer" value="Rechercher">
+        </div>
+    </form>
 
     <?php if (@$afficher=='oui'){?>
         <div id="resultat"></div>
         <div id="nbr"><?=count($tab)."".(count($tab)>1?" résultats trouvés":" résultat trouvé") ?></div>
             
-
-            
-
         <h2>Liste des hébergements disponibles</h2>
-<div class="container">
+<div class="liste-gite-container">
 <?php for($i=0;$i<count($tab);$i++){ ?>
-    <div class="row1">
+    <div class="liste-gite-content">
     <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement"></a>'; ?>
-            <p><?php echo $tab[$i]["Categorie"] ?></p>
-            <p>Lieux : <?php echo '<a href="fiche.hebergement.php"'.$tab[$i]["Emplacement_geographique"].'</a>' ?></p>
+            <p><?php echo $tab[$i]["Nom"] ?></p>
+            <p><?php echo '<a href="./fiche.hebergement.php?id=' . $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
+            <p>Lieux : <?php echo $tab[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
             <a href="fiche.hebergement.php"><button type="submit"></button></a>
     </div>
-
 <?php } ?>
 </div>
         <?php } ?>

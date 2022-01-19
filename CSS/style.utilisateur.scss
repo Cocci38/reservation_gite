@@ -1,7 +1,7 @@
 $color-middle : #6968e5;
 $color-light :#f5f5f5;
 $color-dark : #28284b;
-$font : Montserrat, sans-serif;
+$font : 'Montserrat', sans-serif;
 
 %flex-center {
     display: flex;
@@ -21,98 +21,80 @@ main{
     margin: 100px;
     padding: 10px;
 }
+
 form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recherche-container{
+    display: grid;
+    grid-template-columns: 50% 30% 20%; 
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+label{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: $color-dark solid 1px;
-    border-radius: 10px;
 }
 
-.label{
+input[type="search"]{
+    font-family: $font;
+    font-style: $color-dark;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    font-family: $font;
+    padding: 0px;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: $color-middle;
+}
+
+input:hover[type="submit"]{
     color: $color-dark;
-    border-radius: 30px;
+    background-color: $color-light;
+    transition: 0.3s all;
 }
 
 a{
     color: $color-dark;
     border-radius: 30px;
 }
-button,
-        button::after {
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-        }
-        button {
-        background: none;
-        border: 4px solid #fff;
-        border-radius: 10px;
-        color: $color-middle;
-        display: block;
-        margin: 10px auto;
-        padding: 1em 3em;
-        position: relative;
-        text-transform: uppercase;
-        }
-        button::before,
-        button::after {
-        background: #fff;
-        content: '';
-        position: absolute;
-        z-index: -1;
-        }
-        button:hover {
-        color: $color-dark
-        }
-.button::after {
-    height: 0;
-    left: 50%;
-    top: 50%;
-    width: 0;
-    }
-    .button:hover:after {
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    }
 
-.container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr;
-    gap: 22px 22px;
-    grid-auto-flow: row;
+
+.liste-gite-container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-content: center;
     justify-items: center;
     align-items: center;
+    width: 95%;
+    background: yellow;
 
-}
-.row1{
-    grid-column-start: 1;
-    grid-column-end: 2;
+.liste-gite-content{
+    padding: 15px;
     border: $color-dark solid 1px;
     border-radius: 30px;
+    width: 30%;
+    background: green;
 }
-
-.container_fluid {  display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    align-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-    grid-template-areas:
-    "."
-    "."
-    "."
-    "."
-    ".";
 }
-
-.ellipsis-container {  display: grid;
+.ellipsis-container {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 4px 0px;
@@ -145,6 +127,44 @@ img{
 .maison{
     height: auto;
     width: auto;
+}
+
+.reservation{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 4px 0px; 
+    grid-template-areas: 
+    "."
+    "."
+    "."
+    "."; 
+    align-content: start; 
+    justify-items: center; 
+    align-items: start;
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+}
+
+.date{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.personne{
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+.corps{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.btn{
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 
