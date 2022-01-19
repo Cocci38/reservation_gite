@@ -17,7 +17,7 @@ echo 'ok';
 
 
 if (isset ($_FILES['Photo'])) {
-  
+    var_dump($_FILES);
 
     $tmpName = $_FILES['Photo']['tmp_name'];
     $fileName = $_FILES['Photo']['name'];
@@ -29,15 +29,12 @@ if (isset ($_FILES['Photo'])) {
     $extension= strtolower(end($tabeExtention));
 
     $extensionsAutorisees=['jpg', 'jpeg', 'gif', 'png', 'webp'];
-    $maxSize=70000;
+    $maxSize=50000;
 
-    
 if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error == 0 ) {
 
     move_uploaded_file($tmpName, '../images/'. $fileName); }
     else {
-
-        /*var_dump($_FILES);*/
         echo 'Mauvaise extension ou taille trop importante ou erreur';
     }
 

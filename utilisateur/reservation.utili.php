@@ -82,7 +82,7 @@
                     <button type="submit">Valider</button>
                 </div>
                 <div class="button">
-                    <button type="reset">Annuler</button>
+                    <a href=fiche.hebergement.php></a><button type = "button" value = "Retour"  onclick = "history.go(-1)">Annuler</button>
                 </div>
             </form>
         </section>
