@@ -29,7 +29,7 @@ if (isset ($_FILES['Photo'])) {
     $extension= strtolower(end($tabeExtention));
 
     $extensionsAutorisees=['jpg', 'jpeg', 'gif', 'png', 'webp'];
-    $maxSize=50000;
+    $maxSize=200000;
 
 if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error == 0 ) {
 

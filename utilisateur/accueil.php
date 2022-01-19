@@ -18,6 +18,7 @@
     ?>
 </header>
 <main>
+    <div class="mainAccueil">
 <?php
     require '../Administrateur\initialisation.php';
 
@@ -25,14 +26,13 @@
     @$envoyer=$_GET["envoyer"];
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
+        $sth = $conn->prepare('SELECT * FROM Hebergements, Categories WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
         $sth->setFetchMode(PDO::FETCH_ASSOC);
         $sth->execute();
         $tab=$sth->fetchAll();
 
         $afficher='oui';
     }
-
 ?>
     <form method="GET">
         <div class="recherche-container">
@@ -48,19 +48,21 @@
             
         <h2>Liste des hébergements disponibles</h2>
 <div class="liste-gite-container">
+
 <?php for($i=0;$i<count($tab);$i++){ ?>
+
     <div class="liste-gite-content">
-    <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement"></a>'; ?>
-            <p><?php echo $tab[$i]["Nom"] ?></p>
+    <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
+            <p><?php echo  $tab[$i]["Nom"] .'<br>' . '<br>' ?></p>
             <p><?php echo '<a href="./fiche.hebergement.php?id=' . $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
-            <a href="fiche.hebergement.php"><button type="submit"></button></a>
     </div>
 <?php } ?>
 </div>
         <?php } ?>
+        </div>
     </main>
 </body>
 </html>

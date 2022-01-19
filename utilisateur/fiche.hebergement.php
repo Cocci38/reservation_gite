@@ -28,7 +28,8 @@ try {
 
     /* Jointure*/
 
-    $lien = $conn->prepare('SELECT * FROM Hebergements ');
+    $lien = $conn->prepare('SELECT * FROM Hebergements, Categories');
+
         $lien->execute();
         $result = $lien->fetch();
 

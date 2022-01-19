@@ -8,32 +8,27 @@ header {
   padding: 3px;
 }
 
-main {
-  margin: 100px;
-  padding: 10px;
+.mainAccueil {
+  background-color: #f5f5f5;
 }
-
-form {
+.mainAccueil form {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.recherche-container {
+.mainAccueil .recherche-container {
   display: grid;
   grid-template-columns: 50% 30% 20%;
   border: #28284b solid 1px;
   border-radius: 30px;
   margin: auto;
 }
-
-label {
+.mainAccueil label {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-input[type=search] {
+.mainAccueil input[type=search] {
   font-family: "Montserrat", sans-serif;
   font-style: #28284b;
   padding: 10px;
@@ -43,8 +38,7 @@ input[type=search] {
   border-radius: 20px;
   text-align: center;
 }
-
-input[type=submit] {
+.mainAccueil input[type=submit] {
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   padding: 0px;
@@ -55,33 +49,30 @@ input[type=submit] {
   text-align: center;
   background-color: #6968e5;
 }
-
-input:hover[type=submit] {
+.mainAccueil input:hover[type=submit] {
   color: #28284b;
   background-color: #f5f5f5;
   transition: 0.3s all;
 }
-
-a {
-  color: #28284b;
-  border-radius: 30px;
-}
-
-.liste-gite-container {
+.mainAccueil .liste-gite-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   align-content: center;
   justify-items: center;
   align-items: center;
   width: 95%;
-  background: yellow;
 }
-.liste-gite-container .liste-gite-content {
+.mainAccueil .liste-gite-container .liste-gite-content {
   padding: 15px;
   border: #28284b solid 1px;
   border-radius: 30px;
-  width: 30%;
-  background: green;
+  width: 85%;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.mainAccueil .liste-gite-container .liste-gite-content img {
+  width: 80%;
+  height: 100px;
 }
 
 .ellipsis-container {
@@ -147,4 +138,9 @@ img {
 .btn {
   grid-row-start: 4;
   grid-row-end: 5;
+}
+
+a {
+  color: #28284b;
+  border-radius: 30px;
 }

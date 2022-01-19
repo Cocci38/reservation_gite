@@ -17,10 +17,9 @@ header{
     margin: 3px;
     padding: 3px;
 }
-main{
-    margin: 100px;
-    padding: 10px;
-}
+
+.mainAccueil{
+background-color: $color-light;
 
 form{
     display: flex;
@@ -71,28 +70,29 @@ input:hover[type="submit"]{
     transition: 0.3s all;
 }
 
-a{
-    color: $color-dark;
-    border-radius: 30px;
-}
-
-
-.liste-gite-container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.liste-gite-container {  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-content: center;
     justify-items: center;
     align-items: center;
     width: 95%;
-    background: yellow;
 
 .liste-gite-content{
     padding: 15px;
     border: $color-dark solid 1px;
     border-radius: 30px;
-    width: 30%;
-    background: green;
+    width: 85%;
+    margin-top: 10px;
+    overflow: hidden;
+    img{
+        width: 80%;
+        height: 100px;
+    }
 }
 }
+}
+
 .ellipsis-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -167,4 +167,7 @@ img{
     grid-row-end: 5;
 }
 
-
+a{
+    color: $color-dark;
+    border-radius: 30px;
+}
