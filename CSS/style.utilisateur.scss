@@ -25,6 +25,7 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: auto;
 }
 
 .recherche-container{
@@ -39,6 +40,8 @@ label{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
 }
 
 input[type="search"]{
@@ -61,13 +64,14 @@ input[type="submit"]{
     border: $color-dark solid 1px;
     border-radius: 20px;
     text-align: center;
-    background-color: $color-middle;
+    color: $color-light;
+    background-color: $color-dark;
 }
 
 input:hover[type="submit"]{
-    color: $color-dark;
-    background-color: $color-light;
-    transition: 0.3s all;
+    color: $color-light;
+    background-color: $color-middle;
+    transition: 0.8s all;
 }
 
 .liste-gite-container {  
@@ -115,18 +119,6 @@ input:hover[type="submit"]{
     grid-column-end: 2;
     border: $color-dark solid 1px;
     border-radius: 30px;
-}
-
-
-img{
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 30px;
-    object-fit: contain;
-}
-.maison{
-    height: auto;
-    width: auto;
 }
 
 .reservation{
