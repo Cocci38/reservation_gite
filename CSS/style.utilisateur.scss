@@ -97,28 +97,105 @@ input:hover[type="submit"]{
 }
 }
 
-.ellipsis-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 4px 0px;
-    grid-auto-flow: row;
-    align-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-    grid-template-areas:
-    "."
-    "."
-    "."
-    ".";
-    margin: 300px;
-}
+.fiche-gite-container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 0.6fr 1.1fr 1.3fr 1fr; 
+    gap: 4px 0px; 
+    align-content: start; 
+    justify-items: center; 
+    align-items: start; 
+    background-color: red;
 
-.row2{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border: $color-dark solid 1px;
-    border-radius: 30px;
+    .nom-gite {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "h2"
+        "categorie-lieux"; 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    .categorie-lieux {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        ". ."; 
+        grid-area: categorie-lieux; 
+    }
+    .h2 { grid-area: h2; }
+    .photo-capacite {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "."
+        "capacite"; 
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    .capacite {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 82px; 
+        grid-template-areas: 
+        "personne bain"; 
+        grid-area: capacite; 
+    }
+    .personne {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        gap: 0px 0px; 
+        grid-area: personne; 
+    }
+    .bain { grid-area: bain; }
+    .description {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "h3"
+        "description-resultat"; 
+        grid-area: 3 / 1 / 4 / 2; 
+    }
+    .description-resultat { grid-area: description-resultat; }
+    .h3 { grid-area: h3;
+        justify-self: start;
+    }
+    .tarif {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 40px 0px; 
+        grid-template-areas: 
+        "."
+        "button"; 
+        grid-area: 4 / 1 / 5 / 2; 
+    }
+    button{ 
+        grid-area: button;
+        cursor: pointer;
+        font-family: $font;
+        padding: 0px;
+        outline: none;
+        transition: 0.3s;
+        border: $color-dark solid 1px;
+        border-radius: 20px;
+        text-align: center;
+        color: $color-light;
+        background-color: $color-dark;
+        height: 30px;
+        button:hover{
+        color: $color-light;
+        background-color: $color-middle;
+        transition: 0.8s all;
+    }
+}
 }
 
 .reservation{
