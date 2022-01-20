@@ -34,19 +34,25 @@ try {
         $result = $lien->fetch();
 
         if (isset($result)) { ?>
-            <div class="ellipsis-container">
-                <div class="row2">
+            <div class="fiche-gite-container">
+                <div class="nom-gite">
                     <h2><?php echo $result ['Intitule'] ; ?></h2>
-                    <p>à <?php echo $result ['Emplacement_geographique'] ; ?></p>
-                    <span><?php echo " Catégorie : " . $result ['Nom'] ;?></span>
-                    <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
-                    <span>Capacité : <?php echo $result ['Nombre_de_couchages'] ; ?> personne(s)</span>
-                    <span>Capacité : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?> salle de bain</span>
-                    <span>Description : <?php echo $result ['Description'] ; ?></span>
-                    <span>Tarif : <?php echo $result ['Prix'] ; ?>€</span>
+                    <p class="categorie-lieux"><?php echo $result ['Nom'] . " à " . $result ['Emplacement_geographique'] ; ?></p>
                 </div>
+                <div class="photo-capacite">
+                    <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
+                    <span class="capacite">
+                        <div class="personne">Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?></div>
+                        <div class="bain"></li> Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?></div></span>
+                </div>
+                    <span class="description">
+                        <h3>Description : </h3>
+                        <div class="description-resultat"><?php echo $result ['Description'] ; ?>
+                        </div></span>
+                    <span class="tarif">Tarif : <?php echo $result ['Prix'] ; ?>€
                     <a href="reservation.utili.php"><button type="submit">Réservation</button></a>
-            </div>
+                    </span>
+                </div>
                     <?php
     }
 } catch (PDOException $e) {
