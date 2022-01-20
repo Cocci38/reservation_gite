@@ -67,6 +67,7 @@ h1{
 
 }
 
+/*Affichage de la liste d'hébergement*/
 .liste {
 
   display: grid;
@@ -76,57 +77,14 @@ h1{
 
 }
 
+/*Taille des photos*/
 img {
 
   width: 300px;
 }
 
-// formulaires 
 
-
-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) ;
-  grid-template-rows: repeat(8, 1fr) ;
-  grid-template-areas: "a a"
-                       "b c"
-                       ;
-  height: auto;
-  background-color: $color-light;
-  
-
-  label {
-    margin-top:10px;
-    display:block;
-    }
-  
-
-}
-
-
-  input, textarea, select {
-    padding:3px;
-    border:1px solid $color-dark;
-    border-radius:5px;
-    width:300px;
-    box-shadow:1px 1px 2px $color-middle;
-    }
- 
-
-    select {
-      margin-top:10px;
-      }
-
- input {
-   margin-top: 10px;
- }   
-
-.col1, .col2  {
-  margin : 10px;
-  padding: 10px ;
-}
-
-
+/*Affichage fiche d'hébergement*/
 .fiche_hebergement {
 
   display: grid;
@@ -141,56 +99,228 @@ form {
                        "h h"
                        "i i";
   height: auto;
-
+background-color: $color-dark;
  
   span{
     outline: solid $color-middle 2px;
     background-color: $color-light;
     margin: 4px;
     padding: 4px;
+  
 
     &:nth-child(1) {
-background-color: red;
+background-color: $color-middle;
 grid-area: a;
 text-align: center;
 font-size: 25px;
 margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+
     } 
     &:nth-child(2){
       grid-area:b;
-      background-color: green;
+      background-color: $color-middle;
     }
 
     &:nth-child(3){
       grid-area: c;
-      background-color: yellow;
+      background-color: $color-middle;
     }
     &:nth-child(4){
       grid-area:d;
-      background-color: blue;
+      background-color: $color-middle;
     }
     &:nth-child(5){
       grid-area:e;
-      background-color: purple;
+      background-color: $color-middle;
     }
     &:nth-child(6){
       grid-area:f;
-      background-color: orange;
+      background-color: $color-middle;
     }
     &:nth-child(7){
       grid-area: g;
-      background-color: grey;
+      background-color: $color-middle;
     }
     &:nth-child(8){
       grid-area: h;
-      background-color: pink;
+      background-color: $color-middle;
     }
   }
 
   .btn-crud {
 grid-area: i ;
-background-color: black;
+background-color: $color-middle;
 
   }
 }
+
+/*Affichage formulaire ajout hébergement */
+.admin-content {
+    height: auto;
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(250, 170, 211),rgb(80, 78, 169));
+  padding: 25px;
+    .container-forms {
+      background-color: rgba(231, 149, 231, 0.123);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(7, 1fr) ;
+    grid-template-areas:  "item1 item2"
+                          "item3 item3"
+                          "item3 item3"
+                          "item4 item4"
+                          "item5 item6"
+                          "item7 item8"
+                          "item9 item9"
+                          ;
+      height: auto;                    
+      .container-item1 {
+        background: rgba(255,255,255,0.1);
+        grid-area: item1;
+        margin: 4px;
+        padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .container-item2{
+        grid-area: item2; 
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+        border-radius: 5px;
+
+      }
+      .container-item3 {
+        grid-area: item3;
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+      .container-item4{
+        grid-area: item4; 
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+      .container-item5 {
+        grid-area: item5;
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+      .container-item6{
+        grid-area: item6; 
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+      .container-item7 {
+        grid-area: item7;
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+      .container-item8{
+        grid-area: item8; 
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+      .container-item9 {
+        grid-area: item9 ;
+        outline: solid $color-middle 2px;
+        margin: 4px;
+        padding: 4px;
+      }
+
+    }
+}
+
+/*Affichage formulaire modifier hébergement */
+.admin-update {
+  height: auto;
+  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(250, 170, 211),rgb(80, 78, 169));
+  padding: 25px;
+  .container-update {
+  background-color: rgb(231, 149, 231);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  grid-template-rows: repeat(7, 1fr) ;
+  grid-template-areas:  "item1 item2"
+                        "item3 item3"
+                        "item3 item3"
+                        "item4 item4"
+                        "item5 item6"
+                        "item7 item8"
+                        "item9 item9"
+                        ;
+    .update-item1 {
+      grid-area: item1;
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item2{
+      grid-area: item2; 
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item3 {
+      grid-area: item3;
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item4{
+      grid-area: item4; 
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item5 {
+      grid-area: item5;
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item6{
+      grid-area: item6; 
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item7 {
+      grid-area: item7;
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item8{
+      grid-area: item8; 
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+    .update-item9 {
+      grid-area: item9 ;
+      outline: solid $color-middle 2px;
+      margin: 4px;
+      padding: 4px;
+    }
+
+  }
+}
+
+
+
+
+
+
+
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background: #28284b;
   display: flex;
@@ -50,6 +51,7 @@ h1 {
   height: 80px;
 }
 
+/*Affichage de la liste d'hébergement*/
 .liste {
   display: grid;
   grid-template-columns: 7fr 7fr 7fr;
@@ -57,50 +59,19 @@ h1 {
   height: 300px;
 }
 
+/*Taille des photos*/
 img {
   width: 300px;
 }
 
-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-areas: "a a" "b c";
-  height: auto;
-  background-color: #f5f5f5;
-}
-form label {
-  margin-top: 10px;
-  display: block;
-}
-
-input, textarea, select {
-  padding: 3px;
-  border: 1px solid #28284b;
-  border-radius: 5px;
-  width: 300px;
-  box-shadow: 1px 1px 2px #6968e5;
-}
-
-select {
-  margin-top: 10px;
-}
-
-input {
-  margin-top: 10px;
-}
-
-.col1, .col2 {
-  margin: 10px;
-  padding: 10px;
-}
-
+/*Affichage fiche d'hébergement*/
 .fiche_hebergement {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-template-areas: "a a" "b c" "d e" "f f" "g g" "h h" "h h" "i i";
   height: auto;
+  background-color: #28284b;
 }
 .fiche_hebergement span {
   outline: solid #6968e5 2px;
@@ -109,41 +80,187 @@ input {
   padding: 4px;
 }
 .fiche_hebergement span:nth-child(1) {
-  background-color: red;
+  background-color: #6968e5;
   grid-area: a;
   text-align: center;
   font-size: 25px;
   margin-top: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .fiche_hebergement span:nth-child(2) {
   grid-area: b;
-  background-color: green;
+  background-color: #6968e5;
 }
 .fiche_hebergement span:nth-child(3) {
   grid-area: c;
-  background-color: yellow;
+  background-color: #6968e5;
 }
 .fiche_hebergement span:nth-child(4) {
   grid-area: d;
-  background-color: blue;
+  background-color: #6968e5;
 }
 .fiche_hebergement span:nth-child(5) {
   grid-area: e;
-  background-color: purple;
+  background-color: #6968e5;
 }
 .fiche_hebergement span:nth-child(6) {
   grid-area: f;
-  background-color: orange;
+  background-color: #6968e5;
 }
 .fiche_hebergement span:nth-child(7) {
   grid-area: g;
-  background-color: grey;
+  background-color: #6968e5;
 }
 .fiche_hebergement span:nth-child(8) {
   grid-area: h;
-  background-color: pink;
+  background-color: #6968e5;
 }
 .fiche_hebergement .btn-crud {
   grid-area: i;
-  background-color: black;
+  background-color: #6968e5;
+}
+
+/*Affichage formulaire ajout hébergement */
+.admin-content {
+  height: auto;
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #faaad3, #504ea9);
+  padding: 25px;
+}
+.admin-content .container-forms {
+  background-color: rgba(231, 149, 231, 0.123);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "item1 item2" "item3 item3" "item3 item3" "item4 item4" "item5 item6" "item7 item8" "item9 item9";
+  height: auto;
+}
+.admin-content .container-forms .container-item1 {
+  background: rgba(255, 255, 255, 0.1);
+  grid-area: item1;
+  margin: 4px;
+  padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.admin-content .container-forms .container-item2 {
+  grid-area: item2;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 5px;
+}
+.admin-content .container-forms .container-item3 {
+  grid-area: item3;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-content .container-forms .container-item4 {
+  grid-area: item4;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-content .container-forms .container-item5 {
+  grid-area: item5;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-content .container-forms .container-item6 {
+  grid-area: item6;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-content .container-forms .container-item7 {
+  grid-area: item7;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-content .container-forms .container-item8 {
+  grid-area: item8;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-content .container-forms .container-item9 {
+  grid-area: item9;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+
+/*Affichage formulaire modifier hébergement */
+.admin-update {
+  height: auto;
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #faaad3, #504ea9);
+  padding: 25px;
+}
+.admin-update .container-update {
+  background-color: #e795e7;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "item1 item2" "item3 item3" "item3 item3" "item4 item4" "item5 item6" "item7 item8" "item9 item9";
+}
+.admin-update .container-update .update-item1 {
+  grid-area: item1;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item2 {
+  grid-area: item2;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item3 {
+  grid-area: item3;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item4 {
+  grid-area: item4;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item5 {
+  grid-area: item5;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item6 {
+  grid-area: item6;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item7 {
+  grid-area: item7;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item8 {
+  grid-area: item8;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
+}
+.admin-update .container-update .update-item9 {
+  grid-area: item9;
+  outline: solid #6968e5 2px;
+  margin: 4px;
+  padding: 4px;
 }
