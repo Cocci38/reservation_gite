@@ -26,7 +26,7 @@
     @$envoyer=$_GET["envoyer"];
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-        $sth = $conn->prepare('SELECT * FROM Hebergements, Categories WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
+        $sth = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
         $sth->setFetchMode(PDO::FETCH_ASSOC);
         $sth->execute();
         $tab=$sth->fetchAll();

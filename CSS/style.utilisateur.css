@@ -15,6 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: auto;
 }
 .mainAccueil .recherche-container {
   display: grid;
@@ -27,6 +28,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
 }
 .mainAccueil input[type=search] {
   font-family: "Montserrat", sans-serif;
@@ -47,12 +50,13 @@ header {
   border: #28284b solid 1px;
   border-radius: 20px;
   text-align: center;
-  background-color: #6968e5;
+  color: #f5f5f5;
+  background-color: #28284b;
 }
 .mainAccueil input:hover[type=submit] {
-  color: #28284b;
-  background-color: #f5f5f5;
-  transition: 0.3s all;
+  color: #f5f5f5;
+  background-color: #6968e5;
+  transition: 0.8s all;
 }
 .mainAccueil .liste-gite-container {
   display: grid;
@@ -93,18 +97,6 @@ header {
   grid-column-end: 2;
   border: #28284b solid 1px;
   border-radius: 30px;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 30px;
-  object-fit: contain;
-}
-
-.maison {
-  height: auto;
-  width: auto;
 }
 
 .reservation {
