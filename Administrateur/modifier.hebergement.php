@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,9 +50,8 @@ if (! empty ( $_GET['id']) && isset ($_GET['id'])) {
     $sth = $conn->prepare("SELECT * From hebergements where Id= :id");
     $sth -> bindValue (":id" , $_GET['id'] );
     $sth->execute();
-    $result = $sth->fetch();
-
-    
+    $result = $sth->fetch(PDO::FETCH_ASSOC);
+    var_dump($result);
 }
 
 else {
@@ -70,13 +69,16 @@ else {
 
 ?>
 <main>
-    <form action= 'modifier.php?id= <?php echo $result['id']; ?>' method="post" enctype="multipart/form-data">
+    <form action= 'modifier.php' method="post" enctype="multipart/form-data">
+    <input type="hidden" name="Id" value="<?php echo $result['Id'];?>">
+
     <div class="col1">
+
         <label for="Intitule">Nom de l'hébergement</label>
-        <input type="text" name="Intitule" value=" <?php echo $result['Intitule'];  ?>" id="Intitule" required>
+        <input type="text" name="Intitule" value="<?php echo $result['Intitule'];  ?>" id="Intitule" required>
 
         <label for="Categorie">Type d'hébergement</label>
-        <select name="Id_categorie" value=" <?php echo $result['Categorie'];  ?>" id="Id_categorie" required>
+        <select name="Id_categorie" value="<?php echo $result['Categorie'];?>" id="Id_categorie" required>
         <?php $sth = $conn->prepare("SELECT * From categories" );
                     $sth->execute();
                     $resultC = $sth->fetchall(); 
@@ -92,10 +94,10 @@ else {
 
         <div class="col2">
         <label for="Photo">Photos</label>
-        <input type="file" name="Photo" value=" <?php   echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>" id="Photo" required>
+        <input type="file" name="Photo"  id="Photo" required> <?='<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">';?>
 
         <label for="Nombre_de_couchages">Nombres de lits</label>
-        <select name="Nombre_de_couchages" value=" <?php echo $result["Nombre_de_couchages"];  ?>"id="Nombre_de_couchages" required>
+        <select name="Nombre_de_couchages" value="<?php echo $result["Nombre_de_couchages"];  ?>"id="Nombre_de_couchages" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -109,16 +111,16 @@ else {
         </select>
 
         <label for="Nombre_de_salles_de_bain">Salle(s) de bain</label>
-        <select name="Nombre_de_salles_de_bain" value=" <?php echo $result["Nombre_de_salles_de_bain"];  ?>"id="Nombre_de_salles_de_bain" required>
+        <select name="Nombre_de_salles_de_bain" value="<?php echo $result["Nombre_de_salles_de_bain"];  ?>"id="Nombre_de_salles_de_bain" required>
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
 
         <label for="Emplacement_geographique">Lieux</label>
-        <input type="text" name="Emplacement_geographique" value=" <?php echo $result["Emplacement_geographique"];?>" id="Emplacement_geographique" required>
+        <input type="text" name="Emplacement_geographique" value="<?php echo $result["Emplacement_geographique"];?>" id="Emplacement_geographique" required>
 
         <label for="Prix">Prix</label>
-        <input type="number" name="Prix" value=" <?php echo $result["Prix"];  ?>" id="Prix" required>
+        <input type="number" name="Prix" value="<?php echo $result["Prix"];?>" id="Prix" required>
 
         <div id="submit">
             <input type="submit" value="Envoyer">

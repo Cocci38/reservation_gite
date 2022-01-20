@@ -85,21 +85,24 @@ img {
 
 
 form {
-  width  : 80%;
-  margin : 50px; 
-  display: flex;
-  flex-direction: row ;
-  align-items: center;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  grid-template-rows: repeat(8, 1fr) ;
+  grid-template-areas: "a a"
+                       "b c"
+                       ;
+  height: auto;
   background-color: $color-light;
+  
+
+  label {
+    margin-top:10px;
+    display:block;
+    }
   
 
 }
 
-label {
-  margin-top:10px;
-  display:block;
-  }
 
   input, textarea, select {
     padding:3px;
@@ -183,7 +186,6 @@ margin-top: 15px;
       background-color: pink;
     }
   }
-
 
   .btn-crud {
 grid-area: i ;
