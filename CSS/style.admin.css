@@ -13,7 +13,8 @@ body {
 main {
   margin: 50px 150px;
   padding: 2px 10px 2px 10px;
-  background-color: #6968e5;
+  background-color: #28284b;
+  height: 500px;
 }
 
 h1 {
@@ -24,6 +25,10 @@ h1 {
   text-shadow: 1px 1px 0px #6968e5;
   max-width: 100%;
   height: auto;
+}
+
+h2 {
+  color: #f5f5f5;
 }
 
 .container--fluid {
@@ -49,6 +54,10 @@ h1 {
   margin: 20px;
   padding: 1px 3px 2px 3px;
   height: 80px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /*Affichage de la liste d'hébergement*/
@@ -140,6 +149,7 @@ img {
 .admin-content .container-forms .container-item1 {
   background: rgba(255, 255, 255, 0.1);
   grid-area: item1;
+  outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -152,49 +162,80 @@ img {
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
-  border-radius: 5px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item3 {
   grid-area: item3;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item4 {
   grid-area: item4;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item5 {
   grid-area: item5;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item6 {
   grid-area: item6;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item7 {
   grid-area: item7;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item8 {
   grid-area: item8;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .admin-content .container-forms .container-item9 {
   grid-area: item9;
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /*Affichage formulaire modifier hébergement */

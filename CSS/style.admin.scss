@@ -21,7 +21,8 @@ body{
 main {
   margin:50px 150px ;
 padding: 2px 10px 2px 10px;
-background-color: $color-middle;
+background-color: $color-dark;
+height:500px;
 }
 
 h1{
@@ -32,6 +33,9 @@ h1{
   text-shadow: 1px 1px 0px $color-middle;
   max-width: 100%;
   height: auto;
+}
+h2 {
+  color: $color-light;
 }
 
 //pour le grid
@@ -62,6 +66,10 @@ h1{
     margin: 20px;
     padding: 1px 3px 2px 3px;
     height: 80px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
 
   
 
@@ -180,6 +188,7 @@ background-color: $color-middle;
       .container-item1 {
         background: rgba(255,255,255,0.1);
         grid-area: item1;
+        outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
         box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
@@ -192,7 +201,10 @@ background-color: $color-middle;
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
-        border-radius: 5px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
 
       }
       .container-item3 {
@@ -200,42 +212,70 @@ background-color: $color-middle;
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
       .container-item4{
         grid-area: item4; 
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
       .container-item5 {
         grid-area: item5;
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
       .container-item6{
         grid-area: item6; 
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
       .container-item7 {
         grid-area: item7;
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
       .container-item8{
         grid-area: item8; 
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
       .container-item9 {
         grid-area: item9 ;
         outline: solid $color-middle 2px;
         margin: 4px;
         padding: 4px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
       }
 
     }
