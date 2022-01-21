@@ -22,7 +22,7 @@ main {
   margin:50px 150px ;
 padding: 2px 10px 2px 10px;
 background-color: $color-dark;
-height:500px;
+height:auto;
 }
 
 h1{
@@ -79,9 +79,10 @@ border-left: 1px solid rgba(255, 255, 255, 0.5);
 .liste {
 
   display: grid;
-  grid-template-columns: 7fr 7fr 7fr;
-  grid-template-rows: repeat (100px) ;
-  height: 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat (200px) ;
+  height: auto;
+  background-color: $color-dark;
 
 }
 
@@ -169,7 +170,7 @@ background-color: $color-middle;
 /*Affichage formulaire ajout hébergement */
 .admin-content {
     height: auto;
-    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(250, 170, 211),rgb(80, 78, 169));
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(29, 22, 97),rgb(80, 78, 169));
   padding: 25px;
     .container-forms {
       background-color: rgba(231, 149, 231, 0.123);
@@ -358,9 +359,36 @@ background-color: $color-middle;
 }
 
 
+button {
+  display: inline-block;
+  background-color: $color-dark;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+    a{
+      color:$color-light;
+    }
 
 
+ &:hover {
+    background-color: $color-light;
+   
+    a {
+      color: $color-dark;
+    }
+  }
 
+}
 
 
 

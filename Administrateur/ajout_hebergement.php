@@ -14,9 +14,7 @@
 </head>
 
 <body>
-    <button><a href="deconnexion.php">Deconnexion</a></button>
-    <button><a href="indexheb.php">Accueil</a></button>
-
+    
     <header>
 
 
@@ -31,13 +29,15 @@
         </nav>
     </header>
 
+    <button><a href="deconnexion.php">Deconnexion</a></button>
+    <button><a href="indexheb.php">Accueil</a></button>
 
     <main>
         <div class="admin-content">
 
             <?php require 'initialisation.php'; ?>
-
-            <a href="categorie.php">Ajouter catégorie </a>
+<button><a href="categorie.php">Ajouter catégorie </a></button>
+        
             <form action='ajout.php' method="post" enctype="multipart/form-data">
             <div class="container-forms">
             

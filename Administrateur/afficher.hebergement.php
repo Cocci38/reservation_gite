@@ -18,9 +18,7 @@
 
 <body>
 
-<button><a href="deconnexion.php">Deconnexion</a></button> 
-<button><a href="indexheb.php">Accueil</a></button> 
-<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
+
 
 <header>
 
@@ -36,7 +34,9 @@
 </nav>
 </header>      
     
-
+<button><a href="deconnexion.php">Deconnexion</a></button> 
+<button><a href="indexheb.php">Accueil</a></button> 
+<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <main>
 
 
@@ -88,11 +88,9 @@
                     
                    
                       <div class="btn-crud">
-                        <button> <?php echo   '<a href="modifier.hebergement.php?id='.$_GET['id'].'"><img class="mod" src="images-memory\modifier.png"alt="modifier hébergement"></a>'; ?></button>
+                        <button> <?php echo'<a href="modifier.hebergement.php?id='.$_GET['id'].'"">Modifier hébergement</a>'; ?></button>
 
-        <button><?php echo '<a href="supprimer.php?id='. $_GET['id'] .'"><img class="suppimg" src="" alt="supprimer hébergement"></a></div>';
-
-?></button>
+        <button><?php echo'<a href="supprimer.php?id='. $_GET['id'] .'">Supprimer hébergement</a>';?></button>
           </div>             
                        </div>    
                        

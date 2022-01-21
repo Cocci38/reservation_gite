@@ -13,13 +13,8 @@
     <title>Document</title>
 </head>
 <body>
-<button><a href="deconnexion.php">Deconnexion</a></button> 
 
-
-<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <header>
-
-
 
 <nav class="container--fluid">
 <div class="item">
@@ -30,7 +25,10 @@
 </div>
 </nav>
 </header>
+<button><a href="deconnexion.php">Deconnexion</a></button> 
 
+
+<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <button><a href="ajout_hebergement.php">Ajouter un hébergement</a></button> 
 
 <main>

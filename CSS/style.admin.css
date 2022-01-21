@@ -14,7 +14,7 @@ main {
   margin: 50px 150px;
   padding: 2px 10px 2px 10px;
   background-color: #28284b;
-  height: 500px;
+  height: auto;
 }
 
 h1 {
@@ -63,9 +63,10 @@ h2 {
 /*Affichage de la liste d'hébergement*/
 .liste {
   display: grid;
-  grid-template-columns: 7fr 7fr 7fr;
-  grid-template-rows: repeat 100px;
-  height: 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 200px;
+  height: auto;
+  background-color: #28284b;
 }
 
 /*Taille des photos*/
@@ -135,7 +136,7 @@ img {
 /*Affichage formulaire ajout hébergement */
 .admin-content {
   height: auto;
-  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #faaad3, #504ea9);
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #1d1661, #504ea9);
   padding: 25px;
 }
 .admin-content .container-forms {
@@ -304,4 +305,31 @@ img {
   outline: solid #6968e5 2px;
   margin: 4px;
   padding: 4px;
+}
+
+button {
+  display: inline-block;
+  background-color: #28284b;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+button a {
+  color: #f5f5f5;
+}
+button:hover {
+  background-color: #f5f5f5;
+}
+button:hover a {
+  color: #28284b;
 }
