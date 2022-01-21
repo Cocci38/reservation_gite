@@ -29,11 +29,13 @@
     @$envoyer=$_GET["envoyer"];
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-        $sth = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
-        $sth->setFetchMode(PDO::FETCH_ASSOC);
+        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
+        
         $sth->execute();
-        $tab=$sth->fetchAll();
-
+        $tab=$sth->fetchAll(PDO::FETCH_ASSOC);
+        $sth2 = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
+        $sth2->execute();
+        $tab2=$sth2->fetchAll(PDO::FETCH_ASSOC);
         $afficher='oui';
     }
 ?>
@@ -56,9 +58,9 @@
 
     <div class="liste-gite-content">
     <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
-            <p><?php echo  $tab[$i]["Nom"] .'<br>' . '<br>' ?></p>
-            <p><?php echo '<a href="./fiche.hebergement.php?' . $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
-            <p>Lieux : <?php echo $tab[$i]["Emplacement_geographique"] ?></p>
+            <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
+            <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
+            <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
     </div>

@@ -29,9 +29,12 @@ try {
 
     /* Jointure*/
 
-    $lien = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id');
+    $lien = $conn->prepare("SELECT * FROM hebergements
+    LEFT JOIN categories ON hebergements.Id_categorie = categories.Id where hebergements.Id= :id");
+    $lien -> bindValue (":id" , $_GET['Id'] );
         $lien->execute();
         $result = $lien->fetch();
+
 
         if (isset($result)) { ?>
             <div class="fiche-gite-container">
