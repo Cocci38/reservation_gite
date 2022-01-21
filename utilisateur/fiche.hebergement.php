@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../CSS\style.utilisateur.css">
 <link rel="stylesheet" href="../CSS\style.global.css">
-    <title>Document</title>
+    <title>Fiche de l'hébergement</title>
 </head>
 <body>
 <header>
@@ -25,11 +25,11 @@
 try {
 
     require '../Administrateur\initialisation.php';
+    
 
     /* Jointure*/
 
     $lien = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id');
-
         $lien->execute();
         $result = $lien->fetch();
 

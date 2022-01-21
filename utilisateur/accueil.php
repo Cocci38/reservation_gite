@@ -20,7 +20,10 @@
 <main>
     <div class="mainAccueil">
 <?php
+
     require '../Administrateur\initialisation.php';
+
+
 
     @$recherche=$_GET["recherche"];
     @$envoyer=$_GET["envoyer"];
@@ -54,7 +57,7 @@
     <div class="liste-gite-content">
     <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
             <p><?php echo  $tab[$i]["Nom"] .'<br>' . '<br>' ?></p>
-            <p><?php echo '<a href="./fiche.hebergement.php?id=' . $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
+            <p><?php echo '<a href="./fiche.hebergement.php?' . $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
