@@ -79,7 +79,7 @@
                     <input type="text" id="pays" name="pays" required>
                     </div>
                     <div class="item8">
-                    <label for="phone">Tel</label>
+                    <label for="phone">Téléphone</label>
                     <input type="tel" id="phone" name="telephone" required>
                     </div>
                     <div class="item9">
