@@ -1,12 +1,12 @@
 <?php
-require '../Administrateur\initialisation.php';
+/*require '../Administrateur\initialisation.php';
 
 
 if (isset ($_POST['envoyer'])) {
     echo "ok";
 
 
-/* Si un email est renseigné dans la table*/
+ Si un email est renseigné dans la table
 
 if (isset($_GET['mail'])) 
 	
@@ -19,10 +19,9 @@ if (isset($_GET['mail']))
     $sth->execute();
     $mail = $sth->fetch(); 
 
-}
-}
+}*/
 
-$to = $mail;
+$to = 'semsem73@hotmail.fr';
 $subject = "Confirmation réservation";
 $message = "Nous vous remercions pour votre réservation, en espérant que vous apprecierez votre séjour.";
 
