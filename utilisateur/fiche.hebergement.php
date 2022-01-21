@@ -43,10 +43,13 @@ try {
                     <p class="categorie-lieux"><?php echo $result ['Nom'] . " à " . $result ['Emplacement_geographique'] ; ?></p>
                 </div>
                 <div class="photo-capacite">
-                    <span><?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
-                    <span class="capacite">
-                        <div class="personnes">Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?></div>
-                        <div class="bain"></li> Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?></div></span>
+                    <?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>
+                    <div class="capacite">
+                        <div class="personnes">Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?>
+                        </div>
+                        <div class="bain"></li> Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?>
+                        </div>
+                    </div>
                 </div>
                     <span class="description">
                         <h3>Description : </h3>

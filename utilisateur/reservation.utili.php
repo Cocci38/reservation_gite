@@ -90,10 +90,10 @@
                 </div>
                 <div class="btn">
                 <div>
-                    <button type="submit" name="envoyer" >Valider</button>
+                    <button class="envoyer" type="submit" name="envoyer" >Valider</button>
                 </div>
                 <div>
-                    <a href=fiche.hebergement.php></a><button type = "button" value = "Retour"  onclick = "history.go(-1)">Annuler</button>
+                <button class="retour2" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
                 </div>
                 </div>
             </form>

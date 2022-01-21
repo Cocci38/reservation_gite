@@ -82,7 +82,7 @@ header {
 .fiche-gite-container {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 15% 35% 35% 15%;
   gap: 4px 0px;
   align-content: flex-start;
   justify-items: center;
@@ -128,9 +128,8 @@ header {
 .capacite {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
   gap: 0px 40px;
+  grid-template-areas: "bain" "personnes";
   justify-items: center;
   border-bottom: solid;
 }
@@ -226,12 +225,11 @@ header {
 
 .reservation-container {
   display: grid;
-  grid-template-rows: 15% 25% 45% 15%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   gap: 10px 0px;
   grid-auto-flow: row;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   background-color: yellow;
   overflow: hidden;
 }
@@ -243,6 +241,7 @@ header {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-area: 1/1/2/2;
+  justify-items: center;
   background-color: red;
 }
 
@@ -257,6 +256,7 @@ header {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-area: 2/1/3/2;
+  align-items: start;
   background-color: purple;
 }
 .arrive-depart .arrive {
@@ -271,7 +271,8 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
-  grid-area: 2/1/3/2;
+  grid-auto-flow: row;
+  justify-items: center;
 }
 
 .nb-personne {
@@ -280,9 +281,10 @@ header {
 
 .nombre-personne {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
+  grid-auto-flow: row;
   grid-area: 2/1/3/2;
 }
 
@@ -300,31 +302,69 @@ header {
   grid-template-rows: 20% 80%;
   gap: 0px 0px;
   grid-area: 3/1/4/2;
+  justify-items: center;
   background-color: aqua;
 }
 .corps .vos-coordonnees {
   grid-area: 1/1/2/2;
 }
 .corps .coordonne {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-area: 2/1/3/2;
+  display: inline-block;
+  align-items: left;
 }
 
 .btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-area: 4/1/5/2;
-  align-self: right;
-  background-color: brown;
+  gap: 0px 20px;
+  grid-auto-flow: row;
+  justify-items: center;
+  background-color: hotpink;
 }
-.btn .button[type=submit] {
+
+.envoyer {
   grid-area: 1/1/2/2;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  outline: none;
+  transition: 0.3s;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: #28284b;
+  height: 35px;
+  width: 100px;
+  justify-self: end;
 }
-.btn .button[type=button] {
+.envoyer:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #28284b;
+  background-color: #f5f5f5;
+  transition: 0.8s all;
+}
+
+.retour2 {
   grid-area: 1/2/2/3;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  outline: none;
+  transition: 0.3s;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: #28284b;
+  height: 35px;
+  width: 100px;
+  justify-self: start;
+}
+.retour2:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #28284b;
+  background-color: #f5f5f5;
+  transition: 0.8s all;
 }
