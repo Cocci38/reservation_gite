@@ -69,8 +69,8 @@ input[type="submit"]{
 }
 
 input:hover[type="submit"]{
-    color: $color-light;
-    background-color: $color-middle;
+    color: $color-dark;
+    background-color: $color-light;
     transition: 0.8s all;
 }
 
@@ -102,10 +102,10 @@ input:hover[type="submit"]{
     grid-auto-columns: 1fr; 
     grid-template-rows: 0.6fr 1.1fr 1.3fr 1fr; 
     gap: 4px 0px; 
-    align-content: start; 
+    align-content: center; 
     justify-items: center; 
-    align-items: start; 
-    background-color: red;
+    align-items: center;
+    border: $color-dark solid;
 
     .nom-gite {
         display: grid; 
@@ -116,6 +116,7 @@ input:hover[type="submit"]{
         "h2"
         "categorie-lieux"; 
         grid-area: 1 / 1 / 2 / 2; 
+        border: $color-dark solid;
     }
     .categorie-lieux {
         display: grid; 
@@ -143,16 +144,21 @@ input:hover[type="submit"]{
         grid-template-rows: 1fr; 
         gap: 0px 82px; 
         grid-template-areas: 
-        "personne bain"; 
+        "personnes bain"; 
         grid-area: capacite; 
+        background-color: seagreen;
     }
-    .personne {
+    .personnes {
         display: grid; 
-        grid-auto-columns: 1fr; 
-        gap: 0px 0px; 
-        grid-area: personne; 
+        grid-auto-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px;
+        grid-area: 2 / 1 / 3 / 2;
+        background-color: red;
     }
-    .bain { grid-area: bain; }
+    .bain { grid-area: bain; 
+            background-color: saddlebrown;}
+
     .description {
         display: grid; 
         grid-template-columns: 1fr; 
@@ -241,8 +247,7 @@ input:hover[type="submit"]{
     grid-template-columns: 1fr; 
     grid-template-rows: 1fr 1fr; 
     gap: 0px 0px; 
-    grid-area: 2 / 1 / 3 / 2; 
-    background-color: pink;
+    grid-area: 2 / 1 / 3 / 2;
 
 }
         .nb-personne { grid-area: 1 / 1 / 2 / 2; }

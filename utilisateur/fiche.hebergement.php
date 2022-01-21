@@ -45,7 +45,7 @@ try {
                 <div class="photo-capacite">
                     <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
                     <span class="capacite">
-                        <div class="personne">Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?></div>
+                        <div class="personnes">Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?></div>
                         <div class="bain"></li> Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?></div></span>
                 </div>
                     <span class="description">
