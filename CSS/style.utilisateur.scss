@@ -100,12 +100,12 @@ input:hover[type="submit"]{
 .fiche-gite-container {
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-rows: 0.6fr 1.1fr 1.3fr 1fr; 
+    grid-auto-rows: 1fr 1fr 1fr 1fr; 
     gap: 4px 0px; 
-    align-content: center; 
+    align-content: flex-start; 
     justify-items: center; 
-    align-items: center;
-    border: $color-dark solid;
+    align-items: flex-start;
+}
 
     .nom-gite {
         display: grid; 
@@ -116,18 +116,22 @@ input:hover[type="submit"]{
         "h2"
         "categorie-lieux"; 
         grid-area: 1 / 1 / 2 / 2; 
-        border: $color-dark solid;
+        border-bottom: solid;
+        justify-items: center;
     }
     .categorie-lieux {
         display: grid; 
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr; 
         grid-template-rows: 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
         ". ."; 
-        grid-area: categorie-lieux; 
+        grid-area: categorie-lieux;
+        justify-items: center; 
     }
-    .h2 { grid-area: h2; }
+    .h2 { grid-area: h2;
+        justify-items: center;
+    }
     .photo-capacite {
         display: grid; 
         grid-template-columns: 1fr; 
@@ -136,28 +140,20 @@ input:hover[type="submit"]{
         grid-template-areas: 
         "."
         "capacite"; 
-        grid-area: 2 / 1 / 3 / 2; 
+        grid-area: 2 / 1 / 3 / 2;
+        justify-items: center; 
     }
-    .capacite {
+        .capacite {
         display: grid; 
+        grid-auto-flow: column; 
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 1fr; 
-        gap: 0px 82px; 
-        grid-template-areas: 
-        "personnes bain"; 
-        grid-area: capacite; 
-        background-color: seagreen;
-    }
-    .personnes {
-        display: grid; 
-        grid-auto-columns: 1fr;
-        grid-template-rows: 1fr 1fr; 
-        gap: 0px 0px;
-        grid-area: 2 / 1 / 3 / 2;
-        background-color: red;
-    }
-    .bain { grid-area: bain; 
-            background-color: saddlebrown;}
+        gap: 0px 40px;
+        justify-items: center;
+        border-bottom: solid;
+        }
+            .bain { grid-area: 1 / 2 / 2 / 3; }
+            .personnes { grid-area: 1 / 1 / 2 / 2; }
 
     .description {
         display: grid; 
@@ -167,42 +163,71 @@ input:hover[type="submit"]{
         grid-template-areas: 
         "h3"
         "description-resultat"; 
-        grid-area: 3 / 1 / 4 / 2; 
+        grid-area: 3 / 1 / 4 / 2;
+        border-bottom: solid;
     }
-    .description-resultat { grid-area: description-resultat; }
-    .h3 { grid-area: h3;
+            .description-resultat { grid-area: description-resultat; }
+        .h3 { grid-area: h3;
         justify-self: start;
     }
     .tarif {
         display: grid; 
         grid-template-columns: 1fr; 
         grid-template-rows: 1fr 1fr; 
-        gap: 40px 0px; 
-        grid-template-areas: 
-        "."
-        "button"; 
+        gap: 0px 0px;
+        justify-items: center;
         grid-area: 4 / 1 / 5 / 2; 
     }
-    button{ 
-        grid-area: button;
-        cursor: pointer;
-        font-family: $font;
-        padding: 0px;
-        outline: none;
-        transition: 0.3s;
-        border: $color-dark solid 1px;
-        border-radius: 20px;
-        text-align: center;
-        color: $color-light;
-        background-color: $color-dark;
-        height: 30px;
-        button:hover{
-        color: $color-light;
-        background-color: $color-middle;
-        transition: 0.8s all;
-    }
-}
-}
+            .bouton {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 20px; 
+            grid-area: 2 / 1 / 3 / 2;
+            cursor: pointer;
+            
+            text-align: center;
+            }
+                .reserve{ grid-area: 1 / 1 / 2 / 2;
+                    border: $color-dark solid 1px;
+                    border-radius: 20px;;
+                    background-color: $color-dark;
+                    height: 35px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    a{
+                        text-decoration: none;
+                        font-family: $font;
+                        color: $color-light;
+                    }
+                 &:hover{
+                    background-color: $color-light;
+                    transition: 0.8s all;
+                    a{
+                        color: $color-dark;
+                        font-family: $font;
+                    }
+                    }
+                }
+                
+                .retour{ grid-area: 1 / 2 / 2 / 3;
+                        cursor: pointer;
+                        font-family: $font;
+                        padding: 0px;
+                        outline: none;
+                        transition: 0.3s;
+                        border: $color-dark solid 1px;
+                        border-radius: 20px;
+                        text-align: center;
+                        color: $color-light;
+                        background-color: $color-dark;
+                        height: 35px;
+                            &:hover{
+                            color: $color-dark;
+                            background-color: $color-light;
+                            transition: 0.8s all;
+                        }
+                }
 
 .reservation-container {  
     display: grid;

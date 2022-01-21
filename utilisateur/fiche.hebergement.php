@@ -43,7 +43,7 @@ try {
                     <p class="categorie-lieux"><?php echo $result ['Nom'] . " à " . $result ['Emplacement_geographique'] ; ?></p>
                 </div>
                 <div class="photo-capacite">
-                    <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
+                    <span><?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?></span>
                     <span class="capacite">
                         <div class="personnes">Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?></div>
                         <div class="bain"></li> Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?></div></span>
@@ -53,7 +53,10 @@ try {
                         <div class="description-resultat"><?php echo $result ['Description'] ; ?>
                         </div></span>
                     <span class="tarif">Tarif : <?php echo $result ['Prix'] ; ?>€
-                    <a href="reservation.utili.php"><button type="submit">Réservation</button></a>
+                        <div class="bouton">
+                    <button class="reserve"><a href="reservation.utili.php">Réservation</a></button>
+                    <button class="retour" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
+                        </div>
                     </span>
                 </div>
                     <?php

@@ -57,7 +57,7 @@
 <?php for($i=0;$i<count($tab);$i++){ ?>
 
     <div class="liste-gite-content">
-    <?php  echo " Photo : " . '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
+            <?= '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
             <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
             <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
