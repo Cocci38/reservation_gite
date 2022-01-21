@@ -75,10 +75,14 @@
                     <input type="text" id="ville" name="ville" required>
                     </div>
                     <div class="item7">
+                    <label for="pays">Pays</label>
+                    <input type="text" id="pays" name="pays" required>
+                    </div>
+                    <div class="item8">
                     <label for="phone">Tel</label>
                     <input type="tel" id="phone" name="telephone" required>
                     </div>
-                    <div class="item8">
+                    <div class="item9">
                     <label for="mail">e-mail</label>
                     <input type="email" id="mail" name="mail" required>
                     </div>
@@ -86,7 +90,7 @@
                 </div>
                 <div class="btn">
                 <div>
-                    <button type="submit">Valider</button>
+                    <button type="submit" name="envoyer" >Valider</button>
                 </div>
                 <div>
                     <a href=fiche.hebergement.php></a><button type = "button" value = "Retour"  onclick = "history.go(-1)">Annuler</button>

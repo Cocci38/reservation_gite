@@ -1,23 +1,26 @@
 <?php
-require 'initialisation.php';
+require '../Administrateur\initialisation.php';
+
+
+if (isset ($_POST['envoyer'])) {
+    echo "ok";
 
 
 /* Si un email est renseigné dans la table*/
 
-if (!empty($_GET['email'])) 
-	{
-		$mail = $_GET['email'];}
+if (isset($_GET['mail'])) 
+	
+		
+{   var_dump ($_GET);
 
-        else
-{
-
-    $sth = $conn->prepare("SELECT mail FROM reservation-clients  where Id= :id");
-    $sth -> bindValue (":id" , $_GET['id'] );
+    $mail = $_GET['mail'];
+    $sth = $conn->prepare("SELECT mail FROM reservation_clients  where Id= :id");
+    $sth -> bindValue (":id", $_GET['id'] );
     $sth->execute();
-    $result = $sth->fetch(); 
+    $mail = $sth->fetch(); 
 
 }
-  
+}
 
 $to = $mail;
 $subject = "Confirmation réservation";
