@@ -12,6 +12,7 @@ $font : 'Montserrat', sans-serif;
 body{
     font-style: $color-dark solid;
     background-color: $color-light;
+    color: $color-dark;
 }
 header{
     margin: 3px;
@@ -76,22 +77,31 @@ input:hover[type="submit"]{
 
 .liste-gite-container {  
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-template-areas:
+    "liste-gite-content"
+    "img";
     align-content: center;
     justify-items: center;
     align-items: center;
-    width: 95%;
+    grid-auto-flow: dense;
+    font-style: $color-dark;
+    
 
-.liste-gite-content{
-    padding: 15px;
-    border: $color-dark solid 1px;
-    border-radius: 30px;
-    width: 85%;
-    margin-top: 10px;
-    overflow: hidden;
-    img{
-        width: 80%;
-        height: 100px;
+    .liste-gite-content{
+        padding: 15px;
+        border: $color-dark solid 1px;
+        border-radius: 30px;
+        width: 85%;
+        margin-top: 5px;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
     }
 }
 }
@@ -99,12 +109,20 @@ input:hover[type="submit"]{
 
 .fiche-gite-container {
     display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 15% 35% 35% 15%; 
+    grid-template-columns: auto; 
+    grid-template-rows: repeat(auto-fit,minmax(150px,1fr)); 
     gap: 4px 0px; 
-    align-content: flex-start; 
+    align-content: center; 
     justify-items: center; 
-    align-items: flex-start;
+    align-items: start;
+    justify-content: stretch;
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+    margin: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
 }
 
     .nom-gite {
@@ -117,17 +135,15 @@ input:hover[type="submit"]{
         "categorie-lieux"; 
         grid-area: 1 / 1 / 2 / 2; 
         border-bottom: solid;
-        justify-items: center;
+        justify-items: stretch;
     }
     .categorie-lieux {
         display: grid; 
-        grid-template-columns: 1fr; 
-        grid-template-rows: 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
         ". ."; 
         grid-area: categorie-lieux;
-        justify-items: center; 
+        justify-items: center;
     }
     .h2 { grid-area: h2;
         justify-items: center;
@@ -135,23 +151,23 @@ input:hover[type="submit"]{
     .photo-capacite {
         display: grid; 
         grid-template-columns: 1fr; 
-        grid-template-rows: 1fr 1fr; 
+        grid-template-rows: repeat(auto-fit,minmax(150px,1fr)); 
         gap: 0px 0px; 
         grid-template-areas: 
         "."
         "capacite"; 
         grid-area: 2 / 1 / 3 / 2;
-        justify-items: center; 
+        justify-items: center;
+        border-radius: 20px 20px 20px 20px;
     }
         .capacite {
-        display: grid; 
-        grid-auto-flow: column;
-        gap: 0px 40px;
-        grid-template-areas:
-        "bain"
-        "personnes";
-        justify-items: center;
-        border-bottom: solid;
+            display: grid; 
+            grid-auto-flow: row dense; 
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
+            grid-template-rows: 1fr; 
+            gap: 0px 40px; 
+            align-items: start;
+            border-bottom: solid;
         }
             .bain { grid-area: 1 / 2 / 2 / 3; }
             .personnes { grid-area: 1 / 1 / 2 / 2; }
@@ -186,7 +202,6 @@ input:hover[type="submit"]{
             gap: 0px 20px; 
             grid-area: 2 / 1 / 3 / 2;
             cursor: pointer;
-            
             text-align: center;
             }
                 .reserve{ grid-area: 1 / 1 / 2 / 2;
@@ -237,6 +252,10 @@ input:hover[type="submit"]{
     gap: 10px 0px;
     align-items: stretch;
     overflow: hidden;
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
 }
 
     .date {  
@@ -363,7 +382,6 @@ input:hover[type="submit"]{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 20px;
-    grid-auto-flow: row;
     justify-items: center;
     align-items: center;
 }

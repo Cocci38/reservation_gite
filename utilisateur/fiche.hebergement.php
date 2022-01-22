@@ -40,7 +40,7 @@ try {
             <div class="fiche-gite-container">
                 <div class="nom-gite">
                     <h2><?php echo $result ['Intitule'] ; ?></h2>
-                    <p class="categorie-lieux"><?php echo $result ['Nom'] . " à " . $result ['Emplacement_geographique'] ; ?></p>
+                    <p class="categorie-lieux"><?php echo $result ['Nom'] . " en " . $result ['Emplacement_geographique'] ; ?></p>
                 </div>
                 <div class="photo-capacite">
                     <?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>
