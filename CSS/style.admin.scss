@@ -21,7 +21,7 @@ body{
 main {
   margin:50px 150px ;
 padding: 2px 10px 2px 10px;
-background-color: $color-dark;
+background-color: $color-light;
 height:auto;
 }
 
@@ -70,6 +70,7 @@ h2 {
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
 
   
 
@@ -83,6 +84,7 @@ border-left: 1px solid rgba(255, 255, 255, 0.5);
   grid-template-rows: repeat (200px) ;
   height: auto;
   background-color: $color-dark;
+  
 
 }
 
@@ -108,17 +110,19 @@ img {
                        "h h"
                        "i i";
   height: auto;
-background-color: $color-dark;
+background-color: $color-light;
  
   span{
-    outline: solid $color-middle 2px;
+    /*outline: solid $color-middle 2px;*/
     background-color: $color-light;
-    margin: 4px;
+    margin: 15px;
     padding: 4px;
+    border-radius: 5px;
+     
+    
   
-
     &:nth-child(1) {
-background-color: $color-middle;
+background-color: grey;
 grid-area: a;
 text-align: center;
 font-size: 25px;
@@ -128,41 +132,96 @@ backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
 
+
     } 
     &:nth-child(2){
       grid-area:b;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     &:nth-child(3){
       grid-area: c;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
     &:nth-child(4){
       grid-area:d;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
     &:nth-child(5){
       grid-area:e;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
     &:nth-child(6){
       grid-area:f;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
     &:nth-child(7){
       grid-area: g;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
     &:nth-child(8){
       grid-area: h;
-      background-color: $color-middle;
+      background-color: $color-light;
+      text-align: center;
+font-size: 25px;
+margin-top: 15px;
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
 
   .btn-crud {
 grid-area: i ;
-background-color: $color-middle;
+background-color: $color-light;
+border-radius: 5px;
+margin : 10px;
+display: flex;
+justify-content: center;
+    
 
   }
 }
@@ -375,6 +434,8 @@ button {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+
+ 
     a{
       color:$color-light;
     }
@@ -389,6 +450,10 @@ button {
   }
 
 }
+
+
+
+ 
 
 
 

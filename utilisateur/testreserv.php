@@ -19,11 +19,24 @@
     </header>
     <main>
 
+<?php
+require '../Administrateur\initialisation.php';
 
+$lien = $conn->prepare("SELECT * FROM hebergements
+LEFT JOIN categories ON hebergements.Id_categorie = categories.Id where categories.Id= :id");
+$lien -> bindValue (":id" , $_GET['Id'] );
+    $lien->execute();
+    $result = $lien->fetch();
+
+    var_dump($result);
+    
+?>
 
     <h2>Réservation</h2>
             <form class="reservation-container" action="reservation.php" method="post">
             <div class = "date">
+
+            <?php echo $result['Intitule'];?>
                     <h3>Vos dates de séjour</h3>
                 <div class="arrive-depart">
                 <div class="arrive">
