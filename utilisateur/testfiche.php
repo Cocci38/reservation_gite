@@ -57,7 +57,7 @@ try {
                         </div></span>
                     <span class="tarif">Tarif : <?php echo $result ['Prix'] ; ?>€
                         <div class="bouton">
-                    <button class="reserve"><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '">' .  $result['Intitule'].  '</a><br>' . '<br>';?></button>
+                    <button class="reserve"><?= '<a href="./testreserv.php?Id='. $result['Id'] . '">' .  $result['Intitule'].  '</a><br>' . '<br>';?></button>
                     <button class="retour" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
                         </div>
                     </span>
