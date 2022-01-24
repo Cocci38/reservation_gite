@@ -18,7 +18,25 @@
     ?>
     </header>
     <main>
+    <?php
+try{
+    require '../Administrateur\initialisation.php';
 
+$sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique FROM hebergements where Id= :id");
+$sth2 -> bindValue (":id" , $_GET['Id'] );
+$sth2->execute();
+$resultat = $sth2->fetch(PDO::FETCH_ASSOC);
+
+?>
+<h2><?php echo $resultat ['Intitule'] ; ?></h2>
+    <?php echo  " en " . $resultat ['Emplacement_geographique'] ; ?></p>
+
+<?php
+}
+catch(PDOException $e){
+    echo "Erreur : " . $e->getMessage();
+}
+?>
     <h2>Réservation</h2>
             <form class="reservation-container" action="reservation.php" method="post">
             <div class = "date">

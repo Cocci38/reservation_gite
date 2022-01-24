@@ -29,18 +29,20 @@ try {
 
     /* Jointure*/
 
-    $lien = $conn->prepare("SELECT * FROM hebergements
-    LEFT JOIN categories ON hebergements.Id_categorie = categories.Id where hebergements.Id= :id");
+    $lien = $conn->prepare("SELECT * FROM hebergements where Id= :id");
     $lien -> bindValue (":id" , $_GET['Id'] );
         $lien->execute();
-        $result = $lien->fetch();
+        $result = $lien->fetch(PDO::FETCH_ASSOC);
+        $sth3 = $conn->prepare("SELECT Nom FROM categories WHERE Id =". $result['Id_categorie']);
+        $sth3->execute();
+        $resultat2 =$sth3->fetch(PDO::FETCH_ASSOC);
 
 
         if (isset($result)) { ?>
             <div class="fiche-gite-container">
                 <div class="nom-gite">
                     <h2><?php echo $result ['Intitule'] ; ?></h2>
-                    <p class="categorie-lieux"><?php echo $result ['Nom'] . " en " . $result ['Emplacement_geographique'] ; ?></p>
+                    <p class="categorie-lieux"><?php echo $resultat2 ['Nom'] . " en " . $result ['Emplacement_geographique'] ; ?></p>
                 </div>
                 <div class="photo-capacite">
                     <?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>
@@ -57,7 +59,7 @@ try {
                         </div></span>
                     <span class="tarif">Tarif : <?php echo $result ['Prix'] ; ?>€
                         <div class="bouton">
-                    <button class="reserve"><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '">' .  $result['Intitule'].  '</a><br>' . '<br>';?></button>
+                        <button class="reserve"><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
                     <button class="retour" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
                         </div>
                     </span>
