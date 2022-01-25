@@ -110,27 +110,31 @@ img {
                        "h h"
                        "i i";
   height: auto;
+  margin: 5% 20% ;
 background-color: $color-light;
  
   span{
     /*outline: solid $color-middle 2px;*/
     background-color: $color-light;
-    margin: 15px;
+    margin: 5px;
     padding: 4px;
     border-radius: 5px;
-     
+
+ 
     
   
     &:nth-child(1) {
 background-color: grey;
 grid-area: a;
 text-align: center;
-font-size: 25px;
-margin-top: 15px;
+font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+height: 50px;
+
 
 
     } 
@@ -138,20 +142,21 @@ border-left: 1px solid rgba(255, 255, 255, 0.5);
       grid-area:b;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+height: 50px;
     }
 
     &:nth-child(3){
       grid-area: c;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -161,52 +166,56 @@ border-left: 1px solid rgba(255, 255, 255, 0.5);
       grid-area:d;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+height: 50px;
     }
     &:nth-child(5){
       grid-area:e;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+height: 50px;
     }
     &:nth-child(6){
       grid-area:f;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+height: 50px;
     }
     &:nth-child(7){
       grid-area: g;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
+height: 50px;
     }
     &:nth-child(8){
       grid-area: h;
       background-color: $color-light;
       text-align: center;
-font-size: 25px;
-margin-top: 15px;
+      font-size: 20px;
+
 box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);

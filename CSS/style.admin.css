@@ -82,12 +82,13 @@ img {
   grid-template-rows: repeat(8, 1fr);
   grid-template-areas: "a a" "b c" "d e" "f f" "g g" "h h" "h h" "i i";
   height: auto;
+  margin: 5% 20%;
   background-color: #f5f5f5;
 }
 .fiche_hebergement span {
   /*outline: solid $color-middle 2px;*/
   background-color: #f5f5f5;
-  margin: 15px;
+  margin: 5px;
   padding: 4px;
   border-radius: 5px;
 }
@@ -95,30 +96,29 @@ img {
   background-color: grey;
   grid-area: a;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
 }
 .fiche_hebergement span:nth-child(2) {
   grid-area: b;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
 }
 .fiche_hebergement span:nth-child(3) {
   grid-area: c;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -128,52 +128,51 @@ img {
   grid-area: d;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
 }
 .fiche_hebergement span:nth-child(5) {
   grid-area: e;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
 }
 .fiche_hebergement span:nth-child(6) {
   grid-area: f;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
 }
 .fiche_hebergement span:nth-child(7) {
   grid-area: g;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 50px;
 }
 .fiche_hebergement span:nth-child(8) {
   grid-area: h;
   background-color: #f5f5f5;
   text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
+  font-size: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
