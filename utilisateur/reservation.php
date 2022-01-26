@@ -2,8 +2,15 @@
 
 require '../Administrateur\initialisation.php';
 
+$sth2 = $conn->prepare("SELECT Id FROM hebergements where Id= :id");
+$sth2 -> bindValue (":id" , $_GET['Id'] );
+$sth2->execute();
+$resultat = $sth2->fetch(PDO::FETCH_ASSOC);
+
+
+
 $arrivee = $_POST["arrivee"];
-/*$Id_hebergement = $_POST["Id_hebergement"];*/
+$Id_hebergement = $resultat["Id"];
 $depart = $_POST["depart"];
 $adulte = $_POST["adulte"];
 $enfant = $_POST["enfant"];
@@ -18,12 +25,16 @@ $phone = $_POST["telephone"];
 $mail = $_POST["mail"];
 
 
+
 try{
-$sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, depart, adulte, enfant, titre, nom, prenom, adresse, code_postal, ville, pays, telephone, mail)
-                    VALUES(:arrivee, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
+
+
+
+$sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, depart, adulte, enfant, titre, nom, prenom, adresse, code_postal, ville, pays, telephone, mail)
+                    VALUES(:arrivee, :Id_hebergement, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
 
     $sth->bindParam(':arrivee',$arrivee);
-    /*$sth->bindParam(':Id_hebergement',$Id_hebergement);*/
+    $sth->bindParam(':Id_hebergement',$Id_hebergement);
     $sth->bindParam(':depart',$depart);
     $sth->bindParam(':adulte',$adulte);
     $sth->bindParam(':enfant',$enfant);
@@ -37,6 +48,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, depart, adulte, 
     $sth->bindParam(':telephone',$phone);
     $sth->bindParam(':mail',$mail);
     $sth->execute();
+
 
     /*header('Location: msg.mail.php');*/
 
@@ -55,7 +67,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, depart, adulte, 
         
         $message = wordwrap($message, 70, "\r\n");
         
-        // Mettre un destinataire : 
+        // Le destinataire : 
         
         $headers= "From: ibtissem.khir@gmail.com";
         

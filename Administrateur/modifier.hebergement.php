@@ -14,12 +14,7 @@
 </head>
 
 <body>
-    <button><a href="indexheb.php">Accueil</a></button>
-
-    <button><a href="deconnexion.php">Deconnexion</a></button>
-
-
-    <button><a href="../utilisateur\listegite.php">Utilisateur</a></button>
+   
     <header>
 
 
@@ -52,7 +47,7 @@
             $sth->bindValue(":id", $_GET['id']);
             $sth->execute();
             $result = $sth->fetch(PDO::FETCH_ASSOC);
-            var_dump($result);
+
         } else {
 
             header('location: indexheb.php');
@@ -63,6 +58,13 @@
 
 
     ?>
+
+<button><a href="indexheb.php">Accueil</a></button>
+
+<button><a href="deconnexion.php">Deconnexion</a></button>
+
+
+<button><a href="../utilisateur\listegite.php">Utilisateur</a></button>
     <main>
         <div class="admin-update">
         <form action='modifier.php' method="post" enctype="multipart/form-data">
