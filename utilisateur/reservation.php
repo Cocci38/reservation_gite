@@ -2,7 +2,7 @@
 
 require '../Administrateur\initialisation.php';
 
-$sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique FROM hebergements where Id= id");
+$sth2 = $conn->prepare("SELECT Id FROM hebergements where Id= id");
 $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
@@ -72,11 +72,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
         
         
         mail($to,$subject,$message,$headers);
-
-
-
-
-       }
+    }
 
 
 

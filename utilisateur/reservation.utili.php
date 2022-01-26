@@ -26,18 +26,13 @@ $sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique FROM heber
 $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
-
+var_dump( $_GET['Id'])
 
 ?>
 <h2><?php echo $resultat ['Intitule'] ; ?></h2>
     <?php echo  " en " . $resultat ['Emplacement_geographique'] ; ?></p>
 
-<?php
-}
-catch(PDOException $e){
-    echo "Erreur : " . $e->getMessage();
-}
-?>
+
     <h2>Réservation</h2>
             <form class="reservation-container" action="reservation.php" method="post">
             
@@ -111,13 +106,20 @@ catch(PDOException $e){
                 <div class="btn">
                 <div>
                     <button class="envoyer" type="submit" name="envoyer" >Valider</button>
+                    <input type="hidden" name="$_GET['Id']">
                 </div>
                 <div>
                 <button class="retour2" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
                 </div>
                 </div>
             </form>
-
+            <?php
+            
+}
+catch(PDOException $e){
+    echo "Erreur : " . $e->getMessage();
+}
+?>
         </main>
 </body>
 </html>
