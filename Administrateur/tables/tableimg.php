@@ -21,7 +21,12 @@ try {
 try {
     $sql = "CREATE TABLE images (
         Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        Nom VARCHAR(30) NOT NULL)";
+        Id_hebergement INT (10),
+        Nom1 VARCHAR(30) NOT NULL,
+        Nom2 VARCHAR(30) NOT NULL,
+        Nom3 VARCHAR(30) NOT NULL,
+        Nom4 VARCHAR(30) NOT NULL,
+        Nom5 VARCHAR(30) NOT NULL)";
     
     $conn->exec($sql);
     echo 'Table bien créée !';

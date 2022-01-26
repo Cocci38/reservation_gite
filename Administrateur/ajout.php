@@ -16,7 +16,9 @@ echo 'ok';
 
 
 if (isset ($_FILES['Photo'])) {
-    var_dump($_FILES);
+foreach ($_FILES as $file)
+
+    var_dump($file);
 
     $tmpName = $_FILES['Photo']['tmp_name'];
     $fileName = $_FILES['Photo']['name'];
