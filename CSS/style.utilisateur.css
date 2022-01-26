@@ -61,7 +61,7 @@ header {
 }
 .mainAccueil .liste-gite-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-areas: "liste-gite-content" "img";
   align-content: center;
   justify-items: center;
@@ -88,8 +88,8 @@ header {
 
 .fiche-gite-container {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: auto;
   gap: 4px 0px;
   align-content: center;
   justify-items: center;
@@ -102,9 +102,9 @@ header {
   margin: 15px;
   margin-right: 200px;
   margin-left: 200px;
+  background-color: yellow;
 }
-
-.nom-gite {
+.fiche-gite-container .nom-gite {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -114,21 +114,18 @@ header {
   border-bottom: solid;
   justify-items: stretch;
 }
-
-.categorie-lieux {
+.fiche-gite-container .nom-gite .categorie-lieux {
   display: grid;
   gap: 0px 0px;
   grid-template-areas: ". .";
   grid-area: categorie-lieux;
   justify-items: center;
 }
-
-.h2 {
+.fiche-gite-container .nom-gite .h2 {
   grid-area: h2;
   justify-items: center;
 }
-
-.photo-capacite {
+.fiche-gite-container .photo-capacite {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
@@ -138,8 +135,7 @@ header {
   justify-items: center;
   border-radius: 20px 20px 20px 20px;
 }
-
-.capacite {
+.fiche-gite-container .photo-capacite .capacite {
   display: grid;
   grid-auto-flow: row dense;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -148,16 +144,13 @@ header {
   align-items: start;
   border-bottom: solid;
 }
-
-.bain {
+.fiche-gite-container .photo-capacite .capacite .bain {
   grid-area: 1/2/2/3;
 }
-
-.personnes {
+.fiche-gite-container .photo-capacite .capacite .personnes {
   grid-area: 1/1/2/2;
 }
-
-.description {
+.fiche-gite-container .description {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -166,17 +159,14 @@ header {
   grid-area: 3/1/4/2;
   border-bottom: solid;
 }
-
-.description-resultat {
+.fiche-gite-container .description .description-resultat {
   grid-area: description-resultat;
 }
-
-.h3 {
+.fiche-gite-container .description .h3 {
   grid-area: h3;
   justify-self: start;
 }
-
-.tarif {
+.fiche-gite-container .tarif {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -184,8 +174,7 @@ header {
   justify-items: center;
   grid-area: 4/1/5/2;
 }
-
-.bouton {
+.fiche-gite-container .bouton {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -194,8 +183,7 @@ header {
   cursor: pointer;
   text-align: center;
 }
-
-.reserve {
+.fiche-gite-container .reserve {
   grid-area: 1/1/2/2;
   border: #28284b solid 1px;
   border-radius: 20px;
@@ -204,21 +192,21 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
-.reserve a {
+.fiche-gite-container .reserve a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: #f5f5f5;
+  text-align: center;
 }
-.reserve:hover {
+.fiche-gite-container .reserve:hover {
   background-color: #f5f5f5;
   transition: 0.8s all;
 }
-.reserve:hover a {
+.fiche-gite-container .reserve:hover a {
   color: #28284b;
   font-family: "Montserrat", sans-serif;
 }
-
-.retour {
+.fiche-gite-container .retour {
   grid-area: 1/2/2/3;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
@@ -232,7 +220,7 @@ header {
   background-color: #28284b;
   height: 35px;
 }
-.retour:hover {
+.fiche-gite-container .retour:hover {
   color: #28284b;
   background-color: #f5f5f5;
   transition: 0.8s all;

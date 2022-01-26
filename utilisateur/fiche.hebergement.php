@@ -53,17 +53,18 @@ try {
                         </div>
                     </div>
                 </div>
-                    <span class="description">
+                    <div class="description">
                         <h3>Description : </h3>
                         <div class="description-resultat"><?php echo $result ['Description'] ; ?>
-                        </div></span>
-                    <span class="tarif">Tarif : <?php echo $result ['Prix'] ; ?>€
-                        <div class="bouton">
-                        <button class="reserve"><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
-                    <button class="retour" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
                         </div>
-                    </span>
-                </div>
+                    </div>
+                    <div class="tarif">Tarif : <?php echo $result ['Prix'] ; ?>€
+                        <div class="bouton">
+                            <button class="reserve"><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
+                            <button class="retour" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
+                        </div>
+                    </div>
+            </div>
                     <?php
     }
 } catch (PDOException $e) {
