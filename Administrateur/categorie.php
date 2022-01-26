@@ -12,10 +12,6 @@
 </head>
 <body>
     
-<button><a href="deconnexion.php">Deconnexion</a></button> 
-
-
-<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <header>
 
 
@@ -31,13 +27,19 @@
 </header>
 
 
-<form action= '' method="post">
+<button><a href="deconnexion.php">Deconnexion</a></button> 
+<button><a href="indexheb.php">Accueil</a></button> 
+<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 
+<div class="form-categorie">
+<form action= '' method="post">
+    <div class="categorie">
         <label for="Nom">Nom de la catégorie</label>
         <input type="text" name="Nom" id="Nom" required>
         <input type="submit" value="Envoyer">
-
+    </div>
         </form>
+        </div>
 
 
 

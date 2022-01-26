@@ -27,6 +27,7 @@ $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
 
+
 ?>
 <h2><?php echo $resultat ['Intitule'] ; ?></h2>
     <?php echo  " en " . $resultat ['Emplacement_geographique'] ; ?></p>
@@ -39,6 +40,7 @@ catch(PDOException $e){
 ?>
     <h2>Réservation</h2>
             <form class="reservation-container" action="reservation.php" method="post">
+            
             <div class = "date">
                     <h3>Vos dates de séjour</h3>
                 <div class="arrive-depart">
