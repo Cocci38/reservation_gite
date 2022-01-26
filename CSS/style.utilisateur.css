@@ -88,144 +88,200 @@ header {
 
 .fiche-gite-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: auto;
-  gap: 4px 0px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 0px 0px;
+  grid-template-areas: "nom-gite" "img" "button";
+  grid-auto-flow: row;
   align-content: center;
   justify-items: center;
-  align-items: start;
-  justify-content: stretch;
-  border: #28284b solid 1px;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
-  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
-  margin: 15px;
-  margin-right: 200px;
-  margin-left: 200px;
-  background-color: yellow;
+  align-items: center;
+  grid-auto-flow: dense;
+  font-style: #28284b;
 }
 .fiche-gite-container .nom-gite {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "h2" "categorie-lieux";
-  grid-area: 1/1/2/2;
-  border-bottom: solid;
-  justify-items: stretch;
+  padding: 15px;
+  border: #28284b solid 1px;
+  border-radius: 30px;
+  width: 85%;
+  margin-top: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
 }
-.fiche-gite-container .nom-gite .categorie-lieux {
-  display: grid;
-  gap: 0px 0px;
-  grid-template-areas: ". .";
-  grid-area: categorie-lieux;
-  justify-items: center;
+.fiche-gite-container .nom-gite img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
 }
-.fiche-gite-container .nom-gite .h2 {
-  grid-area: h2;
-  justify-items: center;
-}
-.fiche-gite-container .photo-capacite {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0px 0px;
-  grid-template-areas: "." "capacite";
-  grid-area: 2/1/3/2;
-  justify-items: center;
-  border-radius: 20px 20px 20px 20px;
-}
-.fiche-gite-container .photo-capacite .capacite {
-  display: grid;
-  grid-auto-flow: row dense;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: 1fr;
-  gap: 0px 40px;
-  align-items: start;
-  border-bottom: solid;
-}
-.fiche-gite-container .photo-capacite .capacite .bain {
-  grid-area: 1/2/2/3;
-}
-.fiche-gite-container .photo-capacite .capacite .personnes {
-  grid-area: 1/1/2/2;
-}
-.fiche-gite-container .description {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "h3" "description-resultat";
-  grid-area: 3/1/4/2;
-  border-bottom: solid;
-}
-.fiche-gite-container .description .description-resultat {
-  grid-area: description-resultat;
-}
-.fiche-gite-container .description .h3 {
-  grid-area: h3;
-  justify-self: start;
-}
-.fiche-gite-container .tarif {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  justify-items: center;
-  grid-area: 4/1/5/2;
-}
-.fiche-gite-container .bouton {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 20px;
-  grid-area: 2/1/3/2;
-  cursor: pointer;
-  text-align: center;
-}
-.fiche-gite-container .reserve {
-  grid-area: 1/1/2/2;
+.fiche-gite-container .nom-gite button {
   border: #28284b solid 1px;
   border-radius: 20px;
   background-color: #28284b;
   height: 35px;
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
   cursor: pointer;
   transition: 0.3s;
 }
-.fiche-gite-container .reserve a {
+.fiche-gite-container .nom-gite button a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: #f5f5f5;
   text-align: center;
 }
-.fiche-gite-container .reserve:hover {
+.fiche-gite-container .nom-gite button:hover {
   background-color: #f5f5f5;
   transition: 0.8s all;
 }
-.fiche-gite-container .reserve:hover a {
+.fiche-gite-container .nom-gite button:hover a {
   color: #28284b;
   font-family: "Montserrat", sans-serif;
-}
-.fiche-gite-container .retour {
-  grid-area: 1/2/2/3;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  padding: 0px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  color: #f5f5f5;
-  background-color: #28284b;
-  height: 35px;
-}
-.fiche-gite-container .retour:hover {
-  color: #28284b;
-  background-color: #f5f5f5;
-  transition: 0.8s all;
 }
 
+/*
+.fiche-gite-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
+    grid-template-rows: auto;  
+    gap: 4px 0px; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: start;
+    justify-content: stretch;
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+    margin: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
+    background-color: yellow;
+
+    .nom-gite {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "h2"
+        "categorie-lieux"; 
+        grid-area: 1 / 1 / 2 / 2; 
+        border-bottom: solid;
+        justify-items: stretch;
+    .categorie-lieux {
+        display: grid; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        ". ."; 
+        grid-area: categorie-lieux;
+        justify-items: center;
+    }
+    .h2 { grid-area: h2;
+        justify-items: center;
+    }
+}
+    .photo-capacite {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "."
+        "capacite"; 
+        grid-area: 2 / 1 / 3 / 2;
+        justify-items: center;
+        border-radius: 20px 20px 20px 20px;
+
+        .capacite {
+            display: grid; 
+            grid-auto-flow: row dense; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 40px; 
+            align-items: start;
+            border-bottom: solid;
+
+            .bain { grid-area: 1 / 2 / 2 / 3; }
+            .personnes { grid-area: 1 / 1 / 2 / 2; }
+        }
+    }
+    .description {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "h3"
+        "description-resultat"; 
+        grid-area: 3 / 1 / 4 / 2;
+        border-bottom: solid;
+
+            .description-resultat { grid-area: description-resultat; }
+        .h3 { grid-area: h3;
+        justify-self: start;
+    }
+}
+    .tarif {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px;
+        justify-items: center;
+        grid-area: 4 / 1 / 5 / 2; 
+    }
+            .bouton {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 20px; 
+            grid-area: 2 / 1 / 3 / 2;
+            cursor: pointer;
+            text-align: center;
+            }
+                .reserve{ grid-area: 1 / 1 / 2 / 2;
+                    border: $color-dark solid 1px;
+                    border-radius: 20px;;
+                    background-color: $color-dark;
+                    height: 35px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    a{
+                        text-decoration: none;
+                        font-family: $font;
+                        color: $color-light;
+                        text-align: center;
+                    }
+                 &:hover{
+                    background-color: $color-light;
+                    transition: 0.8s all;
+                    a{
+                        color: $color-dark;
+                        font-family: $font;
+                    }
+                    }
+                }
+
+                .retour{ grid-area: 1 / 2 / 2 / 3;
+                        cursor: pointer;
+                        font-family: $font;
+                        padding: 0px;
+                        outline: none;
+                        transition: 0.3s;
+                        border: $color-dark solid 1px;
+                        border-radius: 20px;
+                        text-align: center;
+                        color: $color-light;
+                        background-color: $color-dark;
+                        height: 35px;
+                            &:hover{
+                            color: $color-dark;
+                            background-color: $color-light;
+                            transition: 0.8s all;
+                        }
+                }
+            }
+*/
 .reservation-container {
   display: grid;
   grid-template-rows: 20% 20% 40% 20%;
