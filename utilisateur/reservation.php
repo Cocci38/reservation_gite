@@ -2,7 +2,7 @@
 
 require '../Administrateur\initialisation.php';
 
-$sth2 = $conn->prepare("SELECT Id FROM hebergements where Id= :id");
+$sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique FROM hebergements where Id= id");
 $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
@@ -10,7 +10,6 @@ $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
 
 
 $arrivee = $_POST["arrivee"];
-$Id_hebergement = $resultat["Id"];
 $depart = $_POST["depart"];
 $adulte = $_POST["adulte"];
 $enfant = $_POST["enfant"];
@@ -31,10 +30,10 @@ try{
 
 
 $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, depart, adulte, enfant, titre, nom, prenom, adresse, code_postal, ville, pays, telephone, mail)
-                    VALUES(:arrivee, :Id_hebergement, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
+                    VALUES(:arrivee, :id, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
 
     $sth->bindParam(':arrivee',$arrivee);
-    $sth->bindParam(':Id_hebergement',$Id_hebergement);
+    $sth->bindParam(':id',$resultat['Id']);
     $sth->bindParam(':depart',$depart);
     $sth->bindParam(':adulte',$adulte);
     $sth->bindParam(':enfant',$enfant);
