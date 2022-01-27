@@ -105,8 +105,7 @@ var_dump( $_GET['Id'])
                 </div>
                 <div class="btn">
                 <div>
-                    <button class="envoyer" type="submit" name="envoyer" >Valider</button>
-                    <input type="hidden" name="$_GET['Id']">
+                    <button class="envoyer" type="submit" name="envoyer" ><?= '<a href="./messagemail.php?Id='. $resultat['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
                 </div>
                 <div>
                 <button class="retour2" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>

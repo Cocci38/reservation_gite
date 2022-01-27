@@ -62,7 +62,7 @@
             <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
-            <p>Prix : <?php echo $tab[$i]["Prix"] ?>€</p>
+            <p>Tarif : <?php echo $tab[$i]["Prix"] ?>€ par nuit</p>
     </div>
 <?php } ?>
 </div>
