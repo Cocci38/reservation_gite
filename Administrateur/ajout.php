@@ -44,6 +44,12 @@ if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error 
 }
 /* Préparation de la requête avec validation des données du formulaire*/ 
 
+$tri = "SELECT Id From hebergements ";
+$sth = $conn->prepare($tri);
+$sth->execute();
+$result = $sth->fetchAll();
+var_dump($result);
+
 var_dump($_FILES);
 if(isset($_POST['envoyer'])){
     $countfiles = count($_FILES['file']['name']);
@@ -60,10 +66,10 @@ var_dump($nom);
 echo '<hr>';
 try {
     $sth = $conn->prepare("INSERT INTO images(Id_hebergement, Nom1, Nom2, Nom3, Nom4, Nom5)
-    VALUES (1, :Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
+    VALUES (:id, :Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
     for ($i=1;$i<$countfiles+1;$i++){
-        $sth->bindParam(':Nom'.$i,$nom[$i]);}
-
+        $sth->bindParam(':Nom'.$i,$nom[$i]);
+        $sth->bindParam(':id',$result['Id']); }
         $sth->execute();
 
     
