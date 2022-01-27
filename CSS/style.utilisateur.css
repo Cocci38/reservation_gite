@@ -511,3 +511,12 @@ input[type=tel] {
   background-color: #f5f5f5;
   transition: 0.8s all;
 }
+
+footer {
+  background-color: #28284b;
+  height: 50px;
+}
+footer p {
+  color: #f5f5f5;
+  text-align: center;
+}

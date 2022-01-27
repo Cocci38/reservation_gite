@@ -76,7 +76,7 @@ if (empty($_SESSION['result'])) {
     catch (PDOException $e) {
         echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
     }
-    
+    require 'footer.php'; 
 ?>
 
 

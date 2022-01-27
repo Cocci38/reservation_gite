@@ -68,5 +68,6 @@ try {
 
 ?>
 </main>
+<?php require 'footer.php';?>
 </body>
 </html>

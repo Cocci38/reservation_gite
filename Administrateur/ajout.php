@@ -69,7 +69,8 @@ try {
     VALUES (:id, :Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
     for ($i=1;$i<$countfiles+1;$i++){
         $sth->bindParam(':Nom'.$i,$nom[$i]);
-        $sth->bindParam(':id',$result['Id']); }
+      }
+        $sth->bindParam(':id',$result['Id']);
         $sth->execute();
 
     

@@ -488,3 +488,11 @@ input:hover[type="submit"]{
             background-color: $color-light;
             transition: 0.8s all; }
     }
+
+    footer {
+        background-color: $color-dark;
+        p { color: $color-light;
+            text-align: center;}
+
+            height: 50px;
+    }

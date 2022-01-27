@@ -73,5 +73,6 @@
     <a href = 'recherche.hebergement.php'><button type="submit">Nouvelle recherche</button></a>
 </div>
 </main>
+<?php require 'footer.php';?>
 </body>
 </html>

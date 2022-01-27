@@ -55,6 +55,7 @@ echo "Erreur : " . $e->getMessage();
     <?php
   header('Location:indexheb.php');
   exit();
+  require 'footer.php';
 ?>
 
 </body>
