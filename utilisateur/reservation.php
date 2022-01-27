@@ -59,8 +59,6 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
 
     if (isset ($_POST['envoyer']) && !empty($_POST['mail'])) {
 
-        echo "ok";
-        var_dump($_POST['mail']);
 
         $mail = $_POST['mail'];
   
@@ -77,7 +75,14 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
         $headers= "From: ibtissem.khir@gmail.com";
         
         
-        mail($to,$subject,$message,$headers);
+        if (mail($to,$subject,$message,$headers)){
+            echo 'Votre message a bien été envoyé';
+        }
+        else{
+            echo 'Votre message n\'a pas pu être envoyé';
+        }
+
+        
     }
 
 
