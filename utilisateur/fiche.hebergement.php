@@ -46,15 +46,13 @@ try {
 
                     <?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>
 
-                    <div>Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )"  ; ?>
-                    </div>
-                    <div> Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?>
-                    </div>
+                    <p>Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )" . "  /  "  ; ?>Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?>
+                    </p>
                     <h3>Description : </h3>
                     <div class="description-resultat"><?php echo $result ['Description'] ; ?>
-                    </div>
-                    <div>Tarif : <?php echo $result ['Prix'] ; ?>€
-                    </div>
+                    </p>
+                    <p>Tarif : <?php echo $result ['Prix'] ; ?>€ par nuit
+                    </p>
                     <button ><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
                     <button type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
                 </div>
