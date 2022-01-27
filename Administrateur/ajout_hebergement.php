@@ -61,13 +61,14 @@
                         <label for="Description">Description</label>
                         <textarea name="Description" requierd pattern="^[A-Za-zéè '-]+$" id="Description" cols="30" rows="10" required></textarea>
                     </div>
-                    <div class="container-item4">
+                    <div class="container-item4"> 
 
-                        <label for="Photo">Photos</label>
-                        <input type="file" name="Photo" id="Photo" required>
-                    </div>
+                        <!-- <label for="Photo">Envoyer plusieurs photos</label>  -->
+                        <!-- <input type="file" name="Photo" id="Photo" required> -->
+                        <input type = "file" accept = "image/jpg,image/jpeg,image/gif,image/png" name = "file[]" id = "file" multiple>
+                     </div> 
+
                     <div class="container-item5">
-
                         <label for="Nombre_de_couchages">Nombres de lits</label>
                         <select name="Nombre_de_couchages" id="Nombre_de_couchages" required>
                             <option value="1">1</option>
@@ -105,6 +106,13 @@
                     </div>
                 </form>
             </div>
+
+    
+        <!-- Envoyer plusieurs fichers :  -->
+
+        <!-- <input type = "submit" name = "submit" value="Envoyer les fichiers"> -->
+    <!-- </form> -->
+
         </div>
     </main>
 </body>

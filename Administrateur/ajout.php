@@ -10,7 +10,7 @@ if (empty($_SESSION['result'])) {
 
 /* Upload de l'image */
 
-if (isset ($_POST['envoyer'])){
+/*if (isset ($_POST['envoyer'])){
 
 echo 'ok';
 
@@ -43,6 +43,44 @@ if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error 
 
 }
 /* Préparation de la requête avec validation des données du formulaire*/ 
+
+var_dump($_FILES);
+if(isset($_POST['envoyer'])){
+    $countfiles = count($_FILES['file']['name']);
+    for($i=0;$i<$countfiles;$i++){
+        $filename = $_FILES['file']['name'][$i];
+        $nom[$i+1]=$filename;
+        
+        
+
+            move_uploaded_file($_FILES['file']['tmp_name'][$i],'../images/'.$filename);}
+}
+echo '<hr>';
+var_dump($nom);
+echo '<hr>';
+try {
+    $sth = $conn->prepare("INSERT INTO images(Id_hebergement, Nom1, Nom2, Nom3, Nom4, Nom5)
+    VALUES (1, :Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
+    for ($i=1;$i<$countfiles+1;$i++){
+        $sth->bindParam(':Nom'.$i,$nom[$i]);}
+
+        $sth->execute();
+
+    
+
+  
+
+    //header();
+} 
+
+catch (PDOException $e) {
+    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+}
+
+
+
+
+
 
 $intitule = valid_donnees ($_POST["Intitule"]);
 $id_categorie= valid_donnees($_POST["Id_categorie"]) ;
@@ -85,15 +123,14 @@ try{
 
         /*Requête pour insérer des données */
 
-$sth = $conn->prepare ("INSERT INTO hebergements (Intitule, Id_categorie, Description, Photo, Nombre_de_couchages, Nombre_de_salles_de_bain, Emplacement_geographique, Prix)
-    VALUES(:Intitule, :Id_categorie, :Description, :Photo, :Nombre_de_couchages, :Nombre_de_salles_de_bain, :Emplacement_geographique, :Prix)");
+$sth = $conn->prepare ("INSERT INTO hebergements (Intitule, Id_categorie, Description, Nombre_de_couchages, Nombre_de_salles_de_bain, Emplacement_geographique, Prix)
+    VALUES(:Intitule, :Id_categorie, :Description, :Nombre_de_couchages, :Nombre_de_salles_de_bain, :Emplacement_geographique, :Prix)");
 
 /*$sth = $conn->prepare("INSERT INTO hebergements (Id_categorie) SELECT Nom FROM categories VALUES(:Id_categorie)");*/
 
     $sth->bindParam(':Intitule',$intitule);
     $sth->bindParam(':Id_categorie',$id_categorie);
     $sth->bindParam(':Description',$description);
-    $sth->bindParam(':Photo', $fileName);
     $sth->bindParam(':Nombre_de_couchages',$couchage);
     $sth->bindParam(':Nombre_de_salles_de_bain',$bain);
     $sth->bindParam(':Emplacement_geographique',$lieux);
