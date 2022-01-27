@@ -23,6 +23,7 @@ $ville = $_POST["ville"];
 $pays = $_POST["pays"];
 $phone = $_POST["telephone"];
 $mail = $_POST["mail"];
+$id = $_POST["Id"];
 
 
 
@@ -38,7 +39,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
                     VALUES(:arrivee, :id, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
 
     $sth->bindParam(':arrivee',$arrivee);
-    $sth->bindParam(':id',$resultat);
+    $sth->bindParam(':id',$id);
     $sth->bindParam(':depart',$depart);
     $sth->bindParam(':adulte',$adulte);
     $sth->bindParam(':enfant',$enfant);

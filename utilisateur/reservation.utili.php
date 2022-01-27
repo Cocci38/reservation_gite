@@ -35,7 +35,8 @@ var_dump( $_GET['Id'])
 
     <h2>Réservation</h2>
             <form class="reservation-container" action="reservation.php" method="post">
-            
+            <input type="hidden" name="Id" value="<?php echo $resultat['Id']; ?>">
+
             <div class = "date">
                     <h3>Vos dates de séjour</h3>
                 <div class="arrive-depart">
@@ -106,7 +107,7 @@ var_dump( $_GET['Id'])
                 <div class="btn">
                 <div>
                
-                    <button class="envoyer" type="submit" value="<?php echo $resulta["Id"]; ?>" name="envoyer"  > Réserver </button>
+                    <button class="envoyer" type="submit" name="envoyer"  > Réserver </button>
                 </div>
                 <div>
                 <button class="retour2" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
