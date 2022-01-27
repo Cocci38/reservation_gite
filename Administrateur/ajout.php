@@ -44,11 +44,10 @@ if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error 
 }
 /* Préparation de la requête avec validation des données du formulaire*/ 
 
-$tri = "SELECT Id From hebergements ";
-$sth = $conn->prepare($tri);
-$sth->execute();
-$result = $sth->fetchAll();
-var_dump($result);
+
+
+
+
 
 var_dump($_FILES);
 if(isset($_POST['envoyer'])){
@@ -64,13 +63,17 @@ if(isset($_POST['envoyer'])){
 echo '<hr>';
 var_dump($nom);
 echo '<hr>';
+
+
+/*
 try {
-    $sth = $conn->prepare("INSERT INTO images(Id_hebergement, Nom1, Nom2, Nom3, Nom4, Nom5)
-    VALUES (:id, :Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
-    for ($i=1;$i<$countfiles+1;$i++){
+    $sth = $conn->prepare("INSERT INTO hebergements(Nom1, Nom2, Nom3, Nom4, Nom5)
+    VALUES (:Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
+    for ($i=7;$i<$countfiles+1;$i++){
         $sth->bindParam(':Nom'.$i,$nom[$i]);
+    
       }
-      $sth->bindParam(':id',$result['Id']);
+    
         $sth->execute();
 
     
@@ -83,7 +86,7 @@ try {
 catch (PDOException $e) {
     echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
 }
-
+*/
 
 
 
@@ -130,8 +133,14 @@ try{
 
         /*Requête pour insérer des données */
 
-$sth = $conn->prepare ("INSERT INTO hebergements (Intitule, Id_categorie, Description, Nombre_de_couchages, Nombre_de_salles_de_bain, Emplacement_geographique, Prix)
-    VALUES(:Intitule, :Id_categorie, :Description, :Nombre_de_couchages, :Nombre_de_salles_de_bain, :Emplacement_geographique, :Prix)");
+$sth = $conn->prepare ("INSERT INTO hebergements (Intitule, Id_categorie, Description, Nombre_de_couchages, Nombre_de_salles_de_bain, Emplacement_geographique, Prix, Nom1, Nom2, Nom3, Nom4, Nom5)
+    VALUES(:Intitule, :Id_categorie, :Description, :Nombre_de_couchages, :Nombre_de_salles_de_bain, :Emplacement_geographique, :Prix, :Nom1, :Nom2, :Nom3, :Nom4, :Nom5)");
+
+for ($i=1;$i<$countfiles+1;$i++){
+    $sth->bindParam(':Nom'.$i,$nom[$i]);
+
+  }
+
 
 /*$sth = $conn->prepare("INSERT INTO hebergements (Id_categorie) SELECT Nom FROM categories VALUES(:Id_categorie)");*/
 
@@ -147,7 +156,7 @@ $sth = $conn->prepare ("INSERT INTO hebergements (Intitule, Id_categorie, Descri
     }
 
 /*Retour à la page d'accueil*/
-    header('Location: indexheb.php');
+   /* header('Location: indexheb.php');*/
 
     
 }

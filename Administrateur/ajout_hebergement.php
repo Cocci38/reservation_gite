@@ -36,9 +36,12 @@
         <div class="admin-content">
 
             <?php require 'initialisation.php'; ?>
+
 <button><a href="categorie.php">Ajouter catégorie </a></button>
-        
+
+
             <form action='ajout.php' method="post" enctype="multipart/form-data">
+         
             <div class="container-forms">
             
                     <div class="container-item1">
@@ -63,7 +66,7 @@
                     </div>
                     <div class="container-item4"> 
 
-                        <!-- <label for="Photo">Envoyer plusieurs photos</label>  -->
+                        <label for="file">Envoyer plusieurs photos</label>
                         <!-- <input type="file" name="Photo" id="Photo" required> -->
                         <input type = "file" accept = "image/jpg,image/jpeg,image/gif,image/png" name = "file[]" id = "file" multiple>
                      </div> 
