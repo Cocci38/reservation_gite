@@ -2,10 +2,11 @@
 
 require '../Administrateur\initialisation.php';
 
-$sth2 = $conn->prepare("SELECT Id FROM hebergements where Id= id");
+/*$sth2 = $conn->prepare("SELECT * FROM hebergements where Id= id");
 $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
+var_dump( $_GET['Id']);*/
 
 
 
@@ -25,6 +26,10 @@ $mail = $_POST["mail"];
 
 
 
+
+
+
+
 try{
 
 
@@ -33,7 +38,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
                     VALUES(:arrivee, :id, :depart, :adulte, :enfant, :titre, :nom, :prenom, :adresse, :code_postal, :ville, :pays, :telephone, :mail)");
 
     $sth->bindParam(':arrivee',$arrivee);
-    $sth->bindParam(':id',$resultat['Id']);
+    $sth->bindParam(':id',$resultat);
     $sth->bindParam(':depart',$depart);
     $sth->bindParam(':adulte',$adulte);
     $sth->bindParam(':enfant',$enfant);

@@ -105,7 +105,8 @@ var_dump( $_GET['Id'])
                 </div>
                 <div class="btn">
                 <div>
-                    <button class="envoyer" type="submit" name="envoyer" ><?= '<a href="./messagemail.php?Id='. $resultat['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
+               
+                    <button class="envoyer" type="submit" value="<?php echo $resulta["Id"]; ?>" name="envoyer"  > Réserver </button>
                 </div>
                 <div>
                 <button class="retour2" type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
@@ -118,6 +119,8 @@ var_dump( $_GET['Id'])
 catch(PDOException $e){
     echo "Erreur : " . $e->getMessage();
 }
+/*<?= '<a href="./reservation.php?Id='. $resultat['Id'] . '"> Réserver </a><br>' . '<br>';?>*/
+ 
 ?>
         </main>
         <?php require 'footer.php';?>
