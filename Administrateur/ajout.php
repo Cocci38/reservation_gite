@@ -156,7 +156,7 @@ for ($i=1;$i<$countfiles+1;$i++){
     }
 
 /*Retour à la page d'accueil*/
-   /* header('Location: indexheb.php');*/
+    header('Location: indexheb.php');
 
     
 }

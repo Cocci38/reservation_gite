@@ -26,8 +26,9 @@ $mail = $_POST["mail"];
 $id = $_POST["Id"];
 
 
+$diponibilite= $_POST['Disponibilite'];
 
-
+var_dump($diponibilite);
 
 
 
@@ -57,7 +58,7 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
 
     /*header('Location: msg.mail.php');*/
 
-    if (isset ($_POST['envoyer']) && !empty($_POST['mail'])) {
+    if (isset ($_POST['envoyer']) && !empty($_POST['mail']) && !empty($_POST['Disponibilite']) && !empty($_POST['Id'])) {
 
 
         $mail = $_POST['mail'];
@@ -73,8 +74,13 @@ $sth = $conn->prepare("INSERT INTO Reservation_clients(arrivee, Id_hebergement, 
         // Le destinataire : 
         
         $headers= "From: ibtissem.khir@gmail.com";
-        
-        
+
+        //Modifier la disponibilite
+        $sth = $conn->prepare("UPDATE hebergements SET Disponibilite=2 where Id=$id");
+        $sth->execute();
+
+     
+    
         if (mail($to,$subject,$message,$headers)){
             echo 'Votre message a bien été envoyé';
         }

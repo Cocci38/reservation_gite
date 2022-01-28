@@ -30,10 +30,16 @@
     @$personne=intval($_GET["personne"]);
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne);
-        
+        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique  LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne );
         $sth->execute();
         $tab=$sth->fetchAll(PDO::FETCH_ASSOC);
+
+        $sth1 = $conn->prepare('SELECT * FROM Hebergements WHERE ' );
+        $sth1->execute();
+        $tab=$sth1->fetchAll(PDO::FETCH_ASSOC);
+
+
+
         $sth2 = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
         $sth2->execute();
         $tab2=$sth2->fetchAll(PDO::FETCH_ASSOC);
