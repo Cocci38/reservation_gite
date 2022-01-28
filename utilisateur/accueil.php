@@ -27,10 +27,11 @@
 
     @$recherche=$_GET["recherche"];
     @$envoyer=$_GET["envoyer"];
+    @$personne=intval($_GET["personne"]);
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
-        
+        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne);
+
         $sth->execute();
         $tab=$sth->fetchAll(PDO::FETCH_ASSOC);
         $sth2 = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
@@ -43,6 +44,7 @@
         <div class="recherche-container">
             <label for="lieux">Où souhaitez-vous aller?</label>
             <input type="search" name="recherche" placeholder="Destination">
+            <input type="number" min=1 name="personne" placeholder="Voyageur (s)">
             <input type="submit" name="envoyer" value="Rechercher">
         </div>
     </form>

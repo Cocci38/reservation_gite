@@ -30,22 +30,24 @@ form{
 }
 
 .recherche-container{
-    display: grid;
-    grid-template-columns: 50% 30% 20%; 
-    border: $color-dark solid 1px;
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border : $color-dark solid 1px;
     border-radius: 30px;
     margin: auto;
 }
 
 label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px 0 0 20px;
+    order: 1;
+    border-radius: 20px;
     overflow: hidden;
 }
 
 input[type="search"]{
+    order: 2;
     font-family: $font;
     font-style: $color-dark;
     padding: 10px;
@@ -54,9 +56,11 @@ input[type="search"]{
     border: $color-dark solid 1px;
     border-radius: 20px;
     text-align: center;
+    width: 180px;
 }
 
 input[type="number"]{
+    order: 2;
     font-family: $font;
     font-style: $color-dark;
     padding: 10px;
@@ -65,10 +69,12 @@ input[type="number"]{
     border: $color-dark solid 1px;
     border-radius: 20px;
     text-align: center;
-    width: 100px;
+    width: 150px;
 }
 
 input[type="submit"]{
+    order: 3;
+    flex-grow: 2;
     cursor: pointer;
     font-family: $font;
     padding: 0px;
@@ -85,6 +91,7 @@ input:hover[type="submit"]{
     color: $color-dark;
     background-color: $color-light;
     transition: 0.8s all;
+    width: auto;
 }
 
 /*form{
