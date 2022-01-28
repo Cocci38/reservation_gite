@@ -67,7 +67,7 @@
 <?php for($i=0;$i<count($tab);$i++){ ?>
 
     <div class="liste-gite-content">
-            <?php  if ( $tab[$i]['Disponibilite']=1) {echo 'Disponible';};
+            <?php  if ( $ta1[$i]['Disponibilite']=2) {echo 'Disponible';} else {echo 'Indisponible';};
             '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
             <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
             <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule']. '</a><br>' . '<br>';?></p>
