@@ -101,15 +101,17 @@ img {
 
   display: grid;
   grid-template-columns: repeat(2, auto) ;
-  grid-template-rows: repeat(8, auto) ;
+  grid-template-rows: repeat(9, auto) ;
   grid-template-areas: "a a"
                        "b c"
                        "d e"
                        "f f"
                        "g g"
                        "h h"
-                       "h h"
-                       "i i";
+                       "i j"
+                       "k l"
+                       "m m";
+  
   height: auto;
   margin: 5% 20% ;
 background-color: $color-light;
@@ -134,7 +136,7 @@ box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
-height: 50px;
+border-radius: 5px;
 
 
 
@@ -222,10 +224,58 @@ backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
+
+    &:nth-child(9){
+      grid-area: i;
+      background-color: $color-light;
+      text-align: center;
+      font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &:nth-child(10){
+      grid-area: j;
+      background-color: $color-light;
+      text-align: center;
+      font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &:nth-child(11){
+      grid-area: k;
+      background-color: $color-light;
+      text-align: center;
+      font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &:nth-child(12){
+      grid-area: l;
+      background-color: $color-light;
+      text-align: center;
+      font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
   }
 
   .btn-crud {
-grid-area: i ;
+grid-area: m ;
 background-color: $color-light;
 border-radius: 5px;
 margin : 10px;
@@ -530,6 +580,12 @@ margin: 5% 20%;
 }
 
  
+footer {
+  background-color: $color-dark;
+  p { color: $color-light;
+      text-align: center;}
 
+      height: 50px;
+}
 
 

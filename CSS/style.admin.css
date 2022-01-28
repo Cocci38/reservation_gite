@@ -79,8 +79,8 @@ img {
 .fiche_hebergement {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(8, auto);
-  grid-template-areas: "a a" "b c" "d e" "f f" "g g" "h h" "h h" "i i";
+  grid-template-rows: repeat(9, auto);
+  grid-template-areas: "a a" "b c" "d e" "f f" "g g" "h h" "i j" "k l" "m m";
   height: auto;
   margin: 5% 20%;
   background-color: #f5f5f5;
@@ -101,7 +101,7 @@ img {
   backdrop-filter: blur(3px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  height: 50px;
+  border-radius: 5px;
 }
 .fiche_hebergement span:nth-child(2) {
   grid-area: b;
@@ -178,8 +178,48 @@ img {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-.fiche_hebergement .btn-crud {
+.fiche_hebergement span:nth-child(9) {
   grid-area: i;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.fiche_hebergement span:nth-child(10) {
+  grid-area: j;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.fiche_hebergement span:nth-child(11) {
+  grid-area: k;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.fiche_hebergement span:nth-child(12) {
+  grid-area: l;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.fiche_hebergement .btn-crud {
+  grid-area: m;
   background-color: #f5f5f5;
   border-radius: 5px;
   margin: 10px;
@@ -452,4 +492,13 @@ button:hover a {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   height: 50px;
+}
+
+footer {
+  background-color: #28284b;
+  height: 50px;
+}
+footer p {
+  color: #f5f5f5;
+  text-align: center;
 }

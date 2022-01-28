@@ -81,12 +81,12 @@
                         <span><?php echo " Nbr de salles de bains : " . $result ['Nombre_de_salles_de_bain'] ;?></span>
                         <span> <?php echo " Emplacement : " . $result ['Emplacement_geographique'] ;?></span>
                         <span> <?php echo " Prix : " . $result ['Prix'] ;?></span>
-                        <span><?php echo " Photo : "  . '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">';?></span>
-                     
+                        <span><?php echo " Photo 1 : "  . '<img src= "../images/'. $result ['Nom1']. '" alt="photo hébergement">';?></span>
+                        <span><?php echo " Photo 2 : "  . '<img src= "../images/'. $result ['Nom2']. '" alt="photo hébergement">';?></span>
+                        <span><?php echo " Photo 3 : "  . '<img src= "../images/'. $result ['Nom3']. '" alt="photo hébergement">';?></span>
+                        <span><?php echo " Photo 4 : "  . '<img src= "../images/'. $result ['Nom4']. '" alt="photo hébergement">';?></span>
+                        <span><?php echo " Photo 5 : "  . '<img src= "../images/'. $result ['Nom5']. '" alt="photo hébergement">';?></span>
 
-                      
-                    
-                   
                       <div class="btn-crud">
                         <button> <?php echo'<a href="modifier.hebergement.php?id='.$_GET['id'].'"">Modifier hébergement</a>'; ?></button>
 

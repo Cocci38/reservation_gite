@@ -93,8 +93,9 @@
                         <textarea name="Description" id="Description" cols="30" rows="10" required><?php echo $result['Description']; ?></textarea>
                     </div>
                     <div class="update-item4">
-                        <label for="Photo">Photos</label>
-                        <input type="file" name="Photo" id="Photo" required> <?= '<img src= "../images/' . $result['Photo'] . '" alt="photo hébergement">'; ?>
+                        <label for="file">Photos</label>
+                        <input type = "file" accept = "image/jpg,image/jpeg,image/gif,image/png" name = "file[]" id = "file" multiple <?php echo '<img src= "../images/' . $result['Nom1'].  '" alt="photo hébergement">'; ?>>
+        
                     </div>
                     <div class="update-item5">
                         <label for="Nombre_de_couchages">Nombres de lits</label>

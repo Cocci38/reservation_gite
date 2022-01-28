@@ -11,7 +11,7 @@ if (empty($_SESSION['result'])) {
 
 
 /*Modification image*/
-
+/*
 if (isset ($_POST)){
 
     echo 'ok';
@@ -32,30 +32,28 @@ if (isset ($_POST)){
         $extension= strtolower(end($tabeExtention));
     
         $extensionsAutorisees=['jpg', 'jpeg', 'gif', 'png', 'webp'];
-        $maxSize=500000;
+        $maxSize=500000;*/
+
+  
+
+
+
+
+       
     
-$sth=$conn->prepare("SELECT Photo FROM hebergements Where Id= :id");
-$sth -> bindValue (":id" , $_POST['Id'] );
-$sth->execute();
-$result = $sth->fetch(PDO::FETCH_ASSOC);
-$fileName=$result['Photo'];
 
-echo 'File name : '. $fileName. '<br>'; 
-
-    if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error == 0 ) {
+   // if (in_array($extension, $extensionsAutorisees,) && $size <= $maxSize && $error == 0 ) {
 
 /*Supprimer l'image que l'on souhaite modifier */
-    unlink('../images/'.$fileName );
+   // unlink('../images/'.$fileName )
 
  /*Uploader la nouvelle image*/   
-        move_uploaded_file($tmpName, '../images/'. $fileName); }
-        else {
-            echo 'Mauvaise extension ou taille trop importante ou erreur';
-        }
+       // move_uploaded_file($tmpName, '../images/'. $fileName); }
+       // else {
+           // echo 'Mauvaise extension ou taille trop importante ou erreur';
+       // }
     
-    }
     
-    }
 // Préparation de la requête pour modifier les hébergements en la sécurisant
 
 $intitule = valid_donnees($_POST["Intitule"]);
@@ -95,14 +93,32 @@ echo '<br>';
    && preg_match("/^[A-Za-zéè '-]+$/",$lieux)
    && !empty($prix))
    
-   {
+
+
+   /* if(isset($_POST['envoyer'])){
+        $countfiles = count($_FILES['file']['name']);
+        for($i=0;$i<$countfiles;$i++){
+            $filename = $_FILES['file']['name'][$i];
+            $nom[$i+1]=$filename;
+            
+            unlink('../images/'.$fileName );
+    
+                move_uploaded_file($_FILES['file']['tmp_name'][$i],'../images/'.$filename);}
+    }*/
+
+
+
 
 try{
     //Modifier les hébergements 
     
-    $sth = $conn->prepare(" UPDATE hebergements SET Intitule= :Intitule, Id_categorie= :Id_categorie, Description= :Description, Nombre_de_couchages= :Nombre_de_couchages, Nombre_de_salles_de_bain= :Nombre_de_salles_de_bain, Emplacement_geographique= :Emplacement_geographique, Prix= :Prix where Id= :id"); 
+    $sth = $conn->prepare(" UPDATE hebergements SET Intitule= :Intitule, Id_categorie= :Id_categorie, Description= :Description, Nombre_de_couchages= :Nombre_de_couchages, Nombre_de_salles_de_bain= :Nombre_de_salles_de_bain, Emplacement_geographique= :Emplacement_geographique, Prix= :Prix  where Id= :id"); 
  
-    
+ /*for ($i=1;$i<$countfiles+1;$i++){
+   
+
+  }*/
+
         $sth->bindParam(':Intitule',$intitule);
         $sth->bindParam(':Id_categorie',$id_categorie);
         $sth->bindParam(':Description',$description);
@@ -120,7 +136,7 @@ try{
     }
     catch (PDOException $e) {
         echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-    }}
+    }
     
 die;
 
