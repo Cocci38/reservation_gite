@@ -27,14 +27,13 @@
 </header>
 <button><a href="deconnexion.php">Deconnexion</a></button> 
 
-
+<button><a href="indexheb.php">Accueil</a></button>
 <button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <button><a href="ajout_hebergement.php">Ajouter un hébergement</a></button> 
-<button><a href="disponible.php">Hébergements disponibles</a></button> 
 
 <main>
 <h2>Liste des hébergements</h2>
-<div class="liste">
+<div class="liste-2">
 
 
 
@@ -68,21 +67,18 @@ try {
 
 
     for ($y = 0; $y < count($result); $y++) {
-        ?>
+        
+ if ($result[$y]['Disponibilite']==1) {
+            ?>
+     
 
-        <div class="block">
+
+        <div class="block-dispo">
             <?php
         echo "Nom de l'hébergement : ".'<a href="./afficher.hebergement.php?id=' . $result[$y]['Id'] . '">' .  $result[$y]['Intitule'].  '</a><br>';
        
-        echo 'Disponibilité : '; 
-
-        if ($result[$y]['Disponibilite']==1) {
-            echo "Oui".'<br>';
-        }
-        else {echo 'Non'.'<br>';}
-            
-          
-        echo "Lieux : " .$result[$y]['Emplacement_geographique'];
+      
+        echo "Lieux : " .$result[$y]['Emplacement_geographique'];}
         ?>
         </div>
 

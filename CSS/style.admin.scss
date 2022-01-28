@@ -73,7 +73,23 @@ border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
 border-radius: 5px;
 
-  
+}
+.liste-2 {
+  display: flex;
+  align-items: center;
+}
+
+.block-dispo {
+  background-color: $color-light;
+  margin: 20px;
+  padding: 1px 3px 2px 3px;
+  height: 80px;
+  width: 50%;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
 
 }
 
@@ -309,40 +325,75 @@ justify-content: center;
                           ;
       height: auto;                    
       .container-item1 {
-        background: rgba(255,255,255,0.1);
+        background: grey;
         grid-area: item1;
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
       }
       .container-item2{
         grid-area: item2; 
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: grey;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
       }
       .container-item3 {
         grid-area: item3;
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
       }
       .container-item4{
         grid-area: item4; 
         margin: 4px;
         padding: 4px;
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        backdrop-filter: blur(3px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+        font-size: 20px;
+        
         box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -353,51 +404,99 @@ justify-content: center;
         grid-area: item5;
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
       }
       .container-item6{
         grid-area: item6; 
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+      
       }
       .container-item7 {
         grid-area: item7;
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+
       }
       .container-item8{
         grid-area: item8; 
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
       }
       .container-item9 {
         grid-area: item9 ;
         margin: 4px;
         padding: 4px;
-        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
         backdrop-filter: blur(3px);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
+        border-radius: 5px;*/
+        background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+     
       }
 
     }
@@ -426,100 +525,185 @@ justify-content: center;
       grid-area: item1;
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: grey;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
-height: 50px;
+height: 50px;*/
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+
+
     }
     .update-item2{
       grid-area: item2; 
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: grey;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
-height: 50px;
+height: 50px;*/
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+
     }
     .update-item3 {
       grid-area: item3;
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
 height: 200px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+
     }
     .update-item4{
       grid-area: item4; 
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
+height: 50px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
 border-left: 1px solid rgba(255, 255, 255, 0.5);
-height: 350px;
+border-radius: 5px;
     }
     .update-item5 {
       grid-area: item5;
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+     /* border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
 height: 50px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
     }
     .update-item6{
       grid-area: item6; 
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
 height: 50px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
     }
     .update-item7 {
       grid-area: item7;
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
 height: 50px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
     }
     .update-item8{
       grid-area: item8; 
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
 height: 50px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
     }
     .update-item9 {
       grid-area: item9 ;
       margin: 4px;
       padding: 4px;
-      border-radius: 5px;
+      background-color: $color-light;
+      /*border-radius: 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
 backdrop-filter: blur(3px);
 border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);*/
 height: 50px;
+text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
     }
 
   }
@@ -535,7 +719,7 @@ button {
   text-align: center;
   font-size: 20px;
   padding: 20px;
-  width: 200px;
+  width: auto;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -570,12 +754,21 @@ margin: 5% 20%;
     .categorie{
       margin: 4px;
       padding: 4px;
-      box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+      /*box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
       backdrop-filter: blur(3px);
       border-top: 1px solid rgba(255, 255, 255, 0.5);
       border-left: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 5px;
+      border-radius: 5px;*/
       height: 50px;
+      background-color: $color-light;
+        text-align: center;
+font-size: 20px;
+
+box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+backdrop-filter: blur(3px);
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-left: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
 
     }
 }
@@ -590,3 +783,22 @@ footer {
 }
 
 
+input[type=submit] {
+  display: inline-block;
+  background-color: $color-dark;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: auto;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+
+}

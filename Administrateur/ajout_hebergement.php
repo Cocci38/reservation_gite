@@ -118,7 +118,7 @@
 
         </div>
     </main>
-    <?php require 'footer.php';?>
+  
 </body>
-
+<?php require 'footer.php';?>
 </html>

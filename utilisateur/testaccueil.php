@@ -67,14 +67,18 @@
 <?php for($i=0;$i<count($tab);$i++){ ?>
 
     <div class="liste-gite-content">
-            <?php  if ( $ta1[$i]['Disponibilite']=2) {echo 'Disponible';} else {echo 'Indisponible';};
-            '<img src= "../images/'. $tab[$i]["Photo"]. '" alt="photo hébergement">'; ?>
+
+            <?php  if ( $tab[$i]['Disponibilite']==1) {
+            echo '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement">'; ?>
             <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
             <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule']. '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Tarif : <?php echo $tab[$i]["Prix"] ?>€ par nuit</p>
 
+
+        <?php    } ?>
+            
 
           
     </div>
