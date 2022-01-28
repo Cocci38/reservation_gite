@@ -24,6 +24,71 @@ background-color: $color-light;
 
 form{
     display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: auto;
+}
+
+.recherche-container{
+    display: grid;
+    grid-template-columns: 50% 30% 20%; 
+    border: $color-dark solid 1px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+}
+
+input[type="search"]{
+    font-family: $font;
+    font-style: $color-dark;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input[type="number"]{
+    font-family: $font;
+    font-style: $color-dark;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    font-family: $font;
+    padding: 0px;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    color: $color-light;
+    background-color: $color-dark;
+}
+
+input:hover[type="submit"]{
+    color: $color-dark;
+    background-color: $color-light;
+    transition: 0.8s all;
+}
+
+/*form{
+    display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
@@ -56,6 +121,18 @@ input[type="search"]{
     text-align: center;
 }
 
+input[type="number"]{
+    font-family: $font;
+    font-style: $color-dark;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+}
+
 input[type="submit"]{
     cursor: pointer;
     font-family: $font;
@@ -73,7 +150,7 @@ input:hover[type="submit"]{
     color: $color-dark;
     background-color: $color-light;
     transition: 0.8s all;
-}
+}*/
 
 .liste-gite-container {  
     display: grid;

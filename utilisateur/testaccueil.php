@@ -44,7 +44,7 @@
         <div class="recherche-container">
             <label for="lieux">Où souhaitez-vous aller?</label>
             <input type="search" name="recherche" placeholder="Destination">
-            <input type="number" min=1 name="personne" placeholder="Personne">
+            <input type="number" min=1 name="personne" placeholder="Voyageur (s)">
             <input type="submit" name="envoyer" value="Rechercher">
         </div>
     </form>
