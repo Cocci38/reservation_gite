@@ -116,17 +116,17 @@ try{
     /*On insère les données reçues si les champs sont correctement remplis (contrer les attaques XXS et l'injection)*/ 
 
     if(!empty($intitule)
-    && strlen ($intitule) <= 20
-    && preg_match("/^[A-Za-zéè '-]+$/",$intitule)
+    && strlen ($intitule) <= 100000
+    //&& preg_match("/^[A-Za-zéè '-]+$/",$intitule)
       && !empty($id_categorie) 
       && !empty($description)
-      && strlen ($description) <= 300
-      && preg_match("/^[A-Za-zéè '-]+$/",$description)
+      && strlen ($description) <= 10000
+      //&& preg_match("/^[A-Za-zéèêô '-]+$/",$description)
       && !empty($couchage)
       && !empty($bain) 
       && !empty($lieux)
-      && strlen ($lieux) <= 20
-      && preg_match("/^[A-Za-zéè '-]+$/",$lieux)
+      && strlen ($lieux) <= 500
+      //&& preg_match("/^[A-Za-zéè '-]+$/",$lieux)
       && !empty($prix))
       
       {
@@ -151,10 +151,10 @@ for ($i=1;$i<$countfiles+1;$i++){
     $sth->bindParam(':Nombre_de_salles_de_bain',$bain);
     $sth->bindParam(':Emplacement_geographique',$lieux);
     $sth->bindParam(':Prix',$prix);
-   
     $sth->execute();
     }
-
+echo 'ok';
+echo $intitule."/".$id_categorie."/".$description."/".$couchage."/".$bain."/".$lieux."/".$prix;
 /*Retour à la page d'accueil*/
     header('Location: indexheb.php');
 

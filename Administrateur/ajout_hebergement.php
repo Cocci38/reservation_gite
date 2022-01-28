@@ -46,7 +46,7 @@
             
                     <div class="container-item1">
                         <label for="Intitule">Nom de l'hébergement</label>
-                        <input type="text" requierd pattern="^[A-Za-zéè '-]+$" name="Intitule" id="Intitule" required>
+                        <input type="text" name="Intitule" id="Intitule" required>
                     </div>
                     <div class="container-item2">
                         <label for="Categorie">Type d'hébergement</label>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="container-item3">
                         <label for="Description">Description</label>
-                        <textarea name="Description" requierd pattern="^[A-Za-zéè '-]+$" id="Description" cols="30" rows="10" required></textarea>
+                        <textarea name="Description" id="Description" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="container-item4"> 
 
@@ -95,7 +95,7 @@
                     </div>
                     <div class="container-item7">
                         <label for="Emplacement_geographique">Lieux</label>
-                        <input type="text" requierd pattern="^[A-Za-zéè '-]+$" name="Emplacement_geographique" id="Emplacement_geographique" required>
+                        <input type="text" name="Emplacement_geographique" id="Emplacement_geographique" required>
                     </div>
                     <div class="container-item8">
 
