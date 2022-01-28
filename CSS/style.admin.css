@@ -91,6 +91,7 @@ img {
   margin: 5px;
   padding: 4px;
   border-radius: 5px;
+  text-transform: bold;
 }
 .fiche_hebergement span:nth-child(1) {
   background-color: grey;

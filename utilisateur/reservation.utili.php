@@ -22,11 +22,11 @@
 try{
     require '../Administrateur\initialisation.php';
 
-$sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique FROM hebergements where Id= :id");
+$sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique, Disponibilite FROM hebergements where Id= :id");
 $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
-var_dump( $_GET['Id'])
+var_dump( $resultat);
 
 ?>
 <h2><?php echo $resultat ['Intitule'] ; ?></h2>
@@ -36,6 +36,7 @@ var_dump( $_GET['Id'])
     <h2>Réservation</h2>
             <form class="reservation-container" action="reservation.php" method="post">
             <input type="hidden" name="Id" value="<?php echo $resultat['Id']; ?>">
+            <input type="hidden" name="Disponibilite" value="<?php echo $resultat['Disponibilite']; ?>">
 
             <div class = "date">
                     <h3>Vos dates de séjour</h3>
