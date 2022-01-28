@@ -44,7 +44,7 @@ try {
                     <h2><?php echo $result ['Intitule'] ; ?></h2>
                     <p class="categorie-lieux"><?php echo $resultat2 ['Nom'] . " en " . $result ['Emplacement_geographique'] ; ?></p>
 
-                    <?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>
+                    <?= '<img src= "../images/'. $result ['Nom1']. '" alt="photo hébergement">'; ?>
 
                     <p>Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )" . "  /  "  ; ?>Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?>
                     </p>

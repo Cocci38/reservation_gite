@@ -26,7 +26,7 @@ $sth2 = $conn->prepare("SELECT Id, Intitule, Emplacement_geographique, Disponibi
 $sth2 -> bindValue (":id" , $_GET['Id'] );
 $sth2->execute();
 $resultat = $sth2->fetch(PDO::FETCH_ASSOC);
-var_dump( $resultat);
+
 
 ?>
 <h2><?php echo $resultat ['Intitule'] ; ?></h2>
