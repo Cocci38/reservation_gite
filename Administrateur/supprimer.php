@@ -13,14 +13,9 @@
 
     <title>Supprimer hébergement </title>
 </head>
-
-
 <body>
-    
-    
     <a href="index.php"><img class="logo" src="images-memory\logomermory.png" alt="Logo memory"></a> 
-
-    <?php
+<?php
 
 require 'initialisation.php';
 if (empty($_SESSION['result'])) {
@@ -28,37 +23,24 @@ if (empty($_SESSION['result'])) {
     
 // echo "Identifiant ou mot de passe incorrect";
 }
-
     try {
-       
-
         // Supprimer le contact
-
-
         $result = " DELETE FROM hebergements WHERE Id= ".$_GET['id'] ;
         $sth = $conn->prepare($result);
         $sth->execute();
 
-    
-
-   
-echo 'Hébergement surpprimé';}
-
-
-catch(PDOException $e){
-echo "Erreur : " . $e->getMessage();
+echo 'Hébergement surpprimé';
 }
-
- ?>
-    </div>
-
-    <?php
-  header('Location:indexheb.php');
-  exit();
-  require 'footer.php';
+catch(PDOException $e){
+    echo "Erreur : " . $e->getMessage();
+}
 ?>
+</div>
 
+<?php
+header('Location:indexheb.php');
+exit();
+require 'footer.php';
+?>
 </body>
-
-
 </html>

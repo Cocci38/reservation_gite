@@ -10,18 +10,15 @@ try {
     $password = "";
     $dbname = "reservation";
     
-    
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
+}
     
-    catch (PDOException $e) {
-        echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-    }
+catch (PDOException $e) {
+    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+}
 
 try {
-    
-    
     $sth = $conn->prepare("
     INSERT INTO administrateur (Nom_admin, Mot_de_passe)
     VALUES (:admin, :mot_de_passe)");
@@ -33,18 +30,8 @@ try {
   $admin = "Ibtissem";
   $mot_de_passe = "Khiri";
   $sth->execute();
-
-
-
 }
-    
-    catch (PDOException $e) {
-        echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-    }
-    
-    
-    
-
-
-
+catch (PDOException $e) {
+    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+}
 ?>

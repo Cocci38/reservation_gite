@@ -12,15 +12,8 @@ session_unset();
 // destroy the session
 session_destroy();
 
-
-    header("location:connexion.php");
-    // echo "Identifiant ou mot de passe incorrect";
-
-
-
-
-
+header("location:connexion.php");
+// echo "Identifiant ou mot de passe incorrect";
 ?>
-
 </body>
 </html>

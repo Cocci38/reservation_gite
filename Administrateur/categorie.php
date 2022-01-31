@@ -14,8 +14,6 @@
     
 <header>
 
-
-
 <nav class="container--fluid">
 <div class="item">
     <a href="indexheb.php"><img class = "logo" src="../imageeasytrip\Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
@@ -25,7 +23,6 @@
 </div>
 </nav>
 </header>
-
 
 <button><a href="deconnexion.php">Deconnexion</a></button> 
 <button><a href="indexheb.php">Accueil</a></button> 
@@ -38,12 +35,8 @@
         <input type="text" name="Nom" id="Nom" required>
         <input type="submit" value="Envoyer">
     </div>
-        </form>
-        </div>
-
-
-
-
+</form>
+</div>
 <?php
 
 require 'initialisation.php';
@@ -51,32 +44,22 @@ require 'initialisation.php';
 if (empty($_SESSION['result'])) {
     header("location:connexion.php");}
 
-       
-
-        try 
-        {
-            if (!empty ($_POST["Nom"])) {
-
+    try{
+        if (!empty ($_POST["Nom"])) {
                 $nom = $_POST["Nom"];
 
-                $sth = $conn->prepare("
-                INSERT INTO categories (Nom)
-                VALUES (:Nom)");
-    
+                $sth = $conn->prepare("INSERT INTO categories (Nom)
+                    VALUES (:Nom)");
+
                 $sth->bindParam(':Nom',$nom);
                 $sth->execute();
-
-            }
-
-        
-
         }
-
-    
-    catch (PDOException $e) {
-        echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
     }
-    require 'footer.php'; 
+catch (PDOException $e) {
+    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+}
+
+require 'footer.php'; 
 ?>
 
 

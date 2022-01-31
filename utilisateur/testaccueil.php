@@ -20,17 +20,14 @@
 <main>
     <div class="mainAccueil">
 <?php
-
     require '../Administrateur\initialisation.php';
-
-
 
     @$recherche=$_GET["recherche"];
     @$envoyer=$_GET["envoyer"];
     @$personne=intval($_GET["personne"]);
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-       
+
         $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique  LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne );
         $sth->execute();
         $tab=$sth->fetchall(PDO::FETCH_ASSOC);
@@ -44,8 +41,6 @@
         $sth1 = $conn->prepare('SELECT Id, Intitule, Disponibilite FROM Hebergements WHERE Disponibilite' );
         $sth1->execute();
         $tab1=$sth1->fetchAll(PDO::FETCH_ASSOC);
-
-    
     }
 ?>
     <form method="GET">
@@ -76,11 +71,7 @@
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Tarif : <?php echo $tab[$i]["Prix"] ?>€ par nuit</p>
 
-
-        <?php    } ?>
-            
-
-          
+<?php    } ?>
     </div>
 <?php } ?>
 </div>
