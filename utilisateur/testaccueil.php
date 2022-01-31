@@ -30,14 +30,22 @@
     @$personne=intval($_GET["personne"]);
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne);
-        
+       
+        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique  LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne );
         $sth->execute();
-        $tab=$sth->fetchAll(PDO::FETCH_ASSOC);
+        $tab=$sth->fetchall(PDO::FETCH_ASSOC);
+
+
         $sth2 = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
         $sth2->execute();
         $tab2=$sth2->fetchAll(PDO::FETCH_ASSOC);
         $afficher='oui';
+
+        $sth1 = $conn->prepare('SELECT Id, Intitule, Disponibilite FROM Hebergements WHERE Disponibilite' );
+        $sth1->execute();
+        $tab1=$sth1->fetchAll(PDO::FETCH_ASSOC);
+
+    
     }
 ?>
     <form method="GET">
@@ -59,12 +67,20 @@
 <?php for($i=0;$i<count($tab);$i++){ ?>
 
     <div class="liste-gite-content">
-            <?= '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement">'; ?>
+
+            <?php  if ( $tab[$i]['Disponibilite']==1) {
+            echo '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement">'; ?>
             <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
-            <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
+            <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule']. '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Tarif : <?php echo $tab[$i]["Prix"] ?>€ par nuit</p>
+
+
+        <?php    } ?>
+            
+
+          
     </div>
 <?php } ?>
 </div>
