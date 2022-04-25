@@ -1,3 +1,214 @@
+.reservation {
+  margin-left: 26%;
+}
+
+.reservation-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  /* Full-width inputs */
+  /* Set a style for all buttons */
+}
+@media screen and (max-width: 900px) {
+  .reservation-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+}
+.reservation-container .hebergement {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: #28284b solid 1px;
+  border-radius: 30px;
+  width: 100%;
+  height: 45%;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+}
+.reservation-container .hebergement img {
+  width: 90%;
+  object-fit: cover;
+}
+.reservation-container .hebergement a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: 0.3s;
+  margin-top: 30px;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  color: #f5f5f5;
+  background-color: #28284b;
+  height: 55px;
+  width: 90%;
+  text-decoration: none;
+}
+.reservation-container .hebergement a:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #28284b;
+  background-color: #f5f5f5;
+  transition: 0.8s all;
+}
+@media screen and (max-width: 900px) {
+  .reservation-container .hebergement {
+    width: 85%;
+  }
+}
+.reservation-container form {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.reservation-container .date {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border: #28284b solid 1px;
+  border-radius: 30px;
+  width: 85%;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+}
+.reservation-container .personne {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border: #28284b solid 1px;
+  border-radius: 30px;
+  width: 85%;
+  margin-top: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+}
+.reservation-container .corps {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border: #28284b solid 1px;
+  border-radius: 30px;
+  margin-top: 10px;
+  width: 85%;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
+}
+.reservation-container input[type=email], .reservation-container input[type=tel], .reservation-container input[type=text], .reservation-container input[type=number], .reservation-container input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+}
+.reservation-container input[type=submit] {
+  background-color: #6968e5;
+  color: #28284b;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.reservation-container input[type=submit]:hover {
+  background-color: #28284b;
+  color: #6968e5;
+  border: 1px solid #6968e5;
+}
+.reservation-container input[type=button] {
+  background-color: #28284b;
+  color: #6968e5;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #6968e5;
+  cursor: pointer;
+  width: 100%;
+}
+.reservation-container label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+.reservation-container input[type=text], .reservation-container input[type=date], .reservation-container input[type=email], .reservation-container input[type=tel] {
+  font-family: "Montserrat", sans-serif;
+  font-style: #28284b;
+  padding: 10px;
+  outline: none;
+  transition: 0.3s;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+}
+@media screen and (max-width: 900px) {
+  .reservation-container input[type=text], .reservation-container input[type=date], .reservation-container input[type=email], .reservation-container input[type=tel] {
+    width: 100%;
+  }
+}
+.reservation-container .btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.reservation-container .envoyer {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: 0.3s;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: #28284b;
+  height: 35px;
+  width: 100px;
+  justify-self: end;
+}
+.reservation-container .envoyer:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #28284b;
+  background-color: #f5f5f5;
+  transition: 0.8s all;
+}
+.reservation-container .retour2 {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: 0.3s;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: #28284b;
+  height: 35px;
+  width: 100px;
+  justify-self: start;
+}
+.reservation-container .retour2:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #28284b;
+  background-color: #f5f5f5;
+  transition: 0.8s all;
+}
+
 body {
   font-style: #28284b solid;
   background-color: #f5f5f5;
@@ -11,70 +222,6 @@ header {
 
 .mainAccueil {
   background-color: #f5f5f5;
-  /*form{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: auto;
-  }
-
-  .recherche-container{
-      display: grid;
-      grid-template-columns: 50% 30% 20%; 
-      border: $color-dark solid 1px;
-      border-radius: 30px;
-      margin: auto;
-  }
-
-  label{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 20px 0 0 20px;
-      overflow: hidden;
-  }
-
-  input[type="search"]{
-      font-family: $font;
-      font-style: $color-dark;
-      padding: 10px;
-      outline: none;
-      transition: 0.3s;
-      border: $color-dark solid 1px;
-      border-radius: 20px;
-      text-align: center;
-  }
-
-  input[type="number"]{
-      font-family: $font;
-      font-style: $color-dark;
-      padding: 10px;
-      outline: none;
-      transition: 0.3s;
-      border: $color-dark solid 1px;
-      border-radius: 20px;
-      text-align: center;
-      width: 100px;
-  }
-
-  input[type="submit"]{
-      cursor: pointer;
-      font-family: $font;
-      padding: 0px;
-      outline: none;
-      transition: 0.3s;
-      border: $color-dark solid 1px;
-      border-radius: 20px;
-      text-align: center;
-      color: $color-light;
-      background-color: $color-dark;
-  }
-
-  input:hover[type="submit"]{
-      color: $color-dark;
-      background-color: $color-light;
-      transition: 0.8s all;
-  }*/
 }
 .mainAccueil form {
   display: flex;
@@ -193,267 +340,18 @@ header {
   height: 100%;
   object-fit: content;
 }
-.fiche-gite-container .nom-gite button {
+.fiche-gite-container button {
   border: #28284b solid 1px;
   border-radius: 20px;
   background-color: #28284b;
-  height: 35px;
   color: #f5f5f5;
   font-family: "Montserrat", sans-serif;
+  height: 30px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
 }
-.fiche-gite-container .nom-gite button a {
+.fiche-gite-container button a {
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
   color: #f5f5f5;
-  text-align: center;
-}
-.fiche-gite-container .nom-gite button:hover {
-  background-color: #f5f5f5;
-  transition: 0.8s all;
-}
-.fiche-gite-container .nom-gite button:hover a {
-  color: #28284b;
-  font-family: "Montserrat", sans-serif;
-}
-
-.reservation-container {
-  display: grid;
-  grid-template-rows: 20% 20% 40% 20%;
-  grid-auto-columns: 1fr;
-  gap: 10px 0px;
-  align-items: stretch;
-  overflow: hidden;
-  border: #28284b solid 1px;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
-  box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
-}
-
-.date {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-area: 1/1/2/2;
-  justify-items: center;
-}
-
-.h3 {
-  grid-area: 1/1/2/2;
-}
-
-.arrive-depart {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-area: 2/1/3/2;
-  align-items: start;
-}
-.arrive-depart .arrive {
-  grid-area: 1/1/2/2;
-}
-.arrive-depart .depart {
-  grid-area: 1/2/2/3;
-}
-
-.personne {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  justify-items: center;
-}
-
-.nb-personne {
-  grid-area: 1/1/2/2;
-}
-
-.nombre-personne {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-area: 2/1/3/2;
-}
-
-.adulte {
-  grid-area: 1/1/2/2;
-}
-
-.enfant {
-  grid-area: 2/1/3/2;
-}
-
-.corps {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  justify-items: center;
-}
-
-.vos-coordonnees {
-  grid-area: 1/1/2/2;
-}
-
-.coordonne {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-area: 2/1/3/2;
-  justify-items: center;
-  align-items: start;
-}
-
-.item1 {
-  grid-area: 1/1/2/2;
-}
-
-.item2 {
-  grid-area: 2/1/3/2;
-}
-
-.item3 {
-  grid-area: 3/1/4/2;
-}
-
-.item4 {
-  grid-area: 4/1/5/2;
-}
-
-.item5 {
-  grid-area: 5/1/6/2;
-}
-
-.item6 {
-  grid-area: 6/1/7/2;
-}
-
-.item7 {
-  grid-area: 7/1/8/2;
-}
-
-.item8 {
-  grid-area: 8/1/9/2;
-}
-
-.item9 {
-  grid-area: 9/1/10/2;
-}
-
-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px 0 0 20px;
-  overflow: hidden;
-}
-
-input[type=text] {
-  font-family: "Montserrat", sans-serif;
-  font-style: #28284b;
-  padding: 10px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  width: 300px;
-}
-
-input[type=email] {
-  font-family: "Montserrat", sans-serif;
-  font-style: #28284b;
-  padding: 10px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  width: 300px;
-}
-
-input[type=tel] {
-  font-family: "Montserrat", sans-serif;
-  font-style: #28284b;
-  padding: 10px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  width: 300px;
-}
-
-.btn {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-.envoyer {
-  grid-area: 1/1/2/2;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  padding: 0px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  color: #f5f5f5;
-  background-color: #28284b;
-  height: 35px;
-  width: 100px;
-  justify-self: end;
-}
-.envoyer:hover {
-  font-family: "Montserrat", sans-serif;
-  color: #28284b;
-  background-color: #f5f5f5;
-  transition: 0.8s all;
-}
-
-.retour2 {
-  grid-area: 1/2/2/3;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  padding: 0px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  color: #f5f5f5;
-  background-color: #28284b;
-  height: 35px;
-  width: 100px;
-  justify-self: start;
-}
-.retour2:hover {
-  font-family: "Montserrat", sans-serif;
-  color: #28284b;
-  background-color: #f5f5f5;
-  transition: 0.8s all;
-}
-
-footer {
-  background-color: #28284b;
-  height: 50px;
-}
-footer p {
-  color: #f5f5f5;
-  text-align: center;
 }

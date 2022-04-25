@@ -1,0 +1,218 @@
+$color-middle : #6968e5;
+$color-light :#f5f5f5;
+$color-dark : #28284b;
+$font : 'Montserrat', sans-serif;
+
+.reservation{
+    margin-left: 26%;
+}
+.reservation-container {  
+    display: grid; 
+    grid-template-columns: 1.4fr 0.6fr;  
+    grid-template-rows: 1fr; 
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    @media screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .hebergement { 
+        grid-area: 1 / 2 / 2 / 3; 
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: $color-dark solid 1px;
+        border-radius: 30px;
+        width: 100%;
+        height: 45%;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+        img{
+            width: 90%;
+            //margin-bottom: 5px;
+            // height: 100%;
+            object-fit: cover;
+            // border-radius: 20px 20px 0 0;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: $font;
+            outline: none;
+            transition: 0.3s;
+            margin-top: 30px;
+            border: $color-dark solid 1px;
+            border-radius: 20px;
+            color: $color-light;
+            background-color: $color-dark;
+            height: 55px;
+            width: 90%;
+            text-decoration: none;
+                &:hover{
+                font-family: $font;
+                color: $color-dark;
+                background-color: $color-light;
+                transition: 0.8s all; }
+        }
+        @media screen and (max-width: 900px) {
+            width: 85%;
+        }
+    }
+    form { 
+        grid-area: 1 / 1 / 2 / 2; 
+        display: flex;
+        flex-direction: column;
+        //padding: 15px;
+        width: 90%;
+    }
+    .date{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        border: $color-dark solid 1px;
+        border-radius: 30px;
+        width: 85%;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+    }
+    .personne{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        border: $color-dark solid 1px;
+        border-radius: 30px;
+        width: 85%;
+        margin-top: 10px;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+    }
+    .corps{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        border: $color-dark solid 1px;
+        border-radius: 30px;
+        margin-top: 10px;
+        width: 85%;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
+        box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75);
+    }
+    /* Full-width inputs */
+    input[type=email],  input[type=tel], input[type=text], input[type=number], input[type=date]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid $color-light;
+        box-sizing: border-box;
+    }
+    
+    /* Set a style for all buttons */
+    input[type=submit] {
+        background-color: $color-middle;
+        color: $color-dark;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type=submit]:hover {
+        background-color: $color-dark;
+        color: $color-middle;
+        border: 1px solid $color-middle;
+    }
+    input[type=button] {
+        background-color: $color-dark;
+        color: $color-middle;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: 1px solid $color-middle;
+        cursor: pointer;
+        width: 100%;
+    }
+    label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 0 0 20px;
+        overflow: hidden;
+    }
+
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"]{
+            font-family: $font;
+            font-style: $color-dark;
+            padding: 10px;
+            outline: none;
+            transition: 0.3s;
+            border: $color-dark solid 1px;
+            border-radius: 20px;
+            text-align: center;
+            width: 300px;
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+
+.btn {  
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 10px;
+}
+
+.envoyer { 
+    cursor: pointer;
+    font-family: $font;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    color: $color-light;
+    background-color: $color-dark;
+    height: 35px;
+    width: 100px;
+    justify-self: end;
+        &:hover{
+        font-family: $font;
+        color: $color-dark;
+        background-color: $color-light;
+        transition: 0.8s all; }
+}
+
+.retour2 { 
+    cursor: pointer;
+    font-family: $font;
+    outline: none;
+    transition: 0.3s;
+    border: $color-dark solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    color: $color-light;
+    background-color: $color-dark;
+    height: 35px;
+    width: 100px;
+    justify-self: start;
+        &:hover{
+        font-family: $font;
+        color: $color-dark;
+        background-color: $color-light;
+        transition: 0.8s all; }
+}
+        
+    }
+
