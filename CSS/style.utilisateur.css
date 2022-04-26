@@ -164,6 +164,7 @@
 }
 .reservation-container .btn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
@@ -236,14 +237,23 @@ header {
   align-content: center;
   border: #28284b solid 1px;
   border-radius: 30px;
+  width: 60%;
   margin: auto;
+}
+@media screen and (max-width: 900px) {
+  .mainAccueil .recherche-container {
+    width: 100%;
+  }
 }
 .mainAccueil label {
   order: 1;
   border-radius: 20px;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
   overflow: hidden;
 }
-.mainAccueil input[type=search] {
+.mainAccueil input[type=search], .mainAccueil input[type=number] {
   order: 2;
   font-family: "Montserrat", sans-serif;
   font-style: #28284b;
@@ -255,17 +265,10 @@ header {
   text-align: center;
   width: 180px;
 }
-.mainAccueil input[type=number] {
-  order: 2;
-  font-family: "Montserrat", sans-serif;
-  font-style: #28284b;
-  padding: 10px;
-  outline: none;
-  transition: 0.3s;
-  border: #28284b solid 1px;
-  border-radius: 20px;
-  text-align: center;
-  width: 150px;
+@media screen and (max-width: 900px) {
+  .mainAccueil input[type=search], .mainAccueil input[type=number] {
+    width: 100%;
+  }
 }
 .mainAccueil input[type=submit] {
   order: 3;
@@ -280,6 +283,12 @@ header {
   text-align: center;
   color: #f5f5f5;
   background-color: #28284b;
+}
+@media screen and (max-width: 900px) {
+  .mainAccueil input[type=submit] {
+    width: 100%;
+    height: 40px;
+  }
 }
 .mainAccueil input:hover[type=submit] {
   color: #28284b;
@@ -297,6 +306,13 @@ header {
   grid-auto-flow: dense;
   font-style: #28284b;
 }
+@media screen and (max-width: 700px) {
+  .mainAccueil .liste-gite-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .mainAccueil .liste-gite-container .liste-gite-content {
   padding: 15px;
   border: #28284b solid 1px;
@@ -313,6 +329,30 @@ header {
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
+.mainAccueil .liste-gite-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: 0.3s;
+  margin-top: 30px;
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  color: #f5f5f5;
+  background-color: #28284b;
+  height: 30px;
+  width: 100%;
+  text-decoration: none;
+}
+.mainAccueil .liste-gite-container a:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #28284b;
+  background-color: #f5f5f5;
+  transition: 0.8s all;
+}
 
 .fiche-gite-container {
   display: grid;
@@ -324,12 +364,19 @@ header {
   grid-auto-flow: dense;
   font-style: #28284b;
 }
+@media screen and (max-width: 700px) {
+  .fiche-gite-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .fiche-gite-container .nom-gite {
   text-align: center;
   padding: 15px;
   border: #28284b solid 1px;
   border-radius: 30px;
-  width: 85%;
+  width: 65%;
   margin-top: 5px;
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 6px 0px rgba(40, 40, 75, 0.75);
@@ -340,18 +387,48 @@ header {
   height: 100%;
   object-fit: content;
 }
-.fiche-gite-container button {
+.fiche-gite-container .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+  .fiche-gite-container .btn {
+    flex-direction: column;
+  }
+}
+.fiche-gite-container .btn button {
   border: #28284b solid 1px;
   border-radius: 20px;
   background-color: #28284b;
   color: #f5f5f5;
   font-family: "Montserrat", sans-serif;
-  height: 30px;
+  height: 40px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
 }
-.fiche-gite-container button a {
-  text-decoration: none;
+@media screen and (max-width: 600px) {
+  .fiche-gite-container .btn button {
+    width: 100%;
+  }
+}
+.fiche-gite-container .btn a {
+  border: #28284b solid 1px;
+  border-radius: 20px;
+  background-color: #28284b;
   color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .fiche-gite-container .btn a {
+    width: 100%;
+  }
 }

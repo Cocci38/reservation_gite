@@ -53,9 +53,12 @@ try {
                     </p>
                     <p>Tarif : <?php echo $result ['Prix'] ; ?>€ par nuit
                     </p>
-                    <button ><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
-                    <button type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
-                </div>
+                    </div>
+                    <div class="btn">
+                        <a href="./reservation.utili.php?Id=<?= $result['Id'] ?>"><button type="submit" class="confirmation" id="confirmation" >Réserver</button>
+                        <a href="./accueil.php"><button type="submit"id="annuler" class="annuler">Retour</button></a>
+                    </div>
+                
             </div>
                     <?php
     }

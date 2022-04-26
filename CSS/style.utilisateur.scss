@@ -37,16 +37,24 @@ form{
     align-content: center;
     border : $color-dark solid 1px;
     border-radius: 30px;
+    width: 60%;
     margin: auto;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        
+    }
 }
 
 label{
     order: 1;
     border-radius: 20px;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
     overflow: hidden;
 }
 
-input[type="search"]{
+input[type="search"], input[type="number"]{
     order: 2;
     font-family: $font;
     font-style: $color-dark;
@@ -57,19 +65,9 @@ input[type="search"]{
     border-radius: 20px;
     text-align: center;
     width: 180px;
-}
-
-input[type="number"]{
-    order: 2;
-    font-family: $font;
-    font-style: $color-dark;
-    padding: 10px;
-    outline: none;
-    transition: 0.3s;
-    border: $color-dark solid 1px;
-    border-radius: 20px;
-    text-align: center;
-    width: 150px;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
 }
 
 input[type="submit"]{
@@ -85,6 +83,10 @@ input[type="submit"]{
     text-align: center;
     color: $color-light;
     background-color: $color-dark;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        height: 40px;
+    }
 }
 
 input:hover[type="submit"]{
@@ -105,8 +107,11 @@ input:hover[type="submit"]{
     align-items: center;
     grid-auto-flow: dense;
     font-style: $color-dark;
-    
-
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
     .liste-gite-content{
         padding: 15px;
         border: $color-dark solid 1px;
@@ -121,7 +126,30 @@ input:hover[type="submit"]{
             height: 100%;
             object-fit: cover;
             border-radius: 20px 20px 0 0;
-            }
+        }
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        font-family: $font;
+        outline: none;
+        transition: 0.3s;
+        margin-top: 30px;
+        border: $color-dark solid 1px;
+        border-radius: 20px;
+        color: $color-light;
+        background-color: $color-dark;
+        height: 30px;
+        width: 100%;
+        text-decoration: none;
+            &:hover{
+            font-family: $font;
+            color: $color-dark;
+            background-color: $color-light;
+            transition: 0.8s all; }
     }
 }
 }
@@ -138,13 +166,17 @@ input:hover[type="submit"]{
     align-items: center;
     grid-auto-flow: dense;
     font-style: $color-dark;
-  
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
     .nom-gite {  
         text-align: center;
         padding: 15px;
         border: $color-dark solid 1px;
         border-radius: 30px;
-        width: 85%;
+        width: 65%;
         margin-top: 5px;
         overflow: hidden;
         -webkit-box-shadow: 2px 2px 6px 0px rgba(40,40,75,0.75); 
@@ -155,21 +187,45 @@ input:hover[type="submit"]{
             object-fit: content;
         }
     }
+    .btn {  
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
         button{ 
             border: $color-dark solid 1px;
             border-radius: 20px;
             background-color: $color-dark;
             color: $color-light;
             font-family: $font;
-            height: 30px;
+            height: 40px;
             text-align: center;
             cursor: pointer;
             transition: 0.3s;
-            a{
-                text-decoration: none;
-                color: $color-light;
+            @media screen and (max-width: 600px) {
+                width: 100%;
             }
         }
+        a{
+            border: $color-dark solid 1px;
+            border-radius: 20px;
+            background-color: $color-dark;
+            color: $color-light;
+            font-family: $font;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
         }
+    }
+}
 
 
