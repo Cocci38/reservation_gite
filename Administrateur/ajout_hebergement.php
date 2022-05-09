@@ -41,7 +41,6 @@
 
 
             <form action='ajout.php' method="post" enctype="multipart/form-data">
-         
             <div class="container-forms">
             
                     <div class="container-item1">
@@ -69,7 +68,7 @@
                         <label for="file">Envoyer plusieurs photos</label>
                         <!-- <input type="file" name="Photo" id="Photo" required> -->
                         <input type = "file" accept = "image/jpg,image/jpeg,image/gif,image/png" name = "file[]" id = "file" multiple>
-                     </div> 
+                    </div> 
 
                     <div class="container-item5">
                         <label for="Nombre_de_couchages">Nombres de lits</label>

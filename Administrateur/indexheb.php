@@ -9,13 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
-
     <title>Document</title>
 </head>
 <body>
-
 <header>
-
 <nav class="container--fluid">
 <div class="item">
     <a href="indexheb.php"><img class = "logo" src="../imageeasytrip\Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
@@ -26,8 +23,6 @@
 </nav>
 </header>
 <button><a href="deconnexion.php">Deconnexion</a></button> 
-
-
 <button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <button><a href="ajout_hebergement.php">Ajouter un hébergement</a></button> 
 <button><a href="disponible.php">Hébergements disponibles</a></button> 
@@ -35,27 +30,18 @@
 <main>
 <h2>Liste des hébergements</h2>
 <div class="liste">
-
-
-
-
 <?php
-
-
 
 try {
 
  // Connexion  
- require 'initialisation.php';
+require 'initialisation.php';
  // require 'veriflogin.php';
 
- if (empty($_SESSION['result'])) {
-     header("location: connexion.php");
+if (empty($_SESSION['result'])) {
+    header("location: connexion.php");
      // echo "Identifiant ou mot de passe incorrect";
-
-
- }
- 
+}
 
     $tri = "SELECT * From hebergements ";
     $sth = $conn->prepare($tri);
@@ -63,9 +49,6 @@ try {
     $result = $sth->fetchAll();
 
     /*echo  '<pre>'; var_dump($result); echo '</pre>';*/
-   
-
-
 
     for ($y = 0; $y < count($result); $y++) {
         ?>
@@ -73,7 +56,6 @@ try {
         <div class="block">
             <?php
         echo "Nom de l'hébergement : ".'<a href="./afficher.hebergement.php?id=' . $result[$y]['Id'] . '">' .  $result[$y]['Intitule'].  '</a><br>';
-       
         echo 'Disponibilité : '; 
 
         if ($result[$y]['Disponibilite']==1) {
@@ -81,30 +63,18 @@ try {
         }
         else {echo 'Non'.'<br>';}
             
-          
         echo "Lieux : " .$result[$y]['Emplacement_geographique'];
         ?>
         </div>
-
-        <?php
+<?php
     }
-
-
-
 }
-
-
-
-             catch (PDOException $e) {
-                echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-            }
-
+catch (PDOException $e) {
+    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+}
 ?>
 </div>
-
 </main>
-
-
 </body>
 <?php require 'footer.php';?>
 </html>

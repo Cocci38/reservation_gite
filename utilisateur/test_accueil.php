@@ -20,27 +20,24 @@
 <main>
     <div class="mainAccueil">
 <?php
+
     require '../Administrateur\initialisation.php';
+
+
 
     @$recherche=$_GET["recherche"];
     @$envoyer=$_GET["envoyer"];
     @$personne=intval($_GET["personne"]);
 
     if(isset($envoyer)&& !empty(trim($recherche))){
-
-        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique  LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne );
+        $sth = $conn->prepare('SELECT * FROM Hebergements WHERE Emplacement_geographique LIKE "%'.$recherche.'%" AND Nombre_de_couchages >= '.$personne);
         $sth->execute();
-        $tab=$sth->fetchall(PDO::FETCH_ASSOC);
-
+        $tab=$sth->fetchAll(PDO::FETCH_ASSOC);
 
         $sth2 = $conn->prepare('SELECT * FROM Hebergements INNER JOIN Categories ON Id_categorie = Categories.Id WHERE Emplacement_geographique LIKE "%'.$recherche.'%"');
         $sth2->execute();
         $tab2=$sth2->fetchAll(PDO::FETCH_ASSOC);
         $afficher='oui';
-
-        $sth1 = $conn->prepare('SELECT Id, Intitule, Disponibilite FROM Hebergements WHERE Disponibilite' );
-        $sth1->execute();
-        $tab1=$sth1->fetchAll(PDO::FETCH_ASSOC);
     }
 ?>
     <form method="GET">
@@ -53,27 +50,22 @@
     </form>
 
     <?php if (@$afficher=='oui'){?>
-        <!-- <div id="resultat"></div>
-        <div id="nbr"><?=count($tab)."".(count($tab)>1?" résultats trouvés":" résultat trouvé") ?></div> -->
+        <div id="resultat"></div>
+        <div id="nbr"><?=count($tab)."".(count($tab)>1?" résultats trouvés":" résultat trouvé") ?></div>
             
         <h2>Liste des hébergements disponibles</h2>
 <div class="liste-gite-container">
 
 <?php for($i=0;$i<count($tab);$i++){ ?>
-    <?php  if ( $tab[$i]['Disponibilite']==1) { ?>
-    <div class="liste-gite-content">
 
-            
-            <?=  '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement">'; ?>
+    <div class="liste-gite-content">
+            <?= '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement" >'; 'width="150px" height="100px"'?>
             <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
-            <p><?= $tab[$i]['Intitule'] . '<br>' . '<br>';?></p>
+            <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule'].  '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Tarif : <?php echo $tab[$i]["Prix"] ?>€ par nuit</p>
-            <?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '"> Voir l\'hébergement </a><br>' . '<br>';?>
-            </div>
-<?php    } ?>
-    
+    </div>
 <?php } ?>
 </div>
         <?php } ?>

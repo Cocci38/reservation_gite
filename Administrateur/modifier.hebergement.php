@@ -14,11 +14,8 @@
 </head>
 
 <body>
-   
+
     <header>
-
-
-
         <nav class="container--fluid">
             <div class="item">
                 <a href="indexheb.php"><img class="logo" src="../imageeasytrip\Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
@@ -55,8 +52,6 @@
     } catch (PDOException $e) {
         echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
     }
-
-
     ?>
 
 <button><a href="indexheb.php">Accueil</a></button>
@@ -71,7 +66,6 @@
                     <input type="hidden" name="Id" value="<?php echo $result['Id']; ?>">
 
             <div class="container-update">
-               
                     <div class="update-item1">
                         <label for="Intitule">Nom de l'hébergement</label>
                         <input type="text" name="Intitule" value="<?php echo $result['Intitule'];  ?>" id="Intitule" required>
@@ -136,7 +130,7 @@
             </div>
         </div>
         <main>
-       <?php require 'footer.php'; ?>
+<?php require 'footer.php'; ?>
 </body>
 
 </html>

@@ -35,72 +35,42 @@
 <h2>Liste des hébergements</h2>
 <div class="liste-2">
 
-
-
-
 <?php
-
-
 
 try {
 
  // Connexion  
- require 'initialisation.php';
+require 'initialisation.php';
  // require 'veriflogin.php';
 
- if (empty($_SESSION['result'])) {
-     header("location: connexion.php");
+if (empty($_SESSION['result'])) {
+    header("location: connexion.php");
      // echo "Identifiant ou mot de passe incorrect";
-
-
- }
- 
-
+}
     $tri = "SELECT * From hebergements ";
     $sth = $conn->prepare($tri);
     $sth->execute();
     $result = $sth->fetchAll();
 
-    /*echo  '<pre>'; var_dump($result); echo '</pre>';*/
-   
-
-
-
     for ($y = 0; $y < count($result); $y++) {
         
- if ($result[$y]['Disponibilite']==1) {
+if ($result[$y]['Disponibilite']==1) {
             ?>
-     
-
-
         <div class="block-dispo">
             <?php
         echo "Nom de l'hébergement : ".'<a href="./afficher.hebergement.php?id=' . $result[$y]['Id'] . '">' .  $result[$y]['Intitule'].  '</a><br>';
-       
-      
         echo "Lieux : " .$result[$y]['Emplacement_geographique'];}
         ?>
         </div>
-
-        <?php
+<?php
     }
-
-
-
 }
-
-
-
-             catch (PDOException $e) {
-                echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-            }
-
+catch (PDOException $e) {
+    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+}
 ?>
 </div>
-
 </main>
-
-
 </body>
 <?php require 'footer.php';?>
 </html>

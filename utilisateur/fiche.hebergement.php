@@ -44,7 +44,7 @@ try {
                     <h2><?php echo $result ['Intitule'] ; ?></h2>
                     <p class="categorie-lieux"><?php echo $resultat2 ['Nom'] . " en " . $result ['Emplacement_geographique'] ; ?></p>
 
-                    <?= '<img src= "../images/'. $result ['Photo']. '" alt="photo hébergement">'; ?>
+                    <?= '<img src= "../images/'. $result ['Nom1']. '" alt="photo hébergement">'; ?>
 
                     <p>Capacité : <?php echo $result ['Nombre_de_couchages'] . " personne( s )" . "  /  "  ; ?>Salle de bain : <?php echo $result ['Nombre_de_salles_de_bain'] ; ?>
                     </p>
@@ -53,9 +53,12 @@ try {
                     </p>
                     <p>Tarif : <?php echo $result ['Prix'] ; ?>€ par nuit
                     </p>
-                    <button ><?= '<a href="./reservation.utili.php?Id='. $result['Id'] . '"> Réserver </a><br>' . '<br>';?></button>
-                    <button type = "button" value = "Retour"  onclick = "history.go(-1)">Retour</button>
-                </div>
+                    </div>
+                    <div class="btn">
+                        <a href="./reservation.utili.php?Id=<?= $result['Id'] ?>"><button type="submit" class="confirmation" id="confirmation" >Réserver</button>
+                        <a href="./accueil.php"><button type="submit"id="annuler" class="annuler">Retour</button></a>
+                    </div>
+                
             </div>
                     <?php
     }

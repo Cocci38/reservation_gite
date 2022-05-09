@@ -53,27 +53,26 @@
     </form>
 
     <?php if (@$afficher=='oui'){?>
-        <!-- <div id="resultat"></div>
-        <div id="nbr"><?=count($tab)."".(count($tab)>1?" résultats trouvés":" résultat trouvé") ?></div> -->
+        <div id="resultat"></div>
+        <div id="nbr"><?=count($tab)."".(count($tab)>1?" résultats trouvés":" résultat trouvé") ?></div>
             
         <h2>Liste des hébergements disponibles</h2>
 <div class="liste-gite-container">
 
 <?php for($i=0;$i<count($tab);$i++){ ?>
-    <?php  if ( $tab[$i]['Disponibilite']==1) { ?>
+
     <div class="liste-gite-content">
 
-            
-            <?=  '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement">'; ?>
+            <?php  if ( $tab[$i]['Disponibilite']==1) {
+            echo '<img src= "../images/'. $tab[$i]["Nom1"]. '" alt="photo hébergement">'; ?>
             <p><?php echo  $tab2[$i]["Nom"] .'<br>' . '<br>' ?></p>
-            <p><?= $tab[$i]['Intitule'] . '<br>' . '<br>';?></p>
+            <p><?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '">' .  $tab[$i]['Intitule']. '</a><br>' . '<br>';?></p>
             <p>Lieux : <?php echo $tab2[$i]["Emplacement_geographique"] ?></p>
             <p>Nombre de couchage : <?php echo $tab[$i]["Nombre_de_couchages"] ?></p>
             <p>Tarif : <?php echo $tab[$i]["Prix"] ?>€ par nuit</p>
-            <?= '<a href="./fiche.hebergement.php?Id='. $tab[$i]['Id'] . '"> Voir l\'hébergement </a><br>' . '<br>';?>
-            </div>
+
 <?php    } ?>
-    
+    </div>
 <?php } ?>
 </div>
         <?php } ?>
