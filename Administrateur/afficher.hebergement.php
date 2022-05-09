@@ -88,7 +88,7 @@
                         <span><?php echo " Photo 5 : "  . '<img src= "../images/'. $result ['Nom5']. '" alt="photo hébergement">';?></span>
 
                       <div class="btn-crud">
-                        <button> <?php echo'<a href="modifier.hebergement.php?id='.$_GET['id'].'"">Modifier hébergement</a>'; ?></button>
+                        <button> <?php echo'<a href="modifier.hebergement.php?id='.$_GET['id'].'">Modifier hébergement</a>'; ?></button>
 
         <button><?php echo'<a href="supprimer.php?id='. $_GET['id'] .'">Supprimer hébergement</a>';?></button>
           </div>             
