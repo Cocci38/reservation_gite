@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../CSS\style.global.css"> -->
+    <link rel="stylesheet" href="../CSS\style.global.css">
     <link rel="stylesheet" href="../CSS\style.admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
 </header>
 <button><a href="deconnexion.php">Deconnexion</a></button> 
 
-<button><a href="indexheb.php">Accueil</a></button>
+<button><a href="index.php">Accueil</a></button>
 <button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
 <button><a href="ajout_hebergement.php">Ajouter un hébergement</a></button> 
 

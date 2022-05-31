@@ -6,7 +6,7 @@ try {
 $admin = $_POST["Nom_admin"];
 $motdepasse = $_POST["Mot_de_passe"];
 
-$util = "SELECT * From Administrateur where Nom_admin='$admin' and Mot_de_passe='$motdepasse'";
+$util = "SELECT * From administrateur where Nom_admin='$admin' and Mot_de_passe='$motdepasse'";
 $sth = $conn->prepare($util);
 $sth->execute();
 $result = $sth->fetch();

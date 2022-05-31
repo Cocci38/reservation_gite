@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../CSS\style.global.css"> -->
+    <link rel="stylesheet" href="../CSS\style.global.css"> 
     <link rel="stylesheet" href="../CSS\style.admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <header>
 <nav class="container--fluid">
 <div class="item">
-    <a href="indexheb.php"><img class = "logo" src="../imageeasytrip\Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
+    <a href="index.php"><img class = "logo" src="../imageeasytrip/Logo_easy_trip.png" alt="logo_easy_trip" srcset=""></a>
 </div>
 <div class="item">
     <h1>Avec nous voyager facile !</h1>
@@ -23,7 +23,7 @@
 </nav>
 </header>
 <button><a href="deconnexion.php">Deconnexion</a></button> 
-<button><a href="../utilisateur\accueil.php">Utilisateur</a></button> 
+<button><a href="../utilisateur/accueil.php">Utilisateur</a></button> 
 <button><a href="ajout_hebergement.php">Ajouter un hébergement</a></button> 
 <button><a href="disponible.php">Hébergements disponibles</a></button> 
 

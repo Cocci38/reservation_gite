@@ -20,7 +20,7 @@
 <main>
     <div class="mainAccueil">
 <?php
-    require '../Administrateur\initialisation.php';
+    require '../Administrateur/initialisation.php';
 
     @$recherche=$_GET["recherche"];
     @$envoyer=$_GET["envoyer"];
